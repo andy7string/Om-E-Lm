@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExecutionTree",
+  "type": "object",
+  "required": ["goal_id", "description", "status", "created_at", "objectives"],
+  "properties": {
+    "goal_id": { "type": "string" },
+    "description": { "type": "string" },
+    "status": { "type": "string", "enum": ["pending", "in_progress", "complete", "failed"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "completed_at": { "type": "string", "format": "date-time" },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["objective_id", "goal_id", "description", "status", "created_at", "tasks"],
+        "properties": {
+          "objective_id": { "type": "string" },
+          "goal_id": { "type": "string" },
+          "description": { "type": "string" },
+          "status": { "type": "string", "enum": ["pending", "in_progress", "complete", "failed"] },
+          "created_at": { "type": "string", "format": "date-time" },
+          "completed_at": { "type": "string", "format": "date-time" },
+          "tasks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["task_id", "objective_id", "description", "status", "created_at", "actions"],
+              "properties": {
+                "task_id": { "type": "string" },
+                "objective_id": { "type": "string" },
+                "description": { "type": "string" },
+                "status": { "type": "string", "enum": ["pending", "in_progress", "complete", "failed"] },
+                "created_at": { "type": "string", "format": "date-time" },
+                "completed_at": { "type": "string", "format": "date-time" },
+                "actions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["name", "source", "input_args", "state", "status"],
+                    "properties": {
+                      "name": { "type": "string" },
+                      "source": { "type": "string" },
+                      "input_args": { "type": "object" },
+                      "state": { "type": "string", "enum": ["pending", "active", "complete", "skipped", "failed"] },
+                      "status": { "type": "string", "enum": ["not_started", "success", "failed"] },
+                      "attempts": { "type": "integer" },
+                      "last_error": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 

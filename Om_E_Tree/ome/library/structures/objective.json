@@ -1,0 +1,42 @@
+{
+  "description": "Defines an objective made of multiple embedded task objects, with status tracking.",
+  "required_fields": ["objective_id", "goal_id", "description", "status", "tasks", "created_at"],
+  "fields": {
+    "objective_id": {
+      "type": "string",
+      "hint": "Unique ID for this objective"
+    },
+    "goal_id": {
+      "type": "string",
+      "hint": "The ID of the parent goal this objective belongs to"
+    },
+    "description": {
+      "type": "string",
+      "hint": "Explanation of the objective's purpose"
+    },
+    "status": {
+      "type": "string",
+      "allowed": ["pending", "in_progress", "complete", "failed"],
+      "hint": "Execution status; starts as 'pending'"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "ISO 8601 datetime",
+      "hint": "Time this objective was created"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "ISO 8601 datetime",
+      "optional": true,
+      "hint": "Time this objective was marked complete"
+    },
+    "tasks": {
+      "type": "list",
+      "hint": "Embedded list of task objects",
+      "items": {
+        "type": "object",
+        "$ref": "tasks.json"
+      }
+    }
+  }
+}

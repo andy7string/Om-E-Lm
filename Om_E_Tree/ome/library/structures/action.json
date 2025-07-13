@@ -1,0 +1,59 @@
+{
+    "description": "Defines the structure of a single executable action used within a task.",
+    "required_fields": ["name", "source", "input_args", "state", "status"],
+    "fields": {
+      "name": {
+        "type": "string",
+        "hint": "Action name from the action library (e.g. click_mouse)"
+      },
+      "source": {
+        "type": "string",
+        "hint": "Which handler this action belongs to (e.g. mouse, keyboard, system)"
+      },
+      "input_args": {
+        "type": "dict",
+        "hint": "Arguments required by the action"
+      },
+      "state": {
+        "type": "string",
+        "allowed": ["pending", "active", "complete", "skipped"],
+        "hint": "Execution state of this action; always starts as 'pending'"
+      },
+      "status": {
+        "type": "string",
+        "allowed": ["not_started", "success", "failed"],
+        "hint": "Result of the last attempt; must be 'not_started' if the action has never been executed"
+      },
+      "attempts": {
+        "type": "int",
+        "optional": true,
+        "hint": "How many times this action has been attempted; 0 or omitted if new"
+      },
+      "last_error": {
+        "type": "string",
+        "optional": true,
+        "hint": "Error message if the last attempt failed"
+      },
+      "screenshot_taken": {
+        "type": "boolean",
+        "optional": true,
+        "hint": "Whether a screenshot was captured after execution"
+      },
+      "deferred": {
+        "type": "boolean",
+        "optional": true,
+        "hint": "Marks whether this action is intentionally delayed or skipped"
+      },
+      "app_name": {
+        "type": "string",
+        "optional": true,
+        "hint": "Name of the application this action targets (e.g. 'Notes'). Only required for actions that interact with application UI elements."
+      },
+      "AXRolePath": {
+        "type": "string",
+        "optional": true,
+        "hint": "Accessibility path to the UI element for this action (e.g. 'AXWindow[0]/AXToolbar[1]/AXButton[0]'). Only required for actions that interact with application UI elements."
+      }
+    }
+  }
+  

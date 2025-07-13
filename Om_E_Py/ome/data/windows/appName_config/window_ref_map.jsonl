@@ -1,0 +1,6 @@
+{"bundle_id": "com.apple.mail", "ax_identifier": "Mail.messageViewer.window.1", "window_ref": "Mail.messageViewer.window.1"}
+{"bundle_id": "com.apple.mail", "ax_identifier": "open-panel", "window_ref": "FilePicker"}
+{"bundle_id": "com.apple.mail", "ax_identifier": "Mail.sendMessageAlert", "window_ref": "Mail.sendMessageAlert"}
+{"bundle_id": "*", "ax_identifier": "*", "window_ref": "Unknown"}
+{"bundle_id": "com.apple.finder", "title_keywords": ["*"], "window_ref": "Finder_MainWindow"}
+{"bundle_id": "com.apple.iCal", "title_keywords": ["*"], "window_ref": "Calendar_MainWindow"} 

@@ -1,0 +1,174 @@
+{
+  "name": "keyboard",
+  "description": "Keyboard actions for input, shortcuts, and browser control.",
+  "actions": [
+    {
+      "name": "press_key",
+      "input_args": ["key"],
+      "defaults": { "key": "enter" },
+      "description": "Press and release a single key (e.g. 'enter', 'esc', 'a'). This action simulates a simple key press.",
+      "source": "keyboard"
+    },
+    {
+      "name": "type_text",
+      "input_args": ["text"],
+      "defaults": { "text": "hello from Om-E" },
+      "description": "Type a string of characters as keyboard input. The text is typed without delays between characters.",
+      "source": "keyboard"
+    },
+    {
+      "name": "hotkey",
+      "input_args": ["keys"],
+      "defaults": { "keys": ["ctrl", "c"] },
+      "description": "Press a combination of keys simultaneously (e.g. ['ctrl', 'c']) to execute shortcuts like copy or paste.",
+      "source": "keyboard"
+    },
+    {
+      "name": "key_down",
+      "input_args": ["key"],
+      "defaults": { "key": "shift" },
+      "description": "Hold down a single key until released. This is useful for actions like highlighting text or using shortcuts.",
+      "source": "keyboard"
+    },
+    {
+      "name": "key_up",
+      "input_args": ["key"],
+      "defaults": { "key": "shift" },
+      "description": "Release a previously held key. It stops the action of holding the key down, like releasing the **Shift** key after selecting text.",
+      "source": "keyboard"
+    },
+    {
+      "name": "write_slow",
+      "input_args": ["text", "interval"],
+      "defaults": {
+        "text": "Typing slowly...",
+        "interval": 0.3
+      },
+      "description": "Type text one character at a time with a delay between keystrokes. Useful for simulating slow typing in automation.",
+      "source": "keyboard"
+    },
+    {
+      "name": "press_keys_sequence",
+      "input_args": ["keys"],
+      "defaults": { "keys": ["a", "b", "c"] },
+      "description": "Press and release a sequence of keys one at a time in order (e.g. ['a', 'b', 'c']). Useful for automating multi-key inputs.",
+      "source": "keyboard"
+    },
+    {
+      "name": "copy_selected_text",
+      "input_args": ["keys"],
+      "defaults": { "keys": ["ctrl", "c"] },
+      "description": "Press a combination of keys simultaneously (e.g. ['ctrl', 'c']) to execute shortcuts like copy or paste.",
+      "source": "keyboard"
+    },
+    {
+      "name": "paste_clipboard",
+      "input_args": [],
+      "description": "Paste clipboard contents (OS-detected shortcut). On macOS, this is `Cmd + V`, and on Windows, it’s `Ctrl + V`.",
+      "source": "keyboard"
+    },
+    {
+      "name": "refresh_browser",
+      "input_args": [],
+      "description": "Refresh the current browser tab (Cmd+R / Ctrl+R). It reloads the page or application.",
+      "source": "keyboard"
+    },
+    {
+      "name": "focus_address_bar",
+      "input_args": [],
+      "description": "Focus the address bar of the browser (Cmd+L / Ctrl+L). This action places the cursor in the browser’s URL field.",
+      "source": "keyboard"
+    },
+    {
+      "name": "new_tab",
+      "input_args": [],
+      "description": "Open a new browser tab (Cmd+T / Ctrl+T). It opens a new tab in your browser.",
+      "source": "keyboard"
+    },
+    {
+      "name": "close_tab",
+      "input_args": [],
+      "description": "Close the current browser tab (Cmd+W / Ctrl+W). This will close the active tab in the browser.",
+      "source": "keyboard"
+    },
+    {
+      "name": "navigate_back",
+      "input_args": [],
+      "description": "Navigate back to the previous page (Cmd+[ / Alt+Left). This simulates clicking the browser back button.",
+      "source": "keyboard"
+    },
+    {
+      "name": "navigate_forward",
+      "input_args": [],
+      "description": "Navigate forward to the next page (Cmd+] / Alt+Right). This simulates clicking the browser forward button.",
+      "source": "keyboard"
+    },
+    {
+      "name": "hold_and_press",
+      "input_args": ["key_to_hold", "key_to_press", "repeat_count"],
+      "defaults": {
+        "key_to_hold": "command",
+        "key_to_press": "tab",
+        "repeat_count": 8
+      },
+      "description": "Hold one key down while pressing another key a specified number of times. Example: Hold **Cmd** and press **Tab** 8 times to switch apps.",
+      "source": "keyboard"
+    },
+    {
+      "name": "key_hold",
+      "input_args": ["key", "duration"],
+      "defaults": {
+        "key": "shift",
+        "duration": 2
+      },
+      "description": "Hold down a single key (e.g., **Shift**) for a specified duration (in seconds). Useful for actions like selecting text.",
+      "source": "keyboard"
+    },
+    {
+      "name": "type_with_delay",
+      "input_args": ["text", "delay_between_keys"],
+      "defaults": {
+        "text": "Hello from Om-E",
+        "delay_between_keys": 0.3
+      },
+      "description": "Type text one character at a time with a delay between keystrokes. Useful for simulating slow typing.",
+      "source": "keyboard"
+    },
+    {
+      "name": "open_spotlight",
+      "input_args": [],
+      "description": "Open Spotlight Search (Cmd+Space). It allows you to quickly search and launch apps or files on macOS.",
+      "source": "keyboard"
+    },
+    {
+      "name": "switch_apps",
+      "input_args": [],
+      "description": "Switch between applications (Cmd+Tab). This lets you cycle through your open apps.",
+      "source": "keyboard"
+    },
+    {
+      "name": "lock_screen",
+      "input_args": [],
+      "description": "Lock the screen (Cmd+Control+Q). This action will lock your macOS device.",
+      "source": "keyboard"
+    },
+    {
+      "name": "screenshot",
+      "input_args": [],
+      "description": "Take a screenshot (Cmd+Shift+4). This allows you to capture a portion of the screen as an image.",
+      "source": "keyboard"
+    },
+    {
+      "name": "minimize_window",
+      "input_args": [],
+      "description": "Minimize the current window (Cmd+M). This action will minimize the active window to the dock.",
+      "source": "keyboard"
+    },
+    {
+      "name": "quit_application",
+      "input_args": [],
+      "description": "Quit the current application (Cmd+Q). This will close the active application.",
+      "source": "keyboard"
+    }
+  ]
+}

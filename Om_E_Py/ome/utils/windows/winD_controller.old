@@ -1,0 +1,337 @@
+"""
+Window State Scanner & Exporter (winD_controller.py)
+
+This script scans all windows (and sheets) for a given macOS app, exporting their state to a JSONL file.
+
+====================
+PURPOSE
+====================
+- Focuses the target app using bundle ID or app name.
+- Scans all windows and their attached sheets/dialogs.
+- Exports window and sheet metadata (title, role, size, focus, etc.) to a JSONL file.
+- Used for automation, debugging, and UI state tracking.
+
+====================
+KEY FEATURES
+====================
+- Resolves bundle ID from app name or bundle ID (with fuzzy fallback).
+- Focuses the app before scanning to ensure current window state.
+- Scans all windows and attached sheets/dialogs for metadata.
+- Writes output as a JSONL file (pretty-printed JSON array) to the directory returned by get_win_list_dir().
+- Can be used as a CLI tool or imported as a module.
+
+====================
+CLI USAGE EXAMPLES
+====================
+# Scan all windows for Mail and write to win_com.apple.mail.jsonl
+python -m ome.utils.windows.winD_controller com.apple.mail
+
+# Scan all windows for Notes by app name
+python -m ome.utils.windows.winD_controller Notes
+
+# Output will be written to the directory returned by get_win_list_dir(), e.g.:
+# ome/data/windows/win_com.apple.mail.jsonl
+
+====================
+WHEN TO USE
+====================
+- When you need a snapshot of all open windows and sheets for a given app.
+- For debugging window focus, modal dialogs, or UI automation state.
+"""
+
+import ome
+from ome.utils.builder.app.app_focus import ensure_app_focus
+import os
+import json
+from datetime import datetime
+from ome.utils.env.env import get_win_list_dir, WINDOW_REF_MAP_CONFIG
+from ome.utils.builder.app.appList_controller import bundle_id_exists, get_bundle_id
+import argparse
+import re
+from rapidfuzz import fuzz
+import time
+
+# ====================
+# OUTPUT DIRECTORY SETUP
+# ====================
+OUTPUT_DIR = get_win_list_dir()
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# ====================
+# SAFE ATTRIBUTE ACCESS
+# ====================
+def get_attr_safe(obj, attr):
+    """
+    Safely gets an attribute from an object, returning None if not present or if an exception occurs.
+    """
+    try:
+        return getattr(obj, attr, None)
+    except Exception:
+        return None
+
+# ====================
+# WINDOW & SHEET STATE
+# ====================
+def is_window_active(win, sheets):
+    """
+    Returns True if the window is focused, main, or has an active sheet.
+    """
+    if get_attr_safe(win, 'AXFocused') or get_attr_safe(win, 'AXMain'):
+        return True
+    for sheet in sheets:
+        if sheet.get('is_active'):
+            return True
+    return False
+
+def get_window_type_or_identifier(window_or_sheet):
+    """
+    Generalized function to detect window type or return AXIdentifier.
+    Handles both accessibility objects and dicts.
+    """
+    if isinstance(window_or_sheet, dict):
+        ax_identifier = window_or_sheet.get('AXIdentifier')
+    else:
+        ax_identifier = get_attr_safe(window_or_sheet, 'AXIdentifier')
+    if ax_identifier == "open-panel":
+        return "FilePicker"
+    if ax_identifier and "messageViewer" in ax_identifier:
+        return ax_identifier
+    if ax_identifier == "Mail.sendMessageAlert":
+        return "SendMessageAlert"
+    if ax_identifier:
+        return ax_identifier
+    return None
+
+def scan_sheet(sheet, parent_window_number, sheet_index, timing_stats=None):
+    """
+    Extracts key attributes from a sheet (AXSheet or AXDialog) for export.
+    """
+    t0 = time.perf_counter() if timing_stats is not None else None
+    ax_identifier = get_attr_safe(sheet, 'AXIdentifier')
+    if ax_identifier:
+        print(f"[AXIdentifier] Sheet {sheet_index}: {ax_identifier}")
+    detected_type = get_window_type_or_identifier(sheet)
+    if detected_type:
+        print(f"[WindowType] Sheet {sheet_index}: {detected_type}")
+    result = {
+        'sheet_index': sheet_index,
+        'AXTitle': get_attr_safe(sheet, 'AXTitle'),
+        'AXIdentifier': ax_identifier,
+        'AXRole': get_attr_safe(sheet, 'AXRole'),
+        'AXRoleDescription': get_attr_safe(sheet, 'AXRoleDescription'),
+        'AXSubrole': get_attr_safe(sheet, 'AXSubrole'),
+        'AXMain': get_attr_safe(sheet, 'AXMain'),
+        'AXFocused': get_attr_safe(sheet, 'AXFocused'),
+        'AXModal': get_attr_safe(sheet, 'AXModal'),
+        'is_active': bool(get_attr_safe(sheet, 'AXFocused') or get_attr_safe(sheet, 'AXModal')),
+        'AXSize': list(get_attr_safe(sheet, 'AXSize')) if get_attr_safe(sheet, 'AXSize') else None,
+        'timestamp': datetime.utcnow().isoformat() + 'Z',
+        'parent_window_number': parent_window_number
+    }
+    if timing_stats is not None and t0 is not None:
+        timing_stats['scan_sheet'] += time.perf_counter() - t0
+    return result
+
+def scan_window(win, window_number, timing_stats=None):
+    """
+    Scans a window, extracting its metadata and any attached sheets/dialogs.
+    Returns a dict with window info and a list of sheets.
+    """
+    t0 = time.perf_counter() if timing_stats is not None else None
+    ax_identifier = get_attr_safe(win, 'AXIdentifier')
+    if ax_identifier:
+        print(f"[AXIdentifier] Window {window_number}: {ax_identifier}")
+    detected_type = get_window_type_or_identifier(win)
+    if detected_type:
+        print(f"[WindowType] Window {window_number}: {detected_type}")
+    sheets = []
+    children = get_attr_safe(win, 'AXChildren') or []
+    for idx, child in enumerate(children):
+        if get_attr_safe(child, 'AXRole') in ('AXSheet', 'AXDialog'):
+            sheets.append(scan_sheet(child, window_number, idx, timing_stats=timing_stats))
+    info = {
+        'window_number': window_number,
+        'AXTitle': get_attr_safe(win, 'AXTitle'),
+        'AXIdentifier': ax_identifier,
+        'AXRole': get_attr_safe(win, 'AXRole'),
+        'AXRoleDescription': get_attr_safe(win, 'AXRoleDescription'),
+        'AXSubrole': get_attr_safe(win, 'AXSubrole'),
+        'AXMain': get_attr_safe(win, 'AXMain'),
+        'AXFocused': get_attr_safe(win, 'AXFocused'),
+        'AXModal': get_attr_safe(win, 'AXModal'),
+        'is_active': is_window_active(win, sheets),
+        'AXSize': list(get_attr_safe(win, 'AXSize')) if get_attr_safe(win, 'AXSize') else None,
+        'timestamp': datetime.utcnow().isoformat() + 'Z',
+        'sheets': sheets
+    }
+    if timing_stats is not None and t0 is not None:
+        timing_stats['scan_window'] += time.perf_counter() - t0
+    return info
+
+# ====================
+# NAV MAP HELPERS (for downstream automation)
+# ====================
+def get_nav_path(bundle_id, window_number, is_sheet=False):
+    """
+    Returns the nav file path for the given bundle_id and window_number, using the naming convention.
+    """
+    from ome.utils.env.env import NAV_EXPORT_DIR
+    base = f"appNav_{bundle_id}_{window_number}"
+    if is_sheet:
+        base += "_sheet"
+    return os.path.join(NAV_EXPORT_DIR, f"{base}.jsonl")
+
+def ensure_nav_for_window(bundle_id, window_number, is_sheet=False, sheet_index=0):
+    """
+    Checks if the nav file exists for the given window (and sheet if is_sheet). If not, creates it by calling build_nav_for_window from appNav_builder.
+    Returns the nav file path.
+    """
+    from ome.utils.builder.app.appNav_builder import build_nav_for_window
+    nav_path = get_nav_path(bundle_id, window_number, is_sheet)
+    if not os.path.exists(nav_path):
+        build_nav_for_window(bundle_id, window_number, is_sheet=is_sheet, sheet_index=sheet_index, out_path=nav_path)
+    else:
+        print(f"Nav file already exists: {nav_path}")
+    return nav_path
+
+# ====================
+# ACTIVE TARGET LOGIC
+# ====================
+def get_active_target(windows, bundle_id):
+    def get_title_for_window(win):
+        title = win.get('AXTitle')
+        return title or 'Unknown'
+
+    # 1. If an active window has any sheets, pick the last one as the active target
+    for win in windows:
+        if win['is_active'] and win.get('sheets'):
+            sheet = win['sheets'][-1]
+            parent_title = get_title_for_window(win)
+            window_ref = get_window_type_or_identifier(sheet)
+            if not window_ref:
+                # Fallback: use AXTitle sanitized if no AXIdentifier
+                window_ref = get_title_for_window(sheet).replace(' ', '_')[:32]
+            nav_map_name = f"appNav_{bundle_id}_{window_ref}.jsonl"
+            return {
+                "type": "sheet",
+                "window_title": parent_title,
+                "window_ref": window_ref,
+                "nav_map_name": nav_map_name,
+                "timestamp": sheet.get('timestamp')
+            }
+    # 2. Check for floating window
+    for win in windows:
+        if win.get('AXSubrole') == 'AXFloatingWindow':
+            title = get_title_for_window(win)
+            window_ref = get_window_type_or_identifier(win)
+            if not window_ref:
+                window_ref = title.replace(' ', '_')[:32]
+            nav_map_name = f"appNav_{bundle_id}_{window_ref}.jsonl"
+            return {
+                "type": "float",
+                "window_title": title,
+                "window_ref": window_ref,
+                "nav_map_name": nav_map_name,
+                "timestamp": win.get('timestamp')
+            }
+    # 3. Fallback: active window
+    for win in windows:
+        if win['is_active']:
+            title = get_title_for_window(win)
+            window_ref = get_window_type_or_identifier(win)
+            if not window_ref:
+                window_ref = title.replace(' ', '_')[:32]
+            nav_map_name = f"appNav_{bundle_id}_{window_ref}.jsonl"
+            return {
+                "type": "window",
+                "window_title": title,
+                "window_ref": window_ref,
+                "nav_map_name": nav_map_name,
+                "timestamp": win.get('timestamp')
+            }
+    return None
+
+def get_active_target_and_windows(bundle_id=None, app=None):
+    """
+    Returns the output dict with 'active_target' and 'windows' for the given bundle_id or app object.
+    If app is provided, uses it directly and skips focusing and bundle_id lookups.
+    Also writes the JSONL file (win_<bundleid>.jsonl) to disk every time.
+    Prints timing stats for performance analysis.
+    """
+    timing_stats = {'focus': 0.0, 'window_fetch': 0.0, 'scan_window': 0.0, 'scan_sheet': 0.0, 'write': 0.0, 'total': 0.0}
+    t_total_start = time.perf_counter()
+    if app is not None:
+        resolved_bundle_id = bundle_id or getattr(app, 'bundle_id', None)
+        t_window_fetch_start = time.perf_counter()
+        windows = app.windows() if hasattr(app, 'windows') else app.AXWindows
+        timing_stats['window_fetch'] = time.perf_counter() - t_window_fetch_start
+    else:
+        from ome.utils.builder.app.app_focus import ensure_app_focus
+        from ome.utils.builder.app.appList_controller import bundle_id_exists, get_bundle_id
+        input_id = bundle_id
+        t_focus_start = time.perf_counter()
+        canonical_bundle_id = bundle_id_exists(input_id)
+        if not canonical_bundle_id:
+            possible_bundle_id = get_bundle_id(input_id)
+            if possible_bundle_id:
+                canonical_bundle_id = bundle_id_exists(possible_bundle_id)
+                if not canonical_bundle_id:
+                    raise ValueError(f"'{input_id}' is neither a valid bundle ID nor a known app name.")
+            else:
+                raise ValueError(f"'{input_id}' is neither a valid bundle ID nor a known app name.")
+        resolved_bundle_id = canonical_bundle_id
+        focus_result = ensure_app_focus(resolved_bundle_id, fullscreen=True)
+        timing_stats['focus'] = time.perf_counter() - t_focus_start
+        if not (isinstance(focus_result, dict) and focus_result.get('status') == 'success'):
+            raise RuntimeError(f"Could not focus app with bundle ID '{resolved_bundle_id}'. Result: {focus_result}")
+        app = focus_result.get('app')
+        t_window_fetch_start = time.perf_counter()
+        windows = app.windows() if hasattr(app, 'windows') else app.AXWindows
+        timing_stats['window_fetch'] = time.perf_counter() - t_window_fetch_start
+    all_windows = []
+    t_scan_loop_start = time.perf_counter()
+    for idx, win in enumerate(windows):
+        info = scan_window(win, idx)
+        all_windows.append(info)
+    timing_stats['scan_loop'] = time.perf_counter() - t_scan_loop_start
+    output = {
+        "active_target": get_active_target(all_windows, resolved_bundle_id),
+        "windows": all_windows
+    }
+    # Always write the JSONL file
+    out_path = os.path.join(OUTPUT_DIR, f'win_{resolved_bundle_id}.jsonl')
+    t_write_start = time.perf_counter()
+    with open(out_path, 'w', encoding='utf-8') as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    timing_stats['write'] = time.perf_counter() - t_write_start
+    timing_stats['total'] = time.perf_counter() - t_total_start
+    print("[winD_controller Timing Stats]")
+    print(f"  focus: {timing_stats['focus']:.4f} s")
+    print(f"  window_fetch: {timing_stats['window_fetch']:.4f} s")
+    print(f"  scan_loop: {timing_stats['scan_loop']:.4f} s")
+    print(f"  write: {timing_stats['write']:.4f} s")
+    print(f"  total: {timing_stats['total']:.4f} s")
+    return output
+
+# ====================
+# MAIN CLI ENTRYPOINT
+# ====================
+def main():
+    """
+    CLI entrypoint: Resolves bundle ID, focuses app, scans all windows and sheets, writes output JSON.
+    """
+    parser = argparse.ArgumentParser(description="Scan and export window state for a macOS app.")
+    parser.add_argument("bundle_id", help="The bundle ID of the app (e.g., com.apple.mail) or app name (e.g., Mail)")
+    args = parser.parse_args()
+
+    output = get_active_target_and_windows(bundle_id=args.bundle_id)
+    resolved_bundle_id = bundle_id_exists(args.bundle_id) or get_bundle_id(args.bundle_id)
+    out_path = os.path.join(OUTPUT_DIR, f'win_{resolved_bundle_id}.jsonl')
+    with open(out_path, 'w', encoding='utf-8') as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    print(f'Wrote {out_path}')
+    # Print only the nav_map_name for scripting
+    print(output['active_target']['nav_map_name'])
+
+if __name__ == '__main__':
+    main() 

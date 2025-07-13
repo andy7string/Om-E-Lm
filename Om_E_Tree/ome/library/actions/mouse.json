@@ -1,0 +1,76 @@
+{
+  "name": "mouse",
+  "description": "Full list of available mouse actions using PyAutoGUI. These simulate user mouse behaviour including movement, clicks, drags, and scrolls. Useful for UI automation and screen interaction.\n\nWhen interacting with application UI elements, actions may include optional 'app_name' (the application name) and 'AXRolePath' (the accessibility path to the UI element) fields for robust automation and updating.",
+  "actions": [
+    {
+      "name": "move_mouse",
+      "input_args": ["x", "y"],
+      "defaults": { "x": 100, "y": 100 },
+      "description": "Move the mouse pointer to the absolute screen coordinates (x, y).",
+      "source": "mouse"
+    },
+    {
+      "name": "click_mouse",
+      "input_args": ["x", "y", "button"],
+      "defaults": { "x": 100, "y": 100, "button": "left" },
+      "description": "Click at the given screen coordinates using the specified button ('left', 'right', 'middle').",
+      "source": "mouse"
+    },
+    {
+      "name": "double_click_mouse",
+      "input_args": ["x", "y"],
+      "defaults": { "x": 100, "y": 100 },
+      "description": "Double-click at the specified screen coordinates.",
+      "source": "mouse"
+    },
+    {
+      "name": "right_click_mouse",
+      "input_args": ["x", "y"],
+      "defaults": { "x": 100, "y": 100 },
+      "description": "Right-click at the specified screen coordinates.",
+      "source": "mouse"
+    },
+    {
+      "name": "drag_mouse",
+      "input_args": ["start_x", "start_y", "end_x", "end_y", "duration", "button"],
+      "defaults": {
+        "start_x": 100,
+        "start_y": 100,
+        "end_x": 200,
+        "end_y": 200,
+        "duration": 0.3,
+        "button": "left"
+      },
+      "description": "Click and drag the mouse from (start_x, start_y) to (end_x, end_y) over the given duration in seconds.",
+      "source": "mouse"
+    },
+    {
+      "name": "scroll_mouse",
+      "input_args": ["amount"],
+      "defaults": { "amount": 10 },
+      "description": "Scroll the mouse wheel. Positive values scroll up, negative scroll down.",
+      "source": "mouse"
+    },
+    {
+      "name": "get_mouse_position",
+      "input_args": [],
+      "defaults": {},
+      "description": "Return the current screen coordinates of the mouse pointer.",
+      "source": "mouse"
+    },
+    {
+      "name": "mouse_down",
+      "input_args": ["button"],
+      "defaults": { "button": "left" },
+      "description": "Simulate pressing down the mouse button without releasing it.",
+      "source": "mouse"
+    },
+    {
+      "name": "mouse_up",
+      "input_args": ["button"],
+      "defaults": { "button": "left" },
+      "description": "Simulate releasing the mouse button.",
+      "source": "mouse"
+    }
+  ]
+}

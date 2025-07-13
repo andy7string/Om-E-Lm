@@ -1,0 +1,332 @@
+{
+  "goal_id": "notes_clickmap_sweep",
+  "description": "Open Notes and right-click all clickable elements, left-clicking parents with children, using the current clickmap.",
+  "status": "complete",
+  "created_at": "2025-07-13T12:08:46.468120",
+  "objectives": [
+    {
+      "objective_id": "obj_1",
+      "goal_id": "notes_clickmap_sweep",
+      "description": "Sweep all clickable elements in Notes UI",
+      "status": "complete",
+      "created_at": "2024-06-07T16:00:00Z",
+      "tasks": [
+        {
+          "task_id": "task_1",
+          "objective_id": "obj_1",
+          "description": "Launch Notes and click all elements",
+          "status": "complete",
+          "created_at": "2024-06-07T16:00:00Z",
+          "actions": [
+            {
+              "name": "launch_app",
+              "source": "system",
+              "input_args": {
+                "app_name": "Notes"
+              },
+              "state": "complete",
+              "status": "success",
+              "description": "Launch the Notes app",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:28.328348+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 140.0,
+                "y": 138.0,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Show folders",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:28.820142+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 271.5,
+                "y": 138.0,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Delete",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:29.262918+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 326.5,
+                "y": 138.0,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Create a note",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:29.697081+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0,
+                "button": "left",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Choose a style to apply to text",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:30.140049+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 311,
+                "y": 184,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXCheckBox"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Bold",
+              "role": "AXCheckBox",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:30.582556+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 341,
+                "y": 184,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXCheckBox"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Italic",
+              "role": "AXCheckBox",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:31.025686+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 370,
+                "y": 184,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXCheckBox"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Underline",
+              "role": "AXCheckBox",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:31.467213+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 398,
+                "y": 184,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXCheckBox"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Strikethrough",
+              "role": "AXCheckBox",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:31.908400+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 426,
+                "y": 184,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXCheckBox"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Pencil/Draw",
+              "role": "AXCheckBox",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:32.346455+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 226,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "TITLE",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:32.786017+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 284,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Heading",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:33.222510+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 312,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Body",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:33.660298+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 341,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Monostyled",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:34.101812+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 370,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Bulleted List",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:34.540062+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 400,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Dashed List",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:34.980531+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 428,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Numbered List",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:35.422896+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 471,
+                "button": "right",
+                "app_name": "Notes",
+                "AXRolePath": "AXButton"
+              },
+              "state": "complete",
+              "status": "complete",
+              "description": "Block Quote",
+              "role": "AXButton",
+              "attempts": 1,
+              "completed_at": "2025-07-13T12:09:35.863774+00:00"
+            }
+          ],
+          "completed_at": "2025-07-13T12:09:35.880813+00:00"
+        }
+      ],
+      "last_task_id": "task_1",
+      "completed_at": "2025-07-13T12:09:35.892915+00:00"
+    }
+  ],
+  "last_objective_id": "obj_1",
+  "completed_at": "2025-07-13T12:09:35.902266+00:00"
+}

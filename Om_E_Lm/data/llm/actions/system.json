@@ -1,0 +1,232 @@
+{
+  "name": "system",
+  "description": "System-level actions for macOS. These enable launching, controlling, and automating system behaviour, applications, files, and peripherals.",
+  "actions": [
+    {
+      "name": "list_apps",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Returns a list of installed apps in /Applications."
+    },
+    {
+      "name": "list_files",
+      "source": "system",
+      "input_args": ["folder_path"],
+      "defaults": {
+        "folder_path": "/Users"
+      },
+      "description": "Returns all files and folders in the specified directory."
+    },
+    {
+      "name": "get_system_info",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Returns basic macOS info like hostname and OS version."
+    },
+    {
+      "name": "list_usb_devices",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "List all connected USB devices using system_profiler."
+    },
+    {
+      "name": "list_displays",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "List connected displays and resolution info using system_profiler."
+    },
+    {
+      "name": "list_printers",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "List installed printers using lpstat."
+    },
+    {
+      "name": "write_file",
+      "source": "system",
+      "input_args": ["path", "content"],
+      "defaults": {
+        "path": "/tmp/ome_note.txt",
+        "content": "Hello from Om-E"
+      },
+      "description": "Writes text content to the specified file path."
+    },
+    {
+      "name": "delete_file",
+      "source": "system",
+      "input_args": ["path"],
+      "defaults": {
+        "path": "/tmp/ome_note.txt"
+      },
+      "description": "Deletes the file at the specified path."
+    },
+    {
+      "name": "copy_file",
+      "source": "system",
+      "input_args": ["src", "dst"],
+      "defaults": {
+        "src": "/tmp/ome_note.txt",
+        "dst": "/tmp/ome_note_copy.txt"
+      },
+      "description": "Copies a file from src to dst."
+    },
+    {
+      "name": "move_file",
+      "source": "system",
+      "input_args": ["src", "dst"],
+      "defaults": {
+        "src": "/tmp/ome_note_copy.txt",
+        "dst": "/tmp/ome_note_moved.txt"
+      },
+      "description": "Moves or renames a file from src to dst."
+    },
+    {
+      "name": "open_url",
+      "source": "system",
+      "input_args": ["url", "browser"],
+      "defaults": {
+        "url": "https://www.google.com",
+        "browser": "Google Chrome"
+      },
+      "description": "Open a URL in the specified browser."
+    },
+    {
+      "name": "open_browser",
+      "source": "system",
+      "input_args": ["browser"],
+      "defaults": {
+        "browser": "Google Chrome"
+      },
+      "description": "Launch the specified browser application."
+    },
+    {
+      "name": "close_browser",
+      "source": "system",
+      "input_args": ["browser"],
+      "defaults": {
+        "browser": "Google Chrome"
+      },
+      "description": "Quit the specified browser application using AppleScript."
+    },
+    {
+      "name": "lock_screen",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Locks the screen using macOS keyboard shortcut via AppleScript."
+    },
+    {
+      "name": "take_screenshot",
+      "source": "system",
+      "input_args": ["save_path"],
+      "defaults": {
+        "save_path": "/tmp/screenshot.png"
+      },
+      "description": "Take a screenshot of the screen and save it to the specified path."
+    },
+    {
+      "name": "launch_app",
+      "source": "system",
+      "input_args": ["app_name"],
+      "defaults": {
+        "app_name": "Notes"
+      },
+      "description": "Launch an installed application by name using the macOS open command."
+    },
+    {
+      "name": "quit_app",
+      "source": "system",
+      "input_args": ["app_name"],
+      "defaults": {
+        "app_name": "Notes"
+      },
+      "description": "Quit an application by name using AppleScript."
+    },
+    {
+      "name": "say_text",
+      "source": "system",
+      "input_args": ["text"],
+      "defaults": {
+        "text": "Hey Bunny, you're the best!"
+      },
+      "description": "Use the macOS voice synthesiser to speak the provided text."
+    },
+    {
+      "name": "set_volume",
+      "source": "system",
+      "input_args": ["level"],
+      "defaults": {
+        "level": 5
+      },
+      "description": "Set the system volume level (0–10) using AppleScript."
+    },
+    {
+      "name": "sleep_system",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Put the Mac to sleep using AppleScript."
+    },
+    {
+      "name": "restart_system",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Restart the Mac immediately (requires elevated permissions)."
+    },
+    {
+      "name": "shutdown_system",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Shut down the Mac immediately (requires elevated permissions)."
+    },
+    {
+      "name": "get_user_info",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Returns the current macOS user's username, home directory, and full name."
+    },
+    {
+      "name": "get_ip_address",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Returns the device's local IP address and hostname."
+    },
+    {
+      "name": "get_current_shell",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Returns the current shell being used (e.g., /bin/zsh)."
+    },
+    {
+      "name": "get_uptime",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Returns the system uptime from the 'uptime' command."
+    },
+    {
+      "name": "get_logged_in_users",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Returns a list of users currently logged into the system."
+    },
+    {
+      "name": "refresh_apps",
+      "source": "system",
+      "input_args": {},
+      "defaults": {},
+      "description": "Scans the /Applications folder and regenerates the app list file."
+    }
+  ]
+}

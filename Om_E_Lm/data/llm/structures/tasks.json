@@ -1,0 +1,72 @@
+{
+  "description": "Defines the structure of a task file with a list of executable actions and metadata for tracking.",
+  "required_fields": ["task_id", "objective_id", "description", "status", "actions", "created_at"],
+  "fields": {
+    "task_id": {
+      "type": "string",
+      "hint": "Unique identifier for this task"
+    },
+    "objective_id": {
+      "type": "string",
+      "hint": "The ID of the parent objective this task belongs to"
+    },
+    "description": {
+      "type": "string",
+      "hint": "Human-readable explanation of what this task does"
+    },
+    "status": {
+      "type": "string",
+      "allowed": ["pending", "in_progress", "complete"],
+      "hint": "Overall status of the task; must be 'pending' on creation"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "ISO 8601 datetime",
+      "hint": "Timestamp when the task file was created"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "ISO 8601 datetime",
+      "optional": true,
+      "hint": "Timestamp when the task was marked complete"
+    },
+    "actions": {
+      "type": "list",
+      "hint": "Ordered list of actions this task will execute",
+      "items": {
+        "name": {
+          "type": "string",
+          "hint": "Action name as defined in library/actions"
+        },
+        "source": {
+          "type": "string",
+          "hint": "Which handler module this action comes from"
+        },
+        "input_args": {
+          "type": "dict",
+          "hint": "Arguments passed to the handler"
+        },
+        "state": {
+          "type": "string",
+          "allowed": ["pending", "active", "complete", "skipped"],
+          "hint": "Execution state of this action; must start as 'pending'"
+        },
+        "status": {
+          "type": "string",
+          "allowed": ["not_started", "success", "failed"],
+          "hint": "Result of the most recent attempt; must be 'not_started' when created"
+        },
+        "attempts": {
+          "type": "int",
+          "optional": true,
+          "hint": "How many times this action has been attempted; 0 or omitted if new"
+        },
+        "last_error": {
+          "type": "string",
+          "optional": true,
+          "hint": "Last error message if the action failed"
+        }
+      }
+    }
+  }
+}

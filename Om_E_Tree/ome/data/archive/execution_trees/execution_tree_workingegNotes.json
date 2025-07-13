@@ -1,0 +1,243 @@
+{
+  "goal_id": "goal_notes_write_and_search",
+  "description": "Create a note, type love note, drag, search, save and close Notes app",
+  "status": "pending",
+  "created_at": "2025-06-05T03:24:39.147253",
+  "objectives": [
+    {
+      "objective_id": "obj_create_note",
+      "goal_id": "goal_notes_write_and_search",
+      "description": "Open a new note and type a message",
+      "status": "pending",
+      "created_at": "2025-06-04T21:00:01Z",
+      "tasks": [
+        {
+          "task_id": "task_click_new_note",
+          "objective_id": "obj_create_note",
+          "description": "Click the 'New Note' button",
+          "status": "pending",
+          "created_at": "2025-06-04T21:00:02Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 1899,
+                "y": 512
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 1899,
+                "y": 512,
+                "button": "left"
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            }
+          ]
+        },
+        {
+          "task_id": "task_type_message",
+          "objective_id": "obj_create_note",
+          "description": "Click body and type 'I love you bunny'",
+          "status": "pending",
+          "created_at": "2025-06-04T21:00:03Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 2125,
+                "y": 885
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 2125,
+                "y": 885,
+                "button": "left"
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            },
+            {
+              "name": "type_text",
+              "source": "keyboard",
+              "input_args": {
+                "text": "I love you bunny \ud83d\udc95"
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            }
+          ]
+        }
+      ],
+      "last_task_id": "task_type_message"
+    },
+    {
+      "objective_id": "obj_drag_inside_note",
+      "goal_id": "goal_notes_write_and_search",
+      "description": "Do a drag motion inside the note",
+      "status": "pending",
+      "created_at": "2025-06-04T21:00:04Z",
+      "tasks": [
+        {
+          "task_id": "task_drag",
+          "objective_id": "obj_drag_inside_note",
+          "description": "Drag the mouse across the note area",
+          "status": "pending",
+          "created_at": "2025-06-04T21:00:05Z",
+          "actions": [
+            {
+              "name": "drag_mouse",
+              "source": "mouse",
+              "input_args": {
+                "start_x": 2125,
+                "start_y": 885,
+                "end_x": 2300,
+                "end_y": 885,
+                "duration": 0.5,
+                "button": "left"
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            }
+          ]
+        }
+      ],
+      "last_task_id": "task_drag"
+    },
+    {
+      "objective_id": "obj_search_note",
+      "goal_id": "goal_notes_write_and_search",
+      "description": "Click search and type something",
+      "status": "pending",
+      "created_at": "2025-06-04T21:00:06Z",
+      "tasks": [
+        {
+          "task_id": "task_search_click",
+          "objective_id": "obj_search_note",
+          "description": "Click search field and type",
+          "status": "pending",
+          "created_at": "2025-06-04T21:00:07Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 2432,
+                "y": 512
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 2432,
+                "y": 512,
+                "button": "left"
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            },
+            {
+              "name": "type_text",
+              "source": "keyboard",
+              "input_args": {
+                "text": "bunny"
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            }
+          ]
+        }
+      ],
+      "last_task_id": "task_search_click"
+    },
+    {
+      "objective_id": "obj_save_and_close",
+      "goal_id": "goal_notes_write_and_search",
+      "description": "Save the note and close Notes app",
+      "status": "pending",
+      "created_at": "2025-06-04T21:00:08Z",
+      "tasks": [
+        {
+          "task_id": "task_save",
+          "objective_id": "obj_save_and_close",
+          "description": "Press Cmd+S to save",
+          "status": "pending",
+          "created_at": "2025-06-04T21:00:09Z",
+          "actions": [
+            {
+              "name": "hotkey",
+              "source": "keyboard",
+              "input_args": {
+                "keys": [
+                  "command",
+                  "s"
+                ]
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            }
+          ]
+        },
+        {
+          "task_id": "task_close_notes",
+          "objective_id": "obj_save_and_close",
+          "description": "Click the close button",
+          "status": "pending",
+          "created_at": "2025-06-04T21:00:10Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 1631,
+                "y": 512
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 1631,
+                "y": 512,
+                "button": "left"
+              },
+              "state": "pending",
+              "status": "not_started",
+              "attempts": 0
+            }
+          ]
+        }
+      ],
+      "last_task_id": "task_close_notes"
+    }
+  ],
+  "last_objective_id": "obj_save_and_close"
+}

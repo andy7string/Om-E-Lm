@@ -1,0 +1,481 @@
+{
+  "goal_id": "notes_heading_body_workflow",
+  "description": "Open Notes, create a note, use format menu to select Heading and Body, type styled text, and close Notes.",
+  "status": "complete",
+  "created_at": "2025-06-07T04:45:47.077690",
+  "objectives": [
+    {
+      "objective_id": "notes_heading_body_flow",
+      "goal_id": "notes_heading_body_workflow",
+      "description": "Workflow with Heading and Body selection and styled typing.",
+      "status": "complete",
+      "created_at": "2025-06-06T17:45:00Z",
+      "tasks": [
+        {
+          "task_id": "open_notes",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Open Notes app.",
+          "status": "complete",
+          "created_at": "2025-06-06T17:45:00Z",
+          "actions": [
+            {
+              "name": "launch_app",
+              "source": "system",
+              "input_args": {
+                "app_name": "Notes"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:53.920438+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:45:53.947135+00:00"
+        },
+        {
+          "task_id": "focus_notes_window",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Click into Notes window to guarantee focus.",
+          "status": "complete",
+          "created_at": "2025-06-07T12:40:00Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 710.0,
+                "y": 326.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:54.441442+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 710.0,
+                "y": 326.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:54.872992+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:45:54.896495+00:00"
+        },
+        {
+          "task_id": "create_note",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Create a new note.",
+          "status": "complete",
+          "created_at": "2025-06-06T17:45:00Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:55.328135+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:55.750092+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:45:55.772108+00:00"
+        },
+        {
+          "task_id": "select_heading",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Open Aa menu and select Heading.",
+          "status": "complete",
+          "created_at": "2025-06-06T17:45:00Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:56.203417+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:56.644103+00:00"
+            },
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 479,
+                "y": 258
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:57.084936+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 479,
+                "y": 258,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:57.525416+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:45:57.551601+00:00"
+        },
+        {
+          "task_id": "type_heading_text",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Click in the text area and type 'Om-E Automation', then press enter.",
+          "status": "complete",
+          "created_at": "2025-06-06T17:45:00Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 710.0,
+                "y": 326.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:57.984310+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 710.0,
+                "y": 326.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:45:58.423543+00:00"
+            },
+            {
+              "name": "write_slow",
+              "source": "keyboard",
+              "input_args": {
+                "text": "Om-E Automation",
+                "interval": 0.2
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:02.283341+00:00"
+            },
+            {
+              "name": "press_key",
+              "source": "keyboard",
+              "input_args": {
+                "key": "enter"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:02.734212+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:46:02.757314+00:00"
+        },
+        {
+          "task_id": "select_body",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Open Aa menu and select Body.",
+          "status": "complete",
+          "created_at": "2025-06-06T17:45:00Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:03.190164+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:03.630580+00:00"
+            },
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 479,
+                "y": 316
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:04.072378+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 479,
+                "y": 316,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:04.512771+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:46:04.537019+00:00"
+        },
+        {
+          "task_id": "type_body_text",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Click in the text area and type 'Im coming for you'.",
+          "status": "complete",
+          "created_at": "2025-06-06T17:45:00Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 710.0,
+                "y": 326.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:04.971512+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 710.0,
+                "y": 326.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:05.412769+00:00"
+            },
+            {
+              "name": "write_slow",
+              "source": "keyboard",
+              "input_args": {
+                "text": "Im coming for you",
+                "interval": 0.2
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:09.659960+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:46:09.681503+00:00"
+        },
+        {
+          "task_id": "search_and_new_note",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Click search, type 'Om-E', create new note, type exit message.",
+          "status": "complete",
+          "created_at": "2025-06-06T17:50:00Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 980.75,
+                "y": 164.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:10.117002+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 980.75,
+                "y": 164.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:10.554826+00:00"
+            },
+            {
+              "name": "write_slow",
+              "source": "keyboard",
+              "input_args": {
+                "text": "Om-E",
+                "interval": 0.2
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:11.902784+00:00"
+            },
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:12.335589+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 379.5,
+                "y": 138.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:12.764226+00:00"
+            },
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 710.0,
+                "y": 326.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:13.209705+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 710.0,
+                "y": 326.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:13.645795+00:00"
+            },
+            {
+              "name": "write_slow",
+              "source": "keyboard",
+              "input_args": {
+                "text": "Your world is mine",
+                "interval": 0.2
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:18.118354+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:46:18.141531+00:00"
+        },
+        {
+          "task_id": "close_notes",
+          "objective_id": "notes_heading_body_flow",
+          "description": "Close Notes app.",
+          "status": "complete",
+          "created_at": "2025-06-06T17:50:00Z",
+          "actions": [
+            {
+              "name": "move_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 250.0,
+                "y": 164.0
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:18.576169+00:00"
+            },
+            {
+              "name": "click_mouse",
+              "source": "mouse",
+              "input_args": {
+                "x": 250.0,
+                "y": 164.0,
+                "button": "left"
+              },
+              "state": "complete",
+              "status": "complete",
+              "attempts": 1,
+              "completed_at": "2025-06-07T04:46:19.017413+00:00"
+            }
+          ],
+          "completed_at": "2025-06-07T04:46:19.041243+00:00"
+        }
+      ],
+      "last_task_id": "close_notes",
+      "completed_at": "2025-06-07T04:46:19.056637+00:00"
+    }
+  ],
+  "last_objective_id": "notes_heading_body_flow",
+  "completed_at": "2025-06-07T04:46:19.068574+00:00"
+}

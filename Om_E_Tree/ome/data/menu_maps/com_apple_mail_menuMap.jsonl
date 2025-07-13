@@ -1,0 +1,390 @@
+{"title":"About Mail","menu_path":["Mail","About Mail"],"role":"AXMenuItem","enabled":true,"center":[133.0,41.5]}
+{"title":"Settings…","menu_path":["Mail","Settings…"],"role":"AXMenuItem","enabled":true,"center":[133.0,75.5]}
+{"title":"Accounts…","menu_path":["Mail","Accounts…"],"role":"AXMenuItem","enabled":true,"center":[133.0,98.5]}
+{"title":"Add Account…","menu_path":["Mail","Add Account…"],"role":"AXMenuItem","enabled":true,"center":[133.0,132.5]}
+{"title":"Text","menu_path":["Mail","Services","Text"],"role":"AXMenuItem","enabled":true,"center":[379.5,166.0]}
+{"title":"Add to Music as a Spoken Track","menu_path":["Mail","Services","Add to Music as a Spoken Track"],"role":"AXMenuItem","enabled":true,"center":[379.5,188.5]}
+{"title":"Make New Sticky Note","menu_path":["Mail","Services","Make New Sticky Note"],"role":"AXMenuItem","enabled":true,"center":[379.5,211.5]}
+{"title":"Open","menu_path":["Mail","Services","Open"],"role":"AXMenuItem","enabled":true,"center":[379.5,234.5]}
+{"title":"Show in Finder","menu_path":["Mail","Services","Show in Finder"],"role":"AXMenuItem","enabled":true,"center":[379.5,257.5]}
+{"title":"Show Info in Finder","menu_path":["Mail","Services","Show Info in Finder"],"role":"AXMenuItem","enabled":true,"center":[379.5,280.5]}
+{"title":"Searching","menu_path":["Mail","Services","Searching"],"role":"AXMenuItem","enabled":true,"center":[379.5,314.0]}
+{"title":"Look Up in Dictionary","menu_path":["Mail","Services","Look Up in Dictionary"],"role":"AXMenuItem","enabled":true,"center":[379.5,336.5]}
+{"title":"Search With Google","menu_path":["Mail","Services","Search With Google"],"role":"AXMenuItem","enabled":true,"center":[379.5,359.5]}
+{"title":"Development","menu_path":["Mail","Services","Development"],"role":"AXMenuItem","enabled":true,"center":[379.5,393.0]}
+{"title":"Activity Monitor","menu_path":["Mail","Services","Activity Monitor"],"role":"AXMenuItem","enabled":true,"center":[379.5,415.5]}
+{"title":"Allocations & Leaks","menu_path":["Mail","Services","Allocations & Leaks"],"role":"AXMenuItem","enabled":true,"center":[379.5,438.5]}
+{"title":"File Activity","menu_path":["Mail","Services","File Activity"],"role":"AXMenuItem","enabled":true,"center":[379.5,461.5]}
+{"title":"System Trace","menu_path":["Mail","Services","System Trace"],"role":"AXMenuItem","enabled":true,"center":[379.5,484.5]}
+{"title":"Create Service","menu_path":["Mail","Services","Create Service"],"role":"AXMenuItem","enabled":true,"center":[379.5,507.5]}
+{"title":"Create Workflow","menu_path":["Mail","Services","Create Workflow"],"role":"AXMenuItem","enabled":true,"center":[379.5,530.5]}
+{"title":"Make New AppleScript","menu_path":["Mail","Services","Make New AppleScript"],"role":"AXMenuItem","enabled":true,"center":[379.5,553.5]}
+{"title":"Run as AppleScript","menu_path":["Mail","Services","Run as AppleScript"],"role":"AXMenuItem","enabled":true,"center":[379.5,576.5]}
+{"title":"Time Profile Active Application","menu_path":["Mail","Services","Time Profile Active Application"],"role":"AXMenuItem","enabled":true,"center":[379.5,599.5]}
+{"title":"Time Profile App Under Mouse","menu_path":["Mail","Services","Time Profile App Under Mouse"],"role":"AXMenuItem","enabled":true,"center":[379.5,622.5]}
+{"title":"Time Profile Entire System","menu_path":["Mail","Services","Time Profile Entire System"],"role":"AXMenuItem","enabled":true,"center":[379.5,645.5]}
+{"title":"Toggle Instruments Recording","menu_path":["Mail","Services","Toggle Instruments Recording"],"role":"AXMenuItem","enabled":true,"center":[379.5,668.5]}
+{"title":"Services Settings…","menu_path":["Mail","Services","Services Settings…"],"role":"AXMenuItem","enabled":true,"center":[379.5,702.5]}
+{"title":"Hide Mail","menu_path":["Mail","Hide Mail"],"role":"AXMenuItem","enabled":false,"center":[133.0,200.5]}
+{"title":"Hide Others","menu_path":["Mail","Hide Others"],"role":"AXMenuItem","enabled":true,"center":[133.0,223.5]}
+{"title":"Show All","menu_path":["Mail","Show All"],"role":"AXMenuItem","enabled":false,"center":[133.0,246.5]}
+{"title":"Quit Mail","menu_path":["Mail","Quit Mail"],"role":"AXMenuItem","enabled":true,"center":[133.0,280.5]}
+{"title":"Quit and Keep Windows","menu_path":["Mail","Quit and Keep Windows"],"role":"AXMenuItem","enabled":true,"center":[133.0,280.5]}
+{"title":"New Message","menu_path":["File","New Message"],"role":"AXMenuItem","enabled":true,"center":[220.0,41.5]}
+{"title":"New Viewer Window","menu_path":["File","New Viewer Window"],"role":"AXMenuItem","enabled":true,"center":[220.0,64.5]}
+{"title":"New Viewer Tab","menu_path":["File","New Viewer Tab"],"role":"AXMenuItem","enabled":true,"center":[220.0,64.5]}
+{"title":"Open Message","menu_path":["File","Open Message"],"role":"AXMenuItem","enabled":true,"center":[220.0,87.5]}
+{"title":"Close","menu_path":["File","Close"],"role":"AXMenuItem","enabled":true,"center":[220.0,121.5]}
+{"title":"Close All","menu_path":["File","Close All"],"role":"AXMenuItem","enabled":true,"center":[220.0,121.5]}
+{"title":"Save","menu_path":["File","Save"],"role":"AXMenuItem","enabled":false,"center":[220.0,144.5]}
+{"title":"Save As…","menu_path":["File","Save As…"],"role":"AXMenuItem","enabled":true,"center":[220.0,167.5]}
+{"title":"Attach Files…","menu_path":["File","Attach Files…"],"role":"AXMenuItem","enabled":false,"center":[220.0,201.5]}
+{"title":"Save Attachments…","menu_path":["File","Save Attachments…"],"role":"AXMenuItem","enabled":true,"center":[220.0,224.5]}
+{"title":"Insert From iPhone or iPad","menu_path":["File","Insert From iPhone or iPad"],"role":"AXMenuItem","enabled":false,"center":[220.0,247.5]}
+{"title":"Quick Look Attachments…","menu_path":["File","Quick Look Attachments…"],"role":"AXMenuItem","enabled":true,"center":[220.0,270.5]}
+{"title":"Import Mailboxes…","menu_path":["File","Import Mailboxes…"],"role":"AXMenuItem","enabled":true,"center":[220.0,304.5]}
+{"title":"Export as PDF…","menu_path":["File","Export as PDF…"],"role":"AXMenuItem","enabled":true,"center":[220.0,338.5]}
+{"title":"Print…","menu_path":["File","Print…"],"role":"AXMenuItem","enabled":true,"center":[220.0,372.5]}
+{"title":"Undo","menu_path":["Edit","Undo"],"role":"AXMenuItem","enabled":false,"center":[292.5,41.5]}
+{"title":"Redo","menu_path":["Edit","Redo"],"role":"AXMenuItem","enabled":false,"center":[292.5,64.5]}
+{"title":"Cut","menu_path":["Edit","Cut"],"role":"AXMenuItem","enabled":false,"center":[292.5,98.5]}
+{"title":"Copy","menu_path":["Edit","Copy"],"role":"AXMenuItem","enabled":false,"center":[292.5,121.5]}
+{"title":"Paste","menu_path":["Edit","Paste"],"role":"AXMenuItem","enabled":false,"center":[292.5,144.5]}
+{"title":"Delete","menu_path":["Edit","Delete"],"role":"AXMenuItem","enabled":true,"center":[292.5,167.5]}
+{"title":"Select All","menu_path":["Edit","Select All"],"role":"AXMenuItem","enabled":true,"center":[292.5,190.5]}
+{"title":"Complete","menu_path":["Edit","Complete"],"role":"AXMenuItem","enabled":false,"center":[292.5,213.5]}
+{"title":"Paste as Quotation","menu_path":["Edit","Paste as Quotation"],"role":"AXMenuItem","enabled":false,"center":[292.5,247.5]}
+{"title":"Paste and Match Style","menu_path":["Edit","Paste and Match Style"],"role":"AXMenuItem","enabled":false,"center":[292.5,270.5]}
+{"title":"Append Selected Messages","menu_path":["Edit","Append Selected Messages"],"role":"AXMenuItem","enabled":false,"center":[292.5,304.5]}
+{"title":"Add Link…","menu_path":["Edit","Add Link…"],"role":"AXMenuItem","enabled":false,"center":[292.5,327.5]}
+{"title":"Remove Link","menu_path":["Edit","Remove Link"],"role":"AXMenuItem","enabled":false,"center":[292.5,327.5]}
+{"title":"Always Send Windows-Friendly Attachments","menu_path":["Edit","Attachments","Always Send Windows-Friendly Attachments"],"role":"AXMenuItem","enabled":true,"center":[615.0,350.5]}
+{"title":"Always Insert Attachments at End of Message","menu_path":["Edit","Attachments","Always Insert Attachments at End of Message"],"role":"AXMenuItem","enabled":true,"center":[615.0,373.5]}
+{"title":"Always","menu_path":["Edit","Include Attachments With Replies","Always"],"role":"AXMenuItem","enabled":true,"center":[546.5,373.5]}
+{"title":"Never","menu_path":["Edit","Include Attachments With Replies","Never"],"role":"AXMenuItem","enabled":true,"center":[546.5,396.5]}
+{"title":"When Adding Recipients","menu_path":["Edit","Include Attachments With Replies","When Adding Recipients"],"role":"AXMenuItem","enabled":true,"center":[546.5,419.5]}
+{"title":"Ask","menu_path":["Edit","Include Attachments With Replies","Ask"],"role":"AXMenuItem","enabled":true,"center":[546.5,442.5]}
+{"title":"Mailbox Search","menu_path":["Edit","Find","Mailbox Search"],"role":"AXMenuItem","enabled":true,"center":[564.5,407.5]}
+{"title":"Find…","menu_path":["Edit","Find","Find…"],"role":"AXMenuItem","enabled":true,"center":[564.5,441.5]}
+{"title":"Find Next","menu_path":["Edit","Find","Find Next"],"role":"AXMenuItem","enabled":true,"center":[564.5,464.5]}
+{"title":"Find Previous","menu_path":["Edit","Find","Find Previous"],"role":"AXMenuItem","enabled":true,"center":[564.5,487.5]}
+{"title":"Use Selection for Find","menu_path":["Edit","Find","Use Selection for Find"],"role":"AXMenuItem","enabled":true,"center":[564.5,521.5]}
+{"title":"Jump to Selection","menu_path":["Edit","Find","Jump to Selection"],"role":"AXMenuItem","enabled":true,"center":[564.5,544.5]}
+{"title":"Jump to Top","menu_path":["Edit","Find","Jump to Top"],"role":"AXMenuItem","enabled":true,"center":[564.5,567.5]}
+{"title":"Show Writing Tools","menu_path":["Edit","Writing Tools","Show Writing Tools"],"role":"AXMenuItem","enabled":true,"center":[524.0,430.5]}
+{"title":"Proofread","menu_path":["Edit","Writing Tools","Proofread"],"role":"AXMenuItem","enabled":true,"center":[524.0,464.5]}
+{"title":"Rewrite","menu_path":["Edit","Writing Tools","Rewrite"],"role":"AXMenuItem","enabled":true,"center":[524.0,487.5]}
+{"title":"Make Friendly","menu_path":["Edit","Writing Tools","Make Friendly"],"role":"AXMenuItem","enabled":true,"center":[524.0,521.5]}
+{"title":"Make Professional","menu_path":["Edit","Writing Tools","Make Professional"],"role":"AXMenuItem","enabled":true,"center":[524.0,544.5]}
+{"title":"Make Concise","menu_path":["Edit","Writing Tools","Make Concise"],"role":"AXMenuItem","enabled":true,"center":[524.0,567.5]}
+{"title":"Summarise","menu_path":["Edit","Writing Tools","Summarise"],"role":"AXMenuItem","enabled":true,"center":[524.0,601.5]}
+{"title":"Create Key Points","menu_path":["Edit","Writing Tools","Create Key Points"],"role":"AXMenuItem","enabled":true,"center":[524.0,624.5]}
+{"title":"Make List","menu_path":["Edit","Writing Tools","Make List"],"role":"AXMenuItem","enabled":true,"center":[524.0,647.5]}
+{"title":"Make Table","menu_path":["Edit","Writing Tools","Make Table"],"role":"AXMenuItem","enabled":true,"center":[524.0,670.5]}
+{"title":"Compose…","menu_path":["Edit","Writing Tools","Compose…"],"role":"AXMenuItem","enabled":true,"center":[524.0,704.5]}
+{"title":"Show Spelling and Grammar","menu_path":["Edit","Spelling and Grammar","Show Spelling and Grammar"],"role":"AXMenuItem","enabled":true,"center":[581.0,453.5]}
+{"title":"Check Document Now","menu_path":["Edit","Spelling and Grammar","Check Document Now"],"role":"AXMenuItem","enabled":false,"center":[581.0,476.5]}
+{"title":"While Typing","menu_path":["Edit","Spelling and Grammar","Check Spelling","While Typing"],"role":"AXMenuItem","enabled":false,"center":[773.0,510.5]}
+{"title":"Before Sending","menu_path":["Edit","Spelling and Grammar","Check Spelling","Before Sending"],"role":"AXMenuItem","enabled":false,"center":[773.0,533.5]}
+{"title":"Never","menu_path":["Edit","Spelling and Grammar","Check Spelling","Never"],"role":"AXMenuItem","enabled":false,"center":[773.0,556.5]}
+{"title":"Check Grammar with Spelling","menu_path":["Edit","Spelling and Grammar","Check Grammar with Spelling"],"role":"AXMenuItem","enabled":false,"center":[581.0,533.5]}
+{"title":"Correct Spelling Automatically","menu_path":["Edit","Spelling and Grammar","Correct Spelling Automatically"],"role":"AXMenuItem","enabled":false,"center":[581.0,556.5]}
+{"title":"Show Substitutions","menu_path":["Edit","Substitutions","Show Substitutions"],"role":"AXMenuItem","enabled":false,"center":[524.5,476.5]}
+{"title":"Smart Copy/Paste","menu_path":["Edit","Substitutions","Smart Copy/Paste"],"role":"AXMenuItem","enabled":false,"center":[524.5,510.5]}
+{"title":"Smart Quotes","menu_path":["Edit","Substitutions","Smart Quotes"],"role":"AXMenuItem","enabled":false,"center":[524.5,533.5]}
+{"title":"Smart Dashes","menu_path":["Edit","Substitutions","Smart Dashes"],"role":"AXMenuItem","enabled":false,"center":[524.5,556.5]}
+{"title":"Smart Links","menu_path":["Edit","Substitutions","Smart Links"],"role":"AXMenuItem","enabled":false,"center":[524.5,579.5]}
+{"title":"Text Replacement","menu_path":["Edit","Substitutions","Text Replacement"],"role":"AXMenuItem","enabled":false,"center":[524.5,602.5]}
+{"title":"Make Uppercase","menu_path":["Edit","Transformations","Make Uppercase"],"role":"AXMenuItem","enabled":false,"center":[516.5,499.5]}
+{"title":"Make Lowercase","menu_path":["Edit","Transformations","Make Lowercase"],"role":"AXMenuItem","enabled":false,"center":[516.5,522.5]}
+{"title":"Capitalise","menu_path":["Edit","Transformations","Capitalise"],"role":"AXMenuItem","enabled":false,"center":[516.5,545.5]}
+{"title":"Start Speaking","menu_path":["Edit","Speech","Start Speaking"],"role":"AXMenuItem","enabled":true,"center":[510.0,522.5]}
+{"title":"Stop Speaking","menu_path":["Edit","Speech","Stop Speaking"],"role":"AXMenuItem","enabled":false,"center":[510.0,545.5]}
+{"title":"Contact…","menu_path":["Edit","AutoFill","Contact…"],"role":"AXMenuItem","enabled":false,"center":[502.5,556.5]}
+{"title":"Passwords…","menu_path":["Edit","AutoFill","Passwords…"],"role":"AXMenuItem","enabled":false,"center":[502.5,579.5]}
+{"title":"Start Dictation…","menu_path":["Edit","Start Dictation…"],"role":"AXMenuItem","enabled":true,"center":[292.5,579.5]}
+{"title":"Emoji & Symbols","menu_path":["Edit","Emoji & Symbols"],"role":"AXMenuItem","enabled":true,"center":[292.5,602.5]}
+{"title":"Show Tab Bar","menu_path":["View","Show Tab Bar"],"role":"AXMenuItem","enabled":true,"center":[309.0,41.5]}
+{"title":"Show All Tabs","menu_path":["View","Show All Tabs"],"role":"AXMenuItem","enabled":true,"center":[309.0,64.5]}
+{"title":"Attachments","menu_path":["View","Sort By","Attachments"],"role":"AXMenuItem","enabled":true,"center":[546.5,98.5]}
+{"title":"Date","menu_path":["View","Sort By","Date"],"role":"AXMenuItem","enabled":true,"center":[546.5,121.5]}
+{"title":"Date Sent","menu_path":["View","Sort By","Date Sent"],"role":"AXMenuItem","enabled":true,"center":[546.5,121.5]}
+{"title":"Remind Me","menu_path":["View","Sort By","Remind Me"],"role":"AXMenuItem","enabled":true,"center":[546.5,144.5]}
+{"title":"Send Later","menu_path":["View","Sort By","Send Later"],"role":"AXMenuItem","enabled":true,"center":[546.5,167.5]}
+{"title":"Flags","menu_path":["View","Sort By","Flags"],"role":"AXMenuItem","enabled":true,"center":[546.5,190.5]}
+{"title":"From","menu_path":["View","Sort By","From"],"role":"AXMenuItem","enabled":true,"center":[546.5,213.5]}
+{"title":"Mailbox","menu_path":["View","Sort By","Mailbox"],"role":"AXMenuItem","enabled":true,"center":[546.5,236.5]}
+{"title":"Size","menu_path":["View","Sort By","Size"],"role":"AXMenuItem","enabled":true,"center":[546.5,259.5]}
+{"title":"Subject","menu_path":["View","Sort By","Subject"],"role":"AXMenuItem","enabled":true,"center":[546.5,282.5]}
+{"title":"To","menu_path":["View","Sort By","To"],"role":"AXMenuItem","enabled":true,"center":[546.5,305.5]}
+{"title":"Unread","menu_path":["View","Sort By","Unread"],"role":"AXMenuItem","enabled":true,"center":[546.5,328.5]}
+{"title":"Oldest Message on Top","menu_path":["View","Sort By","Oldest Message on Top"],"role":"AXMenuItem","enabled":true,"center":[546.5,362.5]}
+{"title":"Newest Message on Top","menu_path":["View","Sort By","Newest Message on Top"],"role":"AXMenuItem","enabled":true,"center":[546.5,385.5]}
+{"title":"Enable Message Filter","menu_path":["View","Filter","Enable Message Filter"],"role":"AXMenuItem","enabled":true,"center":[592.5,121.5]}
+{"title":"Include Mail From:","menu_path":["View","Filter","Include Mail From:"],"role":"AXMenuItem","enabled":false,"center":[592.5,155.5]}
+{"title":"Google","menu_path":["View","Filter","Google"],"role":"AXMenuItem","enabled":false,"center":[592.5,178.5]}
+{"title":"andy7string@gmail.com","menu_path":["View","Filter","andy7string@gmail.com"],"role":"AXMenuItem","enabled":false,"center":[592.5,201.5]}
+{"title":"Include:","menu_path":["View","Filter","Include:"],"role":"AXMenuItem","enabled":false,"center":[592.5,235.5]}
+{"title":"Unread","menu_path":["View","Filter","Unread"],"role":"AXMenuItem","enabled":false,"center":[592.5,258.5]}
+{"title":"Flagged","menu_path":["View","Filter","Flagged"],"role":"AXMenuItem","enabled":false,"center":[592.5,281.5]}
+{"title":"Addressed:","menu_path":["View","Filter","Addressed:"],"role":"AXMenuItem","enabled":false,"center":[592.5,315.5]}
+{"title":"To: Me","menu_path":["View","Filter","To: Me"],"role":"AXMenuItem","enabled":false,"center":[592.5,338.5]}
+{"title":"Cc: Me","menu_path":["View","Filter","Cc: Me"],"role":"AXMenuItem","enabled":false,"center":[592.5,361.5]}
+{"title":"Only Mail with Attachments","menu_path":["View","Filter","Only Mail with Attachments"],"role":"AXMenuItem","enabled":false,"center":[592.5,396.0]}
+{"title":"Only from VIP","menu_path":["View","Filter","Only from VIP"],"role":"AXMenuItem","enabled":false,"center":[592.5,419.5]}
+{"title":"Use Column Layout","menu_path":["View","Use Column Layout"],"role":"AXMenuItem","enabled":true,"center":[309.0,155.5]}
+{"title":"Show Bottom Preview","menu_path":["View","Show Bottom Preview"],"role":"AXMenuItem","enabled":true,"center":[309.0,178.5]}
+{"title":"Show Date and Time","menu_path":["View","Show Date and Time"],"role":"AXMenuItem","enabled":true,"center":[309.0,201.5]}
+{"title":"Show To/Cc Label","menu_path":["View","Show To/Cc Label"],"role":"AXMenuItem","enabled":true,"center":[309.0,224.5]}
+{"title":"Show Message Size","menu_path":["View","Show Message Size"],"role":"AXMenuItem","enabled":true,"center":[309.0,247.5]}
+{"title":"Show Contact Photo","menu_path":["View","Show Contact Photo"],"role":"AXMenuItem","enabled":true,"center":[309.0,270.5]}
+{"title":"Show Mail Categories","menu_path":["View","Show Mail Categories"],"role":"AXMenuItem","enabled":true,"center":[309.0,293.5]}
+{"title":"Show Priority Messages","menu_path":["View","Show Priority Messages"],"role":"AXMenuItem","enabled":true,"center":[309.0,316.5]}
+{"title":"About Categories…","menu_path":["View","About Categories…"],"role":"AXMenuItem","enabled":true,"center":[309.0,339.5]}
+{"title":"Highlight Conversations","menu_path":["View","Highlight Conversations"],"role":"AXMenuItem","enabled":true,"center":[309.0,373.5]}
+{"title":"Organise by Conversation","menu_path":["View","Organise by Conversation"],"role":"AXMenuItem","enabled":true,"center":[309.0,396.5]}
+{"title":"Expand All Conversations","menu_path":["View","Expand All Conversations"],"role":"AXMenuItem","enabled":true,"center":[309.0,419.5]}
+{"title":"Collapse All Conversations","menu_path":["View","Collapse All Conversations"],"role":"AXMenuItem","enabled":true,"center":[309.0,442.5]}
+{"title":"Cc Address Field","menu_path":["View","Cc Address Field"],"role":"AXMenuItem","enabled":true,"center":[309.0,476.5]}
+{"title":"Bcc Address Field","menu_path":["View","Bcc Address Field"],"role":"AXMenuItem","enabled":true,"center":[309.0,499.5]}
+{"title":"Reply-To Address Field","menu_path":["View","Reply-To Address Field"],"role":"AXMenuItem","enabled":true,"center":[309.0,522.5]}
+{"title":"Priority Field","menu_path":["View","Priority Field"],"role":"AXMenuItem","enabled":true,"center":[309.0,545.5]}
+{"title":"Show with Dark Background","menu_path":["View","Message","Show with Dark Background"],"role":"AXMenuItem","enabled":true,"center":[584.5,579.5]}
+{"title":"All Headers","menu_path":["View","Message","All Headers"],"role":"AXMenuItem","enabled":true,"center":[584.5,602.5]}
+{"title":"Raw Source","menu_path":["View","Message","Raw Source"],"role":"AXMenuItem","enabled":true,"center":[584.5,625.5]}
+{"title":"Hide Related Messages","menu_path":["View","Hide Related Messages"],"role":"AXMenuItem","enabled":false,"center":[309.0,602.5]}
+{"title":"Hide Sidebar","menu_path":["View","Hide Sidebar"],"role":"AXMenuItem","enabled":true,"center":[309.0,636.5]}
+{"title":"Hide Toolbar","menu_path":["View","Hide Toolbar"],"role":"AXMenuItem","enabled":true,"center":[309.0,659.5]}
+{"title":"Customise Toolbar…","menu_path":["View","Customise Toolbar…"],"role":"AXMenuItem","enabled":true,"center":[309.0,682.5]}
+{"title":"Show Favourites Bar","menu_path":["View","Show Favourites Bar"],"role":"AXMenuItem","enabled":true,"center":[309.0,705.5]}
+{"title":"Exit Full Screen","menu_path":["View","Exit Full Screen"],"role":"AXMenuItem","enabled":true,"center":[309.0,728.5]}
+{"title":"Take All Accounts Online","menu_path":["Mailbox","Take All Accounts Online"],"role":"AXMenuItem","enabled":false,"center":[364.0,41.5]}
+{"title":"Take All Accounts Offline","menu_path":["Mailbox","Take All Accounts Offline"],"role":"AXMenuItem","enabled":true,"center":[364.0,64.5]}
+{"title":"Get All New Mail","menu_path":["Mailbox","Get All New Mail"],"role":"AXMenuItem","enabled":true,"center":[364.0,87.5]}
+{"title":"Synchronise All Accounts","menu_path":["Mailbox","Synchronise All Accounts"],"role":"AXMenuItem","enabled":true,"center":[364.0,110.5]}
+{"title":"Mark All Messages as Read","menu_path":["Mailbox","Mark All Messages as Read"],"role":"AXMenuItem","enabled":true,"center":[364.0,133.5]}
+{"title":"Take “Google” Offline","menu_path":["Mailbox","Online Status","Take “Google” Offline"],"role":"AXMenuItem","enabled":true,"center":[632.0,156.5]}
+{"title":"Take “andy7string@gmail.com” Offline","menu_path":["Mailbox","Online Status","Take “andy7string@gmail.com” Offline"],"role":"AXMenuItem","enabled":true,"center":[632.0,179.5]}
+{"title":"Google","menu_path":["Mailbox","Get New Mail","Google"],"role":"AXMenuItem","enabled":true,"center":[585.5,179.5]}
+{"title":"andy7string@gmail.com","menu_path":["Mailbox","Get New Mail","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[585.5,202.5]}
+{"title":"Google","menu_path":["Mailbox","Synchronise","Google"],"role":"AXMenuItem","enabled":true,"center":[585.5,202.5]}
+{"title":"andy7string@gmail.com","menu_path":["Mailbox","Synchronise","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[585.5,225.5]}
+{"title":"In All Accounts…","menu_path":["Mailbox","Erase Deleted Items","In All Accounts…"],"role":"AXMenuItem","enabled":true,"center":[624.0,236.5]}
+{"title":"In All Accounts","menu_path":["Mailbox","Erase Deleted Items","In All Accounts"],"role":"AXMenuItem","enabled":true,"center":[624.0,236.5]}
+{"title":"On My Mac…","menu_path":["Mailbox","Erase Deleted Items","On My Mac…"],"role":"AXMenuItem","enabled":true,"center":[624.0,270.5]}
+{"title":"Google…","menu_path":["Mailbox","Erase Deleted Items","Google…"],"role":"AXMenuItem","enabled":true,"center":[624.0,293.5]}
+{"title":"andy7string@gmail.com…","menu_path":["Mailbox","Erase Deleted Items","andy7string@gmail.com…"],"role":"AXMenuItem","enabled":true,"center":[624.0,316.5]}
+{"title":"Erase Junk Mail","menu_path":["Mailbox","Erase Junk Mail"],"role":"AXMenuItem","enabled":true,"center":[364.0,259.5]}
+{"title":"New Mailbox…","menu_path":["Mailbox","New Mailbox…"],"role":"AXMenuItem","enabled":true,"center":[364.0,293.5]}
+{"title":"New Smart Mailbox…","menu_path":["Mailbox","New Smart Mailbox…"],"role":"AXMenuItem","enabled":true,"center":[364.0,316.5]}
+{"title":"Edit Smart Mailbox…","menu_path":["Mailbox","Edit Smart Mailbox…"],"role":"AXMenuItem","enabled":false,"center":[364.0,339.5]}
+{"title":"Duplicate Smart Mailbox","menu_path":["Mailbox","Duplicate Smart Mailbox"],"role":"AXMenuItem","enabled":false,"center":[364.0,362.5]}
+{"title":"New Smart Mailbox Folder…","menu_path":["Mailbox","New Smart Mailbox Folder…"],"role":"AXMenuItem","enabled":true,"center":[364.0,385.5]}
+{"title":"Rename Mailbox…","menu_path":["Mailbox","Rename Mailbox…"],"role":"AXMenuItem","enabled":false,"center":[364.0,408.5]}
+{"title":"Delete Mailbox…","menu_path":["Mailbox","Delete Mailbox…"],"role":"AXMenuItem","enabled":false,"center":[364.0,431.5]}
+{"title":"Export Mailbox…","menu_path":["Mailbox","Export Mailbox…"],"role":"AXMenuItem","enabled":true,"center":[364.0,454.5]}
+{"title":"All Inboxes","menu_path":["Mailbox","Go to Favourite Mailbox","All Inboxes"],"role":"AXMenuItem","enabled":true,"center":[566.5,488.5]}
+{"title":"VIPs","menu_path":["Mailbox","Go to Favourite Mailbox","VIPs"],"role":"AXMenuItem","enabled":true,"center":[566.5,511.5]}
+{"title":"Flagged","menu_path":["Mailbox","Go to Favourite Mailbox","Flagged"],"role":"AXMenuItem","enabled":true,"center":[566.5,534.5]}
+{"title":"All Drafts","menu_path":["Mailbox","Go to Favourite Mailbox","All Drafts"],"role":"AXMenuItem","enabled":true,"center":[566.5,557.5]}
+{"title":"All Sent","menu_path":["Mailbox","Go to Favourite Mailbox","All Sent"],"role":"AXMenuItem","enabled":true,"center":[566.5,580.5]}
+{"title":"All Inboxes","menu_path":["Mailbox","Move to Favourite Mailbox","All Inboxes"],"role":"AXMenuItem","enabled":true,"center":[573.0,511.5]}
+{"title":"VIPs","menu_path":["Mailbox","Move to Favourite Mailbox","VIPs"],"role":"AXMenuItem","enabled":false,"center":[573.0,534.5]}
+{"title":"Flagged","menu_path":["Mailbox","Move to Favourite Mailbox","Flagged"],"role":"AXMenuItem","enabled":false,"center":[573.0,557.5]}
+{"title":"All Drafts","menu_path":["Mailbox","Move to Favourite Mailbox","All Drafts"],"role":"AXMenuItem","enabled":true,"center":[573.0,580.5]}
+{"title":"All Sent","menu_path":["Mailbox","Move to Favourite Mailbox","All Sent"],"role":"AXMenuItem","enabled":true,"center":[573.0,603.5]}
+{"title":"Primary","menu_path":["Mailbox","Go to Mailbox Category","Primary"],"role":"AXMenuItem","enabled":true,"center":[586.0,534.5]}
+{"title":"Transactions","menu_path":["Mailbox","Go to Mailbox Category","Transactions"],"role":"AXMenuItem","enabled":true,"center":[586.0,557.5]}
+{"title":"Updates","menu_path":["Mailbox","Go to Mailbox Category","Updates"],"role":"AXMenuItem","enabled":true,"center":[586.0,580.5]}
+{"title":"Promotions","menu_path":["Mailbox","Go to Mailbox Category","Promotions"],"role":"AXMenuItem","enabled":true,"center":[586.0,603.5]}
+{"title":"All Mail","menu_path":["Mailbox","Go to Mailbox Category","All Mail"],"role":"AXMenuItem","enabled":true,"center":[586.0,626.5]}
+{"title":"Go to Previous Mailbox","menu_path":["Mailbox","Go to Previous Mailbox"],"role":"AXMenuItem","enabled":true,"center":[364.0,557.5]}
+{"title":"Go to Previous Unread Mailbox","menu_path":["Mailbox","Go to Previous Unread Mailbox"],"role":"AXMenuItem","enabled":true,"center":[364.0,557.5]}
+{"title":"Go to Next Mailbox","menu_path":["Mailbox","Go to Next Mailbox"],"role":"AXMenuItem","enabled":true,"center":[364.0,580.5]}
+{"title":"Go to Next Unread Mailbox","menu_path":["Mailbox","Go to Next Unread Mailbox"],"role":"AXMenuItem","enabled":true,"center":[364.0,580.5]}
+{"title":"Rebuild","menu_path":["Mailbox","Rebuild"],"role":"AXMenuItem","enabled":true,"center":[364.0,614.5]}
+{"title":"Send Again","menu_path":["Message","Send Again"],"role":"AXMenuItem","enabled":true,"center":[430.5,41.5]}
+{"title":"Reply","menu_path":["Message","Reply"],"role":"AXMenuItem","enabled":true,"center":[430.5,75.5]}
+{"title":"Reply All","menu_path":["Message","Reply All"],"role":"AXMenuItem","enabled":true,"center":[430.5,98.5]}
+{"title":"Forward","menu_path":["Message","Forward"],"role":"AXMenuItem","enabled":true,"center":[430.5,121.5]}
+{"title":"Forward as Attachment","menu_path":["Message","Forward as Attachment"],"role":"AXMenuItem","enabled":true,"center":[430.5,144.5]}
+{"title":"Forward Message and Parent as Attachments","menu_path":["Message","Forward Message and Parent as Attachments"],"role":"AXMenuItem","enabled":false,"center":[430.5,144.5]}
+{"title":"Redirect","menu_path":["Message","Redirect"],"role":"AXMenuItem","enabled":true,"center":[430.5,167.5]}
+{"title":"Remind Me in 1 Hour","menu_path":["Message","Remind Me","Remind Me in 1 Hour"],"role":"AXMenuItem","enabled":true,"center":[641.5,201.5]}
+{"title":"Remind Me Tomorrow","menu_path":["Message","Remind Me","Remind Me Tomorrow"],"role":"AXMenuItem","enabled":true,"center":[641.5,224.5]}
+{"title":"Remind Me Later…","menu_path":["Message","Remind Me","Remind Me Later…"],"role":"AXMenuItem","enabled":true,"center":[641.5,247.5]}
+{"title":"Clear Reminder","menu_path":["Message","Remind Me","Clear Reminder"],"role":"AXMenuItem","enabled":false,"center":[641.5,281.5]}
+{"title":"Ignore Follow-Up","menu_path":["Message","Ignore Follow-Up"],"role":"AXMenuItem","enabled":false,"center":[430.5,224.5]}
+{"title":"Mark as Unread","menu_path":["Message","Mark as Unread"],"role":"AXMenuItem","enabled":true,"center":[430.5,258.5]}
+{"title":"Move to Junk","menu_path":["Message","Move to Junk"],"role":"AXMenuItem","enabled":true,"center":[430.5,281.5]}
+{"title":"Mute","menu_path":["Message","Mute"],"role":"AXMenuItem","enabled":true,"center":[430.5,304.5]}
+{"title":"Orange","menu_path":["Message","Flag","Orange"],"role":"AXMenuItem","enabled":true,"center":[638.5,327.5]}
+{"title":"Red","menu_path":["Message","Flag","Red"],"role":"AXMenuItem","enabled":true,"center":[638.5,350.5]}
+{"title":"Purple","menu_path":["Message","Flag","Purple"],"role":"AXMenuItem","enabled":true,"center":[638.5,373.5]}
+{"title":"Blue","menu_path":["Message","Flag","Blue"],"role":"AXMenuItem","enabled":true,"center":[638.5,396.5]}
+{"title":"Yellow","menu_path":["Message","Flag","Yellow"],"role":"AXMenuItem","enabled":true,"center":[638.5,419.5]}
+{"title":"Green","menu_path":["Message","Flag","Green"],"role":"AXMenuItem","enabled":true,"center":[638.5,442.5]}
+{"title":"Grey","menu_path":["Message","Flag","Grey"],"role":"AXMenuItem","enabled":true,"center":[638.5,465.5]}
+{"title":"Clear Flag","menu_path":["Message","Flag","Clear Flag"],"role":"AXMenuItem","enabled":true,"center":[638.5,499.5]}
+{"title":"Toggle Flag","menu_path":["Message","Flag","Toggle Flag"],"role":"AXMenuItem","enabled":true,"center":[638.5,522.5]}
+{"title":"Low","menu_path":["Message","Set Priority","Low"],"role":"AXMenuItem","enabled":false,"center":[594.5,350.5]}
+{"title":"Normal","menu_path":["Message","Set Priority","Normal"],"role":"AXMenuItem","enabled":false,"center":[594.5,373.5]}
+{"title":"High","menu_path":["Message","Set Priority","High"],"role":"AXMenuItem","enabled":false,"center":[594.5,396.5]}
+{"title":"Archive","menu_path":["Message","Archive"],"role":"AXMenuItem","enabled":true,"center":[430.5,384.5]}
+{"title":"Move to Predicted Mailbox","menu_path":["Message","Move to Predicted Mailbox"],"role":"AXMenuItem","enabled":false,"center":[430.5,407.5]}
+{"title":"Google","menu_path":["Message","Move to","All Inboxes","Google"],"role":"AXMenuItem","enabled":true,"center":[899.5,430.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Move to","All Inboxes","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[899.5,453.5]}
+{"title":"Google","menu_path":["Message","Move to","All Drafts","Google"],"role":"AXMenuItem","enabled":true,"center":[897.0,454.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Move to","All Drafts","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[897.0,477.5]}
+{"title":"Google","menu_path":["Message","Move to","All Sent","Google"],"role":"AXMenuItem","enabled":true,"center":[898.5,477.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Move to","All Sent","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[898.5,500.5]}
+{"title":"Google","menu_path":["Message","Move to","All Bins","Google"],"role":"AXMenuItem","enabled":true,"center":[897.5,501.0]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Move to","All Bins","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[897.5,525.0]}
+{"title":"Google","menu_path":["Message","Move to","All Junk","Google"],"role":"AXMenuItem","enabled":true,"center":[899.5,524.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Move to","All Junk","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[899.5,547.5]}
+{"title":"Google","menu_path":["Message","Move to","All Mail","Google"],"role":"AXMenuItem","enabled":true,"center":[898.0,547.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Move to","All Mail","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[898.0,570.5]}
+{"title":"Recovered Messages (Google)","menu_path":["Message","Move to","On My Mac","Recovered Messages (Google)"],"role":"AXMenuItem","enabled":true,"center":[920.5,581.5]}
+{"title":"Google","menu_path":["Message","Move to","Google"],"role":"AXMenuItem","enabled":false,"center":[678.5,615.5]}
+{"title":"Important","menu_path":["Message","Move to","Important"],"role":"AXMenuItem","enabled":true,"center":[678.5,638.5]}
+{"title":"Archive","menu_path":["Message","Move to","Archive"],"role":"AXMenuItem","enabled":true,"center":[678.5,661.5]}
+{"title":"Drafts","menu_path":["Message","Move to","Drafts"],"role":"AXMenuItem","enabled":true,"center":[678.5,684.5]}
+{"title":"Sent","menu_path":["Message","Move to","Sent"],"role":"AXMenuItem","enabled":true,"center":[678.5,707.5]}
+{"title":"Bin","menu_path":["Message","Move to","Bin"],"role":"AXMenuItem","enabled":true,"center":[678.5,731.0]}
+{"title":"Junk","menu_path":["Message","Move to","Junk"],"role":"AXMenuItem","enabled":true,"center":[678.5,754.5]}
+{"title":"[Gmail]Trash","menu_path":["Message","Move to","[Gmail]Trash"],"role":"AXMenuItem","enabled":true,"center":[678.5,777.5]}
+{"title":"George Bellas","menu_path":["Message","Move to","George Bellas"],"role":"AXMenuItem","enabled":true,"center":[678.5,800.5]}
+{"title":"Inbox","menu_path":["Message","Move to","Inbox"],"role":"AXMenuItem","enabled":true,"center":[678.5,823.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Move to","andy7string@gmail.com"],"role":"AXMenuItem","enabled":false,"center":[678.5,857.5]}
+{"title":"Important","menu_path":["Message","Move to","Important"],"role":"AXMenuItem","enabled":true,"center":[678.5,880.5]}
+{"title":"Archive","menu_path":["Message","Move to","Archive"],"role":"AXMenuItem","enabled":true,"center":[678.5,903.5]}
+{"title":"Drafts","menu_path":["Message","Move to","Drafts"],"role":"AXMenuItem","enabled":true,"center":[678.5,926.5]}
+{"title":"Sent","menu_path":["Message","Move to","Sent"],"role":"AXMenuItem","enabled":true,"center":[678.5,949.5]}
+{"title":"Bin","menu_path":["Message","Move to","Bin"],"role":"AXMenuItem","enabled":true,"center":[678.5,973.0]}
+{"title":"Junk","menu_path":["Message","Move to","Junk"],"role":"AXMenuItem","enabled":true,"center":[678.5,996.5]}
+{"title":"Andy7String","menu_path":["Message","Move to","Andy7String"],"role":"AXMenuItem","enabled":true,"center":[678.5,1019.5]}
+{"title":"Inbox","menu_path":["Message","Move to","Inbox"],"role":"AXMenuItem","enabled":true,"center":[678.5,1042.5]}
+{"title":"Google","menu_path":["Message","Copy to","All Inboxes","Google"],"role":"AXMenuItem","enabled":true,"center":[899.5,453.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Copy to","All Inboxes","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[899.5,476.5]}
+{"title":"Google","menu_path":["Message","Copy to","All Drafts","Google"],"role":"AXMenuItem","enabled":true,"center":[897.0,477.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Copy to","All Drafts","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[897.0,500.5]}
+{"title":"Google","menu_path":["Message","Copy to","All Sent","Google"],"role":"AXMenuItem","enabled":true,"center":[898.5,500.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Copy to","All Sent","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[898.5,523.5]}
+{"title":"Google","menu_path":["Message","Copy to","All Bins","Google"],"role":"AXMenuItem","enabled":true,"center":[897.5,524.0]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Copy to","All Bins","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[897.5,548.0]}
+{"title":"Google","menu_path":["Message","Copy to","All Junk","Google"],"role":"AXMenuItem","enabled":true,"center":[899.5,547.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Copy to","All Junk","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[899.5,570.5]}
+{"title":"Google","menu_path":["Message","Copy to","All Mail","Google"],"role":"AXMenuItem","enabled":true,"center":[898.0,570.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Copy to","All Mail","andy7string@gmail.com"],"role":"AXMenuItem","enabled":true,"center":[898.0,593.5]}
+{"title":"Recovered Messages (Google)","menu_path":["Message","Copy to","On My Mac","Recovered Messages (Google)"],"role":"AXMenuItem","enabled":true,"center":[920.5,604.5]}
+{"title":"Google","menu_path":["Message","Copy to","Google"],"role":"AXMenuItem","enabled":false,"center":[678.5,638.5]}
+{"title":"Important","menu_path":["Message","Copy to","Important"],"role":"AXMenuItem","enabled":true,"center":[678.5,661.5]}
+{"title":"Archive","menu_path":["Message","Copy to","Archive"],"role":"AXMenuItem","enabled":true,"center":[678.5,684.5]}
+{"title":"Drafts","menu_path":["Message","Copy to","Drafts"],"role":"AXMenuItem","enabled":true,"center":[678.5,707.5]}
+{"title":"Sent","menu_path":["Message","Copy to","Sent"],"role":"AXMenuItem","enabled":true,"center":[678.5,730.5]}
+{"title":"Bin","menu_path":["Message","Copy to","Bin"],"role":"AXMenuItem","enabled":true,"center":[678.5,754.0]}
+{"title":"Junk","menu_path":["Message","Copy to","Junk"],"role":"AXMenuItem","enabled":true,"center":[678.5,777.5]}
+{"title":"[Gmail]Trash","menu_path":["Message","Copy to","[Gmail]Trash"],"role":"AXMenuItem","enabled":true,"center":[678.5,800.5]}
+{"title":"George Bellas","menu_path":["Message","Copy to","George Bellas"],"role":"AXMenuItem","enabled":true,"center":[678.5,823.5]}
+{"title":"Inbox","menu_path":["Message","Copy to","Inbox"],"role":"AXMenuItem","enabled":true,"center":[678.5,846.5]}
+{"title":"andy7string@gmail.com","menu_path":["Message","Copy to","andy7string@gmail.com"],"role":"AXMenuItem","enabled":false,"center":[678.5,880.5]}
+{"title":"Important","menu_path":["Message","Copy to","Important"],"role":"AXMenuItem","enabled":true,"center":[678.5,903.5]}
+{"title":"Archive","menu_path":["Message","Copy to","Archive"],"role":"AXMenuItem","enabled":true,"center":[678.5,926.5]}
+{"title":"Drafts","menu_path":["Message","Copy to","Drafts"],"role":"AXMenuItem","enabled":true,"center":[678.5,949.5]}
+{"title":"Sent","menu_path":["Message","Copy to","Sent"],"role":"AXMenuItem","enabled":true,"center":[678.5,972.5]}
+{"title":"Bin","menu_path":["Message","Copy to","Bin"],"role":"AXMenuItem","enabled":true,"center":[678.5,996.0]}
+{"title":"Junk","menu_path":["Message","Copy to","Junk"],"role":"AXMenuItem","enabled":true,"center":[678.5,1019.5]}
+{"title":"Andy7String","menu_path":["Message","Copy to","Andy7String"],"role":"AXMenuItem","enabled":true,"center":[678.5,1042.5]}
+{"title":"Inbox","menu_path":["Message","Copy to","Inbox"],"role":"AXMenuItem","enabled":true,"center":[678.5,1065.5]}
+{"title":"Move to “Google” Again","menu_path":["Message","Move to “Google” Again"],"role":"AXMenuItem","enabled":true,"center":[430.5,476.5]}
+{"title":"Apply Rules","menu_path":["Message","Apply Rules"],"role":"AXMenuItem","enabled":true,"center":[430.5,510.5]}
+{"title":"Add Sender to Contacts","menu_path":["Message","Add Sender to Contacts"],"role":"AXMenuItem","enabled":true,"center":[430.5,533.5]}
+{"title":"Categorise all messages from “Olivia Sheldon”","menu_path":["Message","Categorise Sender","Categorise all messages from “Olivia Sheldon”"],"role":"AXMenuItem","enabled":false,"center":[726.0,556.5]}
+{"title":"Automatically","menu_path":["Message","Categorise Sender","Automatically"],"role":"AXMenuItem","enabled":true,"center":[726.0,579.5]}
+{"title":"Always Categorise as","menu_path":["Message","Categorise Sender","Always Categorise as"],"role":"AXMenuItem","enabled":false,"center":[726.0,613.5]}
+{"title":"Primary","menu_path":["Message","Categorise Sender","Primary"],"role":"AXMenuItem","enabled":true,"center":[726.0,636.5]}
+{"title":"Transactions","menu_path":["Message","Categorise Sender","Transactions"],"role":"AXMenuItem","enabled":true,"center":[726.0,659.5]}
+{"title":"Updates","menu_path":["Message","Categorise Sender","Updates"],"role":"AXMenuItem","enabled":true,"center":[726.0,682.5]}
+{"title":"Promotions","menu_path":["Message","Categorise Sender","Promotions"],"role":"AXMenuItem","enabled":true,"center":[726.0,705.5]}
+{"title":"Remove Attachments","menu_path":["Message","Remove Attachments"],"role":"AXMenuItem","enabled":true,"center":[430.5,590.5]}
+{"title":"Show Fonts","menu_path":["Format","Show Fonts"],"role":"AXMenuItem","enabled":true,"center":[471.0,41.5]}
+{"title":"Show Colours","menu_path":["Format","Show Colours"],"role":"AXMenuItem","enabled":true,"center":[471.0,64.5]}
+{"title":"Insert Bulleted List","menu_path":["Format","Lists","Insert Bulleted List"],"role":"AXMenuItem","enabled":false,"center":[657.5,98.5]}
+{"title":"Insert Numbered List","menu_path":["Format","Lists","Insert Numbered List"],"role":"AXMenuItem","enabled":false,"center":[657.5,121.5]}
+{"title":"Increase List Level","menu_path":["Format","Lists","Increase List Level"],"role":"AXMenuItem","enabled":false,"center":[657.5,155.5]}
+{"title":"Decrease List Level","menu_path":["Format","Lists","Decrease List Level"],"role":"AXMenuItem","enabled":false,"center":[657.5,178.5]}
+{"title":"Convert to Numbered List","menu_path":["Format","Lists","Convert to Numbered List"],"role":"AXMenuItem","enabled":false,"center":[657.5,212.5]}
+{"title":"Bold","menu_path":["Format","Style","Bold"],"role":"AXMenuItem","enabled":false,"center":[649.5,121.5]}
+{"title":"Italic","menu_path":["Format","Style","Italic"],"role":"AXMenuItem","enabled":false,"center":[649.5,144.5]}
+{"title":"Underline","menu_path":["Format","Style","Underline"],"role":"AXMenuItem","enabled":false,"center":[649.5,167.5]}
+{"title":"Outline","menu_path":["Format","Style","Outline"],"role":"AXMenuItem","enabled":false,"center":[649.5,190.5]}
+{"title":"Bigger","menu_path":["Format","Style","Bigger"],"role":"AXMenuItem","enabled":true,"center":[649.5,224.5]}
+{"title":"Smaller","menu_path":["Format","Style","Smaller"],"role":"AXMenuItem","enabled":true,"center":[649.5,247.5]}
+{"title":"Copy Style","menu_path":["Format","Style","Copy Style"],"role":"AXMenuItem","enabled":false,"center":[649.5,281.5]}
+{"title":"Paste Style","menu_path":["Format","Style","Paste Style"],"role":"AXMenuItem","enabled":false,"center":[649.5,304.5]}
+{"title":"Remove Style","menu_path":["Format","Style","Remove Style"],"role":"AXMenuItem","enabled":false,"center":[649.5,327.5]}
+{"title":"Styles…","menu_path":["Format","Style","Styles…"],"role":"AXMenuItem","enabled":false,"center":[649.5,361.5]}
+{"title":"Align Left","menu_path":["Format","Alignment","Align Left"],"role":"AXMenuItem","enabled":false,"center":[650.0,144.5]}
+{"title":"Centre","menu_path":["Format","Alignment","Centre"],"role":"AXMenuItem","enabled":false,"center":[650.0,167.5]}
+{"title":"Justify","menu_path":["Format","Alignment","Justify"],"role":"AXMenuItem","enabled":false,"center":[650.0,190.5]}
+{"title":"Align Right","menu_path":["Format","Alignment","Align Right"],"role":"AXMenuItem","enabled":false,"center":[650.0,213.5]}
+{"title":"Float Left","menu_path":["Format","Alignment","Float Left"],"role":"AXMenuItem","enabled":false,"center":[650.0,247.5]}
+{"title":"Float Right","menu_path":["Format","Alignment","Float Right"],"role":"AXMenuItem","enabled":false,"center":[650.0,270.5]}
+{"title":"Remove Float","menu_path":["Format","Alignment","Remove Float"],"role":"AXMenuItem","enabled":false,"center":[650.0,293.5]}
+{"title":"Paragraph","menu_path":["Format","Alignment","Writing Direction","Paragraph"],"role":"AXMenuItem","enabled":false,"center":[803.0,327.5]}
+{"title":"\tDefault","menu_path":["Format","Alignment","Writing Direction","\tDefault"],"role":"AXMenuItem","enabled":false,"center":[803.0,350.5]}
+{"title":"\tLeft to Right","menu_path":["Format","Alignment","Writing Direction","\tLeft to Right"],"role":"AXMenuItem","enabled":false,"center":[803.0,373.5]}
+{"title":"\tRight to Left","menu_path":["Format","Alignment","Writing Direction","\tRight to Left"],"role":"AXMenuItem","enabled":false,"center":[803.0,396.5]}
+{"title":"Selection","menu_path":["Format","Alignment","Writing Direction","Selection"],"role":"AXMenuItem","enabled":false,"center":[803.0,430.5]}
+{"title":"\tDefault","menu_path":["Format","Alignment","Writing Direction","\tDefault"],"role":"AXMenuItem","enabled":false,"center":[803.0,453.5]}
+{"title":"\tLeft to Right","menu_path":["Format","Alignment","Writing Direction","\tLeft to Right"],"role":"AXMenuItem","enabled":false,"center":[803.0,476.5]}
+{"title":"\tRight to Left","menu_path":["Format","Alignment","Writing Direction","\tRight to Left"],"role":"AXMenuItem","enabled":false,"center":[803.0,499.5]}
+{"title":"Increase","menu_path":["Format","Indentation","Increase"],"role":"AXMenuItem","enabled":false,"center":[626.0,178.5]}
+{"title":"Decrease","menu_path":["Format","Indentation","Decrease"],"role":"AXMenuItem","enabled":false,"center":[626.0,201.5]}
+{"title":"Increase","menu_path":["Format","Quote Level","Increase"],"role":"AXMenuItem","enabled":false,"center":[633.0,201.5]}
+{"title":"Decrease","menu_path":["Format","Quote Level","Decrease"],"role":"AXMenuItem","enabled":false,"center":[633.0,224.5]}
+{"title":"Make Rich Text","menu_path":["Format","Make Rich Text"],"role":"AXMenuItem","enabled":false,"center":[471.0,235.5]}
+{"title":"Minimise","menu_path":["Window","Minimise"],"role":"AXMenuItem","enabled":false,"center":[654.5,41.5]}
+{"title":"Minimise All","menu_path":["Window","Minimise All"],"role":"AXMenuItem","enabled":false,"center":[654.5,41.5]}
+{"title":"Zoom","menu_path":["Window","Zoom"],"role":"AXMenuItem","enabled":false,"center":[654.5,64.5]}
+{"title":"Zoom All","menu_path":["Window","Zoom All"],"role":"AXMenuItem","enabled":false,"center":[654.5,64.5]}
+{"title":"Fill","menu_path":["Window","Fill"],"role":"AXMenuItem","enabled":false,"center":[654.5,87.5]}
+{"title":"Centre","menu_path":["Window","Centre"],"role":"AXMenuItem","enabled":false,"center":[654.5,110.5]}
+{"title":"Halves","menu_path":["Window","Move & Resize","Halves"],"role":"AXMenuItem","enabled":false,"center":[999.5,144.0]}
+{"title":"Left","menu_path":["Window","Move & Resize","Left"],"role":"AXMenuItem","enabled":false,"center":[999.5,166.5]}
+{"title":"Right","menu_path":["Window","Move & Resize","Right"],"role":"AXMenuItem","enabled":false,"center":[999.5,189.5]}
+{"title":"Top","menu_path":["Window","Move & Resize","Top"],"role":"AXMenuItem","enabled":false,"center":[999.5,212.5]}
+{"title":"Bottom","menu_path":["Window","Move & Resize","Bottom"],"role":"AXMenuItem","enabled":false,"center":[999.5,235.5]}
+{"title":"Quarters","menu_path":["Window","Move & Resize","Quarters"],"role":"AXMenuItem","enabled":false,"center":[999.5,269.0]}
+{"title":"Top Left","menu_path":["Window","Move & Resize","Top Left"],"role":"AXMenuItem","enabled":false,"center":[999.5,291.5]}
+{"title":"Top Right","menu_path":["Window","Move & Resize","Top Right"],"role":"AXMenuItem","enabled":false,"center":[999.5,314.5]}
+{"title":"Bottom Left","menu_path":["Window","Move & Resize","Bottom Left"],"role":"AXMenuItem","enabled":false,"center":[999.5,337.5]}
+{"title":"Bottom Right","menu_path":["Window","Move & Resize","Bottom Right"],"role":"AXMenuItem","enabled":false,"center":[999.5,360.5]}
+{"title":"Arrange","menu_path":["Window","Move & Resize","Arrange"],"role":"AXMenuItem","enabled":false,"center":[999.5,394.0]}
+{"title":"Left & Right","menu_path":["Window","Move & Resize","Left & Right"],"role":"AXMenuItem","enabled":false,"center":[999.5,416.5]}
+{"title":"Left & Quarters","menu_path":["Window","Move & Resize","Left & Quarters"],"role":"AXMenuItem","enabled":false,"center":[999.5,416.5]}
+{"title":"Right & Left","menu_path":["Window","Move & Resize","Right & Left"],"role":"AXMenuItem","enabled":false,"center":[999.5,439.5]}
+{"title":"Right & Quarters","menu_path":["Window","Move & Resize","Right & Quarters"],"role":"AXMenuItem","enabled":false,"center":[999.5,439.5]}
+{"title":"Top & Bottom","menu_path":["Window","Move & Resize","Top & Bottom"],"role":"AXMenuItem","enabled":false,"center":[999.5,462.5]}
+{"title":"Top & Quarters","menu_path":["Window","Move & Resize","Top & Quarters"],"role":"AXMenuItem","enabled":false,"center":[999.5,462.5]}
+{"title":"Bottom & Top","menu_path":["Window","Move & Resize","Bottom & Top"],"role":"AXMenuItem","enabled":false,"center":[999.5,485.5]}
+{"title":"Bottom & Quarters","menu_path":["Window","Move & Resize","Bottom & Quarters"],"role":"AXMenuItem","enabled":false,"center":[999.5,485.5]}
+{"title":"Quarters","menu_path":["Window","Move & Resize","Quarters"],"role":"AXMenuItem","enabled":false,"center":[999.5,508.5]}
+{"title":"Return to Previous Size","menu_path":["Window","Move & Resize","Return to Previous Size"],"role":"AXMenuItem","enabled":false,"center":[999.5,542.5]}
+{"title":"Left of Screen","menu_path":["Window","Full-Screen Tile","Left of Screen"],"role":"AXMenuItem","enabled":false,"center":[950.0,167.5]}
+{"title":"Right of Screen","menu_path":["Window","Full-Screen Tile","Right of Screen"],"role":"AXMenuItem","enabled":false,"center":[950.0,190.5]}
+{"title":"Remove Window from Set","menu_path":["Window","Remove Window from Set"],"role":"AXMenuItem","enabled":false,"center":[654.5,201.5]}
+{"title":"Message Viewer","menu_path":["Window","Message Viewer"],"role":"AXMenuItem","enabled":true,"center":[654.5,235.5]}
+{"title":"Show Previous Tab","menu_path":["Window","Show Previous Tab"],"role":"AXMenuItem","enabled":false,"center":[654.5,269.5]}
+{"title":"Show Next Tab","menu_path":["Window","Show Next Tab"],"role":"AXMenuItem","enabled":false,"center":[654.5,292.5]}
+{"title":"Move Tab to New Window","menu_path":["Window","Move Tab to New Window"],"role":"AXMenuItem","enabled":false,"center":[654.5,315.5]}
+{"title":"Merge All Windows","menu_path":["Window","Merge All Windows"],"role":"AXMenuItem","enabled":false,"center":[654.5,338.5]}
+{"title":"Photo Browser","menu_path":["Window","Photo Browser"],"role":"AXMenuItem","enabled":true,"center":[654.5,372.5]}
+{"title":"Previous Recipients","menu_path":["Window","Previous Recipients"],"role":"AXMenuItem","enabled":true,"center":[654.5,395.5]}
+{"title":"Activity","menu_path":["Window","Activity"],"role":"AXMenuItem","enabled":true,"center":[654.5,429.5]}
+{"title":"Connection Doctor","menu_path":["Window","Connection Doctor"],"role":"AXMenuItem","enabled":true,"center":[654.5,452.5]}
+{"title":"Bring All to Front","menu_path":["Window","Bring All to Front"],"role":"AXMenuItem","enabled":true,"center":[654.5,486.5]}
+{"title":"Arrange in Front","menu_path":["Window","Arrange in Front"],"role":"AXMenuItem","enabled":true,"center":[654.5,486.5]}
+{"title":"All Inboxes (Primary · 9 479 messages, 1 833 unread)","menu_path":["Window","All Inboxes (Primary · 9 479 messages, 1 833 unread)"],"role":"AXMenuItem","enabled":true,"center":[654.5,520.5]}
+{"title":"Mail Help","menu_path":["Help","Mail Help"],"role":"AXMenuItem","enabled":true,"center":[695.0,67.5]}
+{"title":"What’s New in Mail?","menu_path":["Help","What’s New in Mail?"],"role":"AXMenuItem","enabled":true,"center":[695.0,101.5]}

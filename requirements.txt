@@ -1,0 +1,59 @@
+# === Core Python Packages ===
+requests
+beautifulsoup4
+colorama
+PyYAML
+typing_extensions
+typing-inspection
+future
+psutil
+python-dotenv
+sniffio
+jiter
+
+# === Mac Automation & UI ===
+pyautogui
+pyperclip
+PyGetWindow
+PyMsgBox
+MouseInfo
+mac-pyxa
+appscript
+macimg
+pyxa
+
+# === PyObjC (macOS frameworks) ===
+pyobjc-core
+pyobjc-framework-Cocoa
+pyobjc-framework-Quartz
+pyobjc-framework-ApplicationServices
+
+# === OpenAI & AI ===
+openai
+rapidfuzz
+
+# === Data & Validation ===
+pydantic
+pydantic_core
+annotated-types
+jsonschema
+
+# === HTTP & Networking ===
+httpx
+httpcore
+h11
+certifi
+charset-normalizer
+idna
+urllib3
+
+# === Computer Vision ===
+opencv-python
+pillow
+
+# === Atomac/Legacy (if still needed for reference) ===
+# atomac
+# pyAtoM
+
+# === Project-specific ===
+# Add any other project-specific dependencies here 

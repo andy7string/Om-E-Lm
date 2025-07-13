@@ -1,0 +1,110 @@
+{
+    "description": "Root memory structure used to generate and track the execution lifecycle of goals, objectives, and tasks.",
+    "required_fields": ["goal_id", "description", "status", "created_at", "objectives"],
+    "fields": {
+      "goal_id": {
+        "type": "string",
+        "hint": "Unique identifier for the goal"
+      },
+      "description": {
+        "type": "string",
+        "hint": "Top-level goal or outcome to be achieved"
+      },
+      "status": {
+        "type": "string",
+        "allowed": ["pending", "in_progress", "complete", "failed"],
+        "hint": "Overall status of the goal"
+      },
+      "created_at": {
+        "type": "string",
+        "format": "ISO 8601 datetime",
+        "hint": "Timestamp when this execution tree was created"
+      },
+      "completed_at": {
+        "type": "string",
+        "format": "ISO 8601 datetime",
+        "optional": true,
+        "hint": "When the goal was marked as complete"
+      },
+      "objectives": {
+        "type": "list",
+        "hint": "List of embedded objectives with their full structure and tasks",
+        "items": {
+          "objective_id": {
+            "type": "string",
+            "hint": "Unique ID for the objective"
+          },
+          "goal_id": {
+            "type": "string",
+            "hint": "Parent goal ID"
+          },
+          "description": {
+            "type": "string",
+            "hint": "Intermediate milestone for the goal"
+          },
+          "status": {
+            "type": "string",
+            "allowed": ["pending", "in_progress", "complete", "failed"],
+            "hint": "Status of the objective"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "ISO 8601 datetime"
+          },
+          "completed_at": {
+            "type": "string",
+            "format": "ISO 8601 datetime",
+            "optional": true
+          },
+          "tasks": {
+            "type": "list",
+            "hint": "Embedded tasks within the objective",
+            "items": {
+              "task_id": {
+                "type": "string"
+              },
+              "objective_id": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "allowed": ["pending", "in_progress", "complete", "failed"]
+              },
+              "created_at": {
+                "type": "string",
+                "format": "ISO 8601 datetime"
+              },
+              "completed_at": {
+                "type": "string",
+                "format": "ISO 8601 datetime",
+                "optional": true
+              },
+              "actions": {
+                "type": "list",
+                "hint": "Sequence of executable atomic actions",
+                "items": {
+                  "name": { "type": "string" },
+                  "source": { "type": "string" },
+                  "input_args": { "type": "dict" },
+                  "state": {
+                    "type": "string",
+                    "allowed": ["pending", "active", "complete", "skipped", "failed"]
+                  },
+                  "status": {
+                    "type": "string",
+                    "allowed": ["not_started", "success", "failed"]
+                  },
+                  "attempts": { "type": "int", "optional": true },
+                  "last_error": { "type": "string", "optional": true }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

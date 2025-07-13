@@ -1,0 +1,37 @@
+{"path": ["system", "Favourites"], "omeClick": [124.0, 87.0], "title": "Favourites", "type": "system", "line_number": 18}
+{"path": ["aggregate", "All Inboxes"], "omeClick": [124.0, 110.0], "title": "All Inboxes", "type": "aggregate", "line_number": 19}
+{"path": ["aggregate", "All Inboxes", "Google"], "omeClick": [124.0, 134.0], "title": "Google", "type": "account", "line_number": 20, "pyxa_account": "Google"}
+{"path": ["aggregate", "All Inboxes", "andy7string@gmail.com"], "omeClick": [124.0, 158.0], "title": "andy7string@gmail.com", "type": "account", "line_number": 21, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["system", "VIPs"], "omeClick": [124.0, 182.0], "title": "VIPs", "type": "system", "line_number": 22}
+{"path": ["system", "VIPs", "George Bellas"], "omeClick": [124.0, 206.0], "title": "George Bellas", "type": "system_item", "line_number": 23, "parent_system": "VIPs"}
+{"path": ["system", "Flagged"], "omeClick": [124.0, 230.0], "title": "Flagged", "type": "system", "line_number": 24}
+{"path": ["flags", "Orange"], "omeClick": [124.0, 254.0], "title": "Orange", "type": "flag", "line_number": 25}
+{"path": ["flags", "Red"], "omeClick": [124.0, 278.0], "title": "Red", "type": "flag", "line_number": 26}
+{"path": ["aggregate", "All Drafts"], "omeClick": [124.0, 302.0], "title": "All Drafts", "type": "aggregate", "line_number": 27}
+{"path": ["aggregate", "All Drafts", "Google"], "omeClick": [124.0, 326.0], "title": "Google", "type": "account", "line_number": 28, "pyxa_account": "Google"}
+{"path": ["aggregate", "All Drafts", "andy7string@gmail.com"], "omeClick": [124.0, 350.0], "title": "andy7string@gmail.com", "type": "account", "line_number": 29, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["aggregate", "All Sent"], "omeClick": [124.0, 374.0], "title": "All Sent", "type": "aggregate", "line_number": 30}
+{"path": ["aggregate", "All Sent", "Google"], "omeClick": [124.0, 398.0], "title": "Google", "type": "account", "line_number": 31, "pyxa_account": "Google"}
+{"path": ["aggregate", "All Sent", "andy7string@gmail.com"], "omeClick": [124.0, 422.0], "title": "andy7string@gmail.com", "type": "account", "line_number": 32, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["system", "Smart Mailboxes"], "omeClick": [124.0, 458.0], "title": "Smart Mailboxes", "type": "system", "line_number": 33}
+{"path": ["system", "On My Mac"], "omeClick": [124.0, 493.0], "title": "On My Mac", "type": "system", "line_number": 34}
+{"path": ["accounts", "Google"], "omeClick": [124.0, 528.0], "title": "Google", "type": "account", "line_number": 35, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "Important"], "omeClick": [124.0, 551.0], "title": "Important", "type": "unknown_mailbox", "line_number": 36, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "Inbox"], "omeClick": [124.0, 575.0], "title": "Inbox", "type": "unknown_mailbox", "line_number": 37, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "Drafts"], "omeClick": [124.0, 599.0], "title": "Drafts", "type": "unknown_mailbox", "line_number": 38, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "Sent"], "omeClick": [124.0, 623.0], "title": "Sent", "type": "unknown_mailbox", "line_number": 39, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "Junk"], "omeClick": [124.0, 647.0], "title": "Junk", "type": "unknown_mailbox", "line_number": 40, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "Bin"], "omeClick": [124.0, 671.0], "title": "Bin", "type": "unknown_mailbox", "line_number": 41, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "Archive"], "omeClick": [124.0, 695.0], "title": "Archive", "type": "unknown_mailbox", "line_number": 42, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "[Gmail]Trash"], "omeClick": [124.0, 719.0], "title": "[Gmail]Trash", "type": "unknown_mailbox", "line_number": 43, "pyxa_account": "Google"}
+{"path": ["accounts", "Google", "George Bellas"], "omeClick": [124.0, 743.0], "title": "George Bellas", "type": "unknown_mailbox", "line_number": 44, "pyxa_account": "Google"}
+{"path": ["accounts", "andy7string@gmail.com"], "omeClick": [124.0, 779.0], "title": "andy7string@gmail.com", "type": "account", "line_number": 45, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "Important"], "omeClick": [124.0, 802.0], "title": "Important", "type": "unknown_mailbox", "line_number": 46, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "Inbox"], "omeClick": [124.0, 826.0], "title": "Inbox", "type": "unknown_mailbox", "line_number": 47, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "Drafts"], "omeClick": [124.0, 850.0], "title": "Drafts", "type": "unknown_mailbox", "line_number": 48, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "Sent"], "omeClick": [124.0, 874.0], "title": "Sent", "type": "unknown_mailbox", "line_number": 49, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "Junk"], "omeClick": [124.0, 898.0], "title": "Junk", "type": "unknown_mailbox", "line_number": 50, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "Bin"], "omeClick": [124.0, 922.0], "title": "Bin", "type": "unknown_mailbox", "line_number": 51, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "Archive"], "omeClick": [124.0, 946.0], "title": "Archive", "type": "unknown_mailbox", "line_number": 52, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "Andy7String"], "omeClick": [124.0, 970.0], "title": "Andy7String", "type": "unknown_mailbox", "line_number": 53, "pyxa_account": "andy7string@gmail.com"}
+{"path": ["accounts", "andy7string@gmail.com", "unknown"], "omeClick": [124.0, 997.5], "title": "unknown", "type": "unknown_mailbox", "line_number": 54, "pyxa_account": "andy7string@gmail.com"}

@@ -1,0 +1,6 @@
+{"bundle_id": "com.apple.mail", "window_ref": "Mail.messageViewer.window.1", "associations": {"message_list_jsonl": "<MESSAGE_EXPORT_DIR>/messages/mail_com.apple.mail.inbox.jsonl"}}
+{"bundle_id": "com.apple.mail", "window_ref": "FilePicker", "associations": {"picker_jsonl": "<PICKER_EXPORT_DIR>/picker_com.apple.mail.jsonl"}}
+{"bundle_id": "com.apple.mail", "window_ref": "Mail.sendMessageAlert", "associations": {}}
+{"bundle_id": "com.apple.mail", "window_ref": "_NS:41", "associations": {"picker_jsonl": "<PICKER_EXPORT_DIR>/picker_com.apple.mail.jsonl"}}
+{"bundle_id": "com.apple.mail", "window_ref": "*", "associations": {}}
+{"bundle_id": "com.apple.finder", "window_ref": "*", "associations": {}} 

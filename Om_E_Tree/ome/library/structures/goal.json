@@ -1,0 +1,38 @@
+{
+  "description": "Defines the structure of a high-level goal, which contains embedded objectives.",
+  "required_fields": ["goal_id", "description", "status", "objectives", "created_at"],
+  "fields": {
+    "goal_id": {
+      "type": "string",
+      "hint": "Unique identifier for the goal"
+    },
+    "description": {
+      "type": "string",
+      "hint": "High-level mission to achieve (e.g., Automate browser testing)"
+    },
+    "status": {
+      "type": "string",
+      "allowed": ["pending", "running", "complete", "failed"],
+      "hint": "Current execution status of this goal; default is 'pending' when first created"
+    },
+    "objectives": {
+      "type": "list",
+      "hint": "Embedded list of objective objects belonging to this goal",
+      "items": {
+        "type": "object",
+        "$ref": "objective.json"
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "ISO 8601 datetime",
+      "hint": "Timestamp when the goal was created"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "ISO 8601 datetime",
+      "optional": true,
+      "hint": "Timestamp when the goal was completed"
+    }
+  }
+}

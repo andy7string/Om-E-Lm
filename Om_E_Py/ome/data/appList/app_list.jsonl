@@ -1,0 +1,187 @@
+{"name": "Accessibility Inspector", "bundle_id": "com.apple.AccessibilityInspector"}
+{"name": "Activity Monitor", "bundle_id": "com.apple.ActivityMonitor"}
+{"name": "AddPrinter", "bundle_id": "com.apple.print.add"}
+{"name": "AirBeam", "bundle_id": "com.appologics.airbeam.mac"}
+{"name": "AirPort Utility", "bundle_id": "com.apple.airport.airportutility"}
+{"name": "Alpaca Electron", "bundle_id": "com.electron.alpaca-electron"}
+{"name": "AnyDesk", "bundle_id": "com.philandro.anydesk"}
+{"name": "AnythingLLM", "bundle_id": "com.anythingllm"}
+{"name": "App Store", "bundle_id": "com.apple.AppStore"}
+{"name": "Apple Diagnostics", "bundle_id": "com.apple.DiagnosticsModeAssistant"}
+{"name": "Arc", "bundle_id": "company.thebrowser.Browser"}
+{"name": "Archi", "bundle_id": "com.archimatetool.editor"}
+{"name": "Archive Utility", "bundle_id": "com.apple.archiveutility"}
+{"name": "Audio MIDI Setup", "bundle_id": "com.apple.audio.AudioMIDISetup"}
+{"name": "Automator", "bundle_id": "com.apple.Automator"}
+{"name": "AVB Configuration", "bundle_id": "com.apple.AVB-Audio-Configuration"}
+{"name": "Batteries", "bundle_id": "com.apple.Batteries"}
+{"name": "Bluetooth File Exchange", "bundle_id": "com.apple.BluetoothFileExchange"}
+{"name": "BluetoothSetupAssistant", "bundle_id": "com.apple.BluetoothSetupAssistant"}
+{"name": "Books", "bundle_id": "com.apple.iBooksX"}
+{"name": "Boot Camp Assistant", "bundle_id": "com.apple.bootcampassistant"}
+{"name": "Calculator", "bundle_id": "com.apple.calculator"}
+{"name": "Calendar", "bundle_id": "com.apple.iCal"}
+{"name": "CamTwist", "bundle_id": "com.allocinit.CamTwist"}
+{"name": "Certificate Assistant", "bundle_id": "com.apple.CertificateAssistant"}
+{"name": "ChatGPT", "bundle_id": "com.openai.chat"}
+{"name": "Chess", "bundle_id": "com.apple.Chess"}
+{"name": "Clock", "bundle_id": "com.apple.clock"}
+{"name": "ColorSync Utility", "bundle_id": "com.apple.ColorSyncUtility"}
+{"name": "Console", "bundle_id": "com.apple.Console"}
+{"name": "Contacts", "bundle_id": "com.apple.AddressBook"}
+{"name": "Corel Font Manager", "bundle_id": "com.corel.coreldrawsuite.2022.fontmanager"}
+{"name": "Corel PHOTO-PAINT", "bundle_id": "com.corel.coreldrawsuite.2022.photopaint"}
+{"name": "CorelDRAW", "bundle_id": "com.corel.coreldrawsuite.2022.coreldraw"}
+{"name": "crash_report_sender", "bundle_id": "com.Breakpad.crash_report_sender"}
+{"name": "Create ML", "bundle_id": "com.apple.CreateML"}
+{"name": "Cursor", "bundle_id": "com.todesktop.230313mzl4w4u92"}
+{"name": "Desk View", "bundle_id": "com.apple.DeskCam"}
+{"name": "Dictionary", "bundle_id": "com.apple.Dictionary"}
+{"name": "Digital Color Meter", "bundle_id": "com.apple.DigitalColorMeter"}
+{"name": "Directory Utility", "bundle_id": "com.apple.DirectoryUtility"}
+{"name": "Discord", "bundle_id": "com.hnc.Discord"}
+{"name": "Disk Utility", "bundle_id": "com.apple.DiskUtility"}
+{"name": "DVD Player", "bundle_id": "com.apple.DVDPlayer"}
+{"name": "Enhanced Logging", "bundle_id": "com.apple.EnhancedLogging"}
+{"name": "Erase Assistant", "bundle_id": "com.apple.EraseAssistant"}
+{"name": "Expansion Slot Utility", "bundle_id": "com.apple.ExpansionSlotUtility"}
+{"name": "EZbass", "bundle_id": "com.toontrack.ezbasshost"}
+{"name": "EZkeys", "bundle_id": "com.toontrack.ezkeyshost"}
+{"name": "EZmix", "bundle_id": "com.toontrack.ezmixhost"}
+{"name": "FaceTime", "bundle_id": "com.apple.FaceTime"}
+{"name": "Feedback Assistant", "bundle_id": "com.apple.appleseed.FeedbackAssistant"}
+{"name": "FileMerge", "bundle_id": "com.apple.FileMerge"}
+{"name": "FileSystemUIAgent", "bundle_id": "com.apple.FileSystemUIAgent"}
+{"name": "Final Cut Pro", "bundle_id": "com.apple.FinalCut"}
+{"name": "Finder", "bundle_id": "com.apple.finder"}
+{"name": "FindMy", "bundle_id": "com.apple.findmy"}
+{"name": "Focusrite Control", "bundle_id": "com.focusrite.FocusriteControl"}
+{"name": "Folder Actions Setup", "bundle_id": "com.apple.FolderActionsSetup"}
+{"name": "Font Book", "bundle_id": "com.apple.FontBook"}
+{"name": "FreeCAD", "bundle_id": "org.freecad.FreeCAD"}
+{"name": "Freeform", "bundle_id": "com.apple.freeform"}
+{"name": "Google Chrome", "bundle_id": "com.google.Chrome"}
+{"name": "GoPro Player", "bundle_id": "com.gopro.GoPro-Player"}
+{"name": "Grapher", "bundle_id": "com.apple.grapher"}
+{"name": "Guitar Pro 7", "bundle_id": "com.arobas-music.guitarpro7"}
+{"name": "GuitarLayers", "bundle_id": "com.moreorlessmusic.GuitarLayers"}
+{"name": "Home", "bundle_id": "com.apple.Home"}
+{"name": "IBCocoaSimulator", "bundle_id": "com.apple.IBCocoaSimulator3"}
+{"name": "iLok License Manager", "bundle_id": "com.paceap.eden.iLokLicenseManager"}
+{"name": "Image Capture", "bundle_id": "com.apple.Image_Capture"}
+{"name": "Image Playground", "bundle_id": "com.apple.GenerativePlaygroundApp"}
+{"name": "Imaging Edge Desktop", "bundle_id": "com.sony.ImagingEdgeDesktop"}
+{"name": "Impulse Response Utility", "bundle_id": "com.apple.ImpulseResponseUtility"}
+{"name": "Insta360 Link Controller", "bundle_id": "com.insta360.linkcontroller"}
+{"name": "Installer", "bundle_id": "com.apple.installer"}
+{"name": "Instruments", "bundle_id": "com.apple.dt.Instruments"}
+{"name": "iPhone Mirroring", "bundle_id": "com.apple.ScreenContinuity"}
+{"name": "iZotope Product Portal", "bundle_id": "com.izotope.productportal"}
+{"name": "Keychain Access", "bundle_id": "com.apple.keychainaccess"}
+{"name": "Keynote", "bundle_id": "com.apple.iWork.Keynote"}
+{"name": "Language Chooser", "bundle_id": "com.apple.Language-Chooser"}
+{"name": "Logi Bolt", "bundle_id": "com.logi.bolt.app"}
+{"name": "Logi Bolt Uninstaller", "bundle_id": "com.logi.bolt.uninstaller.main"}
+{"name": "Logi Options", "bundle_id": "com.logitech.Logi-Options"}
+{"name": "Logic Pro", "bundle_id": "com.apple.logic10"}
+{"name": "LogiMgr Uninstaller", "bundle_id": "com.logitech.manager.uninstaller"}
+{"name": "logioptionsplus", "bundle_id": "com.logi.optionsplus"}
+{"name": "Mail", "bundle_id": "com.apple.mail"}
+{"name": "Maps", "bundle_id": "com.apple.Maps"}
+{"name": "mCallouts Simple 2 Registration", "bundle_id": "com.motionVFX.mCalloutsSimple2"}
+{"name": "mCallouts Simple 2 Uninstaller", "bundle_id": "com.motionVFX.mCalloutsSimple2Uninstaller"}
+{"name": "mCallouts Tech Registration", "bundle_id": "com.motionVFX.mCalloutsTech"}
+{"name": "mCallouts Tech Uninstaller", "bundle_id": "com.motionVFX.mCalloutsTechUninstaller"}
+{"name": "MCXDiskAuthorization", "bundle_id": "com.apple.mcx.MCXDiskAuthorization"}
+{"name": "MediaMLPluginApp", "bundle_id": "com.apple.MediaMLPluginApp"}
+{"name": "Messages", "bundle_id": "com.apple.MobileSMS"}
+{"name": "mFilmLook Registration", "bundle_id": "com.motionVFX.mFilmLook"}
+{"name": "mFilmLook Uninstaller", "bundle_id": "com.motionVFX.mFilmLookUninstaller"}
+{"name": "Microsoft Error Reporting", "bundle_id": "com.microsoft.errorreporting"}
+{"name": "Microsoft Excel", "bundle_id": "com.microsoft.Excel"}
+{"name": "Microsoft OneNote", "bundle_id": "com.microsoft.onenote.mac"}
+{"name": "Microsoft Outlook", "bundle_id": "com.microsoft.Outlook"}
+{"name": "Microsoft PowerPoint", "bundle_id": "com.microsoft.Powerpoint"}
+{"name": "Microsoft Teams", "bundle_id": "com.microsoft.teams"}
+{"name": "Microsoft Word", "bundle_id": "com.microsoft.Word"}
+{"name": "Microsoft.Mashup.Container", "bundle_id": "com.microsoft.Microsoft-Mashup-Container"}
+{"name": "Migration Assistant", "bundle_id": "com.apple.MigrateAssistant"}
+{"name": "mLUT Registration", "bundle_id": "com.motionvfx.mLUT-Registration"}
+{"name": "mLUT Uninstaller", "bundle_id": "com.motionvfx.mLUT-Uninstaller"}
+{"name": "mMessage 2 Registration", "bundle_id": "com.motionVFX.mMessage2"}
+{"name": "mMessage 2 Uninstaller", "bundle_id": "com.motionVFX.mMessage2Uninstaller"}
+{"name": "mMessage Registration", "bundle_id": "com.motionVFX.mMessage"}
+{"name": "mMessage Uninstaller", "bundle_id": "com.motionVFX.mMessageUninstaller"}
+{"name": "mPV Course Logic Pro X 10.1", "bundle_id": "com.nonlineareducating.x.logicpro10x1"}
+{"name": "mTransition Scrub Registration", "bundle_id": "com.motionVFX.mTransitionScrub"}
+{"name": "mTransition Scrub Uninstaller", "bundle_id": "com.motionVFX.mTransitionScrubUninstaller"}
+{"name": "Music", "bundle_id": "com.apple.Music"}
+{"name": "MusicRecognitionMac", "bundle_id": "com.apple.musicrecognition.mac"}
+{"name": "News", "bundle_id": "com.apple.news"}
+{"name": "Notes", "bundle_id": "com.apple.Notes"}
+{"name": "Numbers", "bundle_id": "com.apple.iWork.Numbers"}
+{"name": "OneDrive File Handler", "bundle_id": "com.microsoft.OneDrive.OneDriveFileHandler"}
+{"name": "Outlook Profile Manager", "bundle_id": "com.microsoft.outlook.profilemanager"}
+{"name": "Pages", "bundle_id": "com.apple.iWork.Pages"}
+{"name": "Paired Devices", "bundle_id": "com.apple.PairedDevices"}
+{"name": "Passwords", "bundle_id": "com.apple.Passwords"}
+{"name": "PeopleMessageService", "bundle_id": "com.apple.PeopleMessageService"}
+{"name": "Photo Booth", "bundle_id": "com.apple.PhotoBooth"}
+{"name": "Photos", "bundle_id": "com.apple.Photos"}
+{"name": "Podcasts", "bundle_id": "com.apple.podcasts"}
+{"name": "Preview", "bundle_id": "com.apple.Preview"}
+{"name": "Print Center", "bundle_id": "com.apple.printcenter"}
+{"name": "Pro Display Calibrator", "bundle_id": "com.apple.displaycalibrator"}
+{"name": "Python", "bundle_id": "com.apple.python3"}
+{"name": "QuickTime Player", "bundle_id": "com.apple.QuickTimePlayerX"}
+{"name": "rcd", "bundle_id": "com.apple.rcd"}
+{"name": "Reality Composer Pro", "bundle_id": "com.apple.RealityComposerPro"}
+{"name": "Reminders", "bundle_id": "com.apple.reminders"}
+{"name": "Remote Desktop Message", "bundle_id": "com.apple.RemoteDesktopMessageAgent"}
+{"name": "Riffer", "bundle_id": "com.audiomodern.riffer"}
+{"name": "Rig Manager", "bundle_id": "com.kempermusic.rigmanager"}
+{"name": "Rosetta 2 Updater", "bundle_id": "com.apple.OAHSoftwareUpdateApp"}
+{"name": "Safari", "bundle_id": "com.apple.Safari"}
+{"name": "Screen Sharing", "bundle_id": "com.apple.ScreenSharing"}
+{"name": "Screen Time", "bundle_id": "com.apple.ScreenTimeWidgetApplication"}
+{"name": "Script Editor", "bundle_id": "com.apple.ScriptEditor2"}
+{"name": "Setup Assistant", "bundle_id": "com.apple.SetupAssistant"}
+{"name": "Share Screen Request", "bundle_id": "com.apple.VNCGuestRequest"}
+{"name": "Shared Screen Viewer", "bundle_id": "com.apple.ARDForcedViewer"}
+{"name": "Shortcuts", "bundle_id": "com.apple.shortcuts"}
+{"name": "ShortcutsActions", "bundle_id": "com.apple.ShortcutsActions"}
+{"name": "Simulator", "bundle_id": "com.apple.iphonesimulator"}
+{"name": "Skype", "bundle_id": "com.skype.skype"}
+{"name": "SoftwareUpdateLauncher", "bundle_id": "com.apple.SoftwareUpdateLauncher"}
+{"name": "Stickies", "bundle_id": "com.apple.Stickies"}
+{"name": "Stocks", "bundle_id": "com.apple.stocks"}
+{"name": "Superior Drummer 3", "bundle_id": "com.toontrack.superior3host"}
+{"name": "System Settings", "bundle_id": "com.apple.systempreferences"}
+{"name": "TeamViewer", "bundle_id": "com.teamviewer.TeamViewer"}
+{"name": "TeamViewer Note", "bundle_id": "com.teamviewer.TeamViewer-Note"}
+{"name": "Telegram", "bundle_id": "ru.keepcoder.Telegram"}
+{"name": "Terminal", "bundle_id": "com.apple.Terminal"}
+{"name": "TextEdit", "bundle_id": "com.apple.TextEdit"}
+{"name": "Ticket Viewer", "bundle_id": "com.apple.Ticket-Viewer"}
+{"name": "Tips", "bundle_id": "com.apple.helpviewer"}
+{"name": "Toontrack Product Manager", "bundle_id": "com.toontrack.productmanager"}
+{"name": "TV", "bundle_id": "com.apple.TV"}
+{"name": "Uninstall Fresh Air", "bundle_id": null}
+{"name": "Visual Studio Code", "bundle_id": "com.microsoft.VSCode"}
+{"name": "VLC", "bundle_id": "org.videolan.vlc"}
+{"name": "VoiceMemos", "bundle_id": "com.apple.VoiceMemos"}
+{"name": "VoiceOver Utility", "bundle_id": "com.apple.VoiceOverUtility"}
+{"name": "Waves AU Reg Utility", "bundle_id": "com.WavesAudio.Waves-AU-Reg-Utility.12.7.0"}
+{"name": "Waves AU Reg Utility 13", "bundle_id": "com.WavesAudio.Waves-AU-Reg-Utility.13.0.0"}
+{"name": "Waves Central", "bundle_id": "com.WavesAudio.central"}
+{"name": "WAZA Tube Amp Expander Editor", "bundle_id": "jp.co.roland.WAZA-Tube-Amp-Expander-Editor"}
+{"name": "WAZA-TAE Driver Setup", "bundle_id": "jp.co.roland.WAZA-TAE-Driver-Setup"}
+{"name": "Weather", "bundle_id": "com.apple.weather"}
+{"name": "WEDGE FORCE Matcha", "bundle_id": "com.wedgeforce.standalone.matcha"}
+{"name": "WhatsApp", "bundle_id": "WhatsApp"}
+{"name": "WhatsApp", "bundle_id": "net.whatsapp.WhatsApp"}
+{"name": "WidgetKit Simulator", "bundle_id": "com.apple.widgetkit.simulator"}
+{"name": "Wireless Diagnostics", "bundle_id": "com.apple.wifi.diagnostics"}
+{"name": "Xcode", "bundle_id": "com.apple.dt.Xcode"}
+{"name": "XCPreviewAgent", "bundle_id": "previews.com.apple.PreviewAgent.Catalyst"}
+{"name": "XCPreviewAgent", "bundle_id": "previews.com.apple.PreviewAgent.macOS"}

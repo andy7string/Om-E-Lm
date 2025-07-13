@@ -1,0 +1,3 @@
+[console_scripts]
+pyxa = pyxa.parser:main
+

@@ -1,0 +1,61 @@
+{
+  "goal_id": "open-chrome-and-openai-goal",
+  "description": "Open Google Chrome and navigate to openai.com",
+  "status": "pending",
+  "created_at": "2024-01-01T00:00:00Z",
+  "objectives": [
+    {
+      "objective_id": "open-chrome-obj",
+      "goal_id": "open-chrome-and-openai-goal",
+      "description": "Launch the Google Chrome browser",
+      "status": "pending",
+      "created_at": "2024-01-01T00:00:00Z",
+      "tasks": [
+        {
+          "task_id": "launch-chrome-task",
+          "objective_id": "open-chrome-obj",
+          "description": "Use the system handler to open Google Chrome",
+          "status": "pending",
+          "created_at": "2024-01-01T00:00:00Z",
+          "actions": [
+            {
+              "name": "open_browser",
+              "source": "system",
+              "input_args": {"browser": "Google Chrome"},
+              "state": "pending",
+              "status": "not_started"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "objective_id": "navigate-openai-obj",
+      "goal_id": "open-chrome-and-openai-goal",
+      "description": "Navigate to openai.com in Google Chrome",
+      "status": "pending",
+      "created_at": "2024-01-01T00:00:00Z",
+      "tasks": [
+        {
+          "task_id": "navigate-openai-task",
+          "objective_id": "navigate-openai-obj",
+          "description": "Use the system handler to open openai.com in Google Chrome",
+          "status": "pending",
+          "created_at": "2024-01-01T00:00:00Z",
+          "actions": [
+            {
+              "name": "open_url",
+              "source": "system",
+              "input_args": {
+                "url": "https://openai.com",
+                "browser": "Google Chrome"
+              },
+              "state": "pending",
+              "status": "not_started"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

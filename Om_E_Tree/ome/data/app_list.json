@@ -1,0 +1,1622 @@
+[
+  {
+    "name": "About This Mac",
+    "bundle_id": "com.apple.AboutThisMacLauncher"
+  },
+  {
+    "name": "Accessibility Inspector",
+    "bundle_id": "com.apple.AccessibilityInspector"
+  },
+  {
+    "name": "ACE Studio",
+    "bundle_id": "com.timedomain.AceStudio"
+  },
+  {
+    "name": "Activity Monitor",
+    "bundle_id": "com.apple.ActivityMonitor"
+  },
+  {
+    "name": "AddPrinter",
+    "bundle_id": "com.apple.print.add"
+  },
+  {
+    "name": "AddressBookUrlForwarder",
+    "bundle_id": "com.apple.AddressBook.UrlForwarder"
+  },
+  {
+    "name": "AirBeam",
+    "bundle_id": "com.appologics.airbeam.mac"
+  },
+  {
+    "name": "AirDrop",
+    "bundle_id": "com.apple.finder.Open-AirDrop"
+  },
+  {
+    "name": "AirPlayUIAgent",
+    "bundle_id": "com.apple.AirPlayUIAgent"
+  },
+  {
+    "name": "AirPort Base Station Agent",
+    "bundle_id": "com.apple.AirPortBaseStationAgent"
+  },
+  {
+    "name": "AirPort Utility",
+    "bundle_id": "com.apple.airport.airportutility"
+  },
+  {
+    "name": "All My Files",
+    "bundle_id": "com.apple.finder.Open-AllMyFiles"
+  },
+  {
+    "name": "Alpaca Electron",
+    "bundle_id": "com.electron.alpaca-electron"
+  },
+  {
+    "name": "Alpaca Electron Helper",
+    "bundle_id": "com.electron.alpaca-electron.helper"
+  },
+  {
+    "name": "Alpaca Electron Helper (GPU)",
+    "bundle_id": "com.electron.alpaca-electron.helper"
+  },
+  {
+    "name": "Alpaca Electron Helper (Plugin)",
+    "bundle_id": "com.electron.alpaca-electron.helper"
+  },
+  {
+    "name": "Alpaca Electron Helper (Renderer)",
+    "bundle_id": "com.electron.alpaca-electron.helper"
+  },
+  {
+    "name": "AnyDesk",
+    "bundle_id": "com.philandro.anydesk"
+  },
+  {
+    "name": "AnythingLLM",
+    "bundle_id": "com.anythingllm"
+  },
+  {
+    "name": "AnythingLLM Helper",
+    "bundle_id": "com.anythingllm.helper"
+  },
+  {
+    "name": "AnythingLLM Helper (GPU)",
+    "bundle_id": "com.anythingllm.helper.GPU"
+  },
+  {
+    "name": "AnythingLLM Helper (Plugin)",
+    "bundle_id": "com.anythingllm.helper.Plugin"
+  },
+  {
+    "name": "AnythingLLM Helper (Renderer)",
+    "bundle_id": "com.anythingllm.helper.Renderer"
+  },
+  {
+    "name": "AOSUIPrefPaneLauncher",
+    "bundle_id": "com.apple.AOSUIPrefPaneLauncher"
+  },
+  {
+    "name": "App Store",
+    "bundle_id": "com.apple.AppStore"
+  },
+  {
+    "name": "Apple Diagnostics",
+    "bundle_id": "com.apple.DiagnosticsModeAssistant"
+  },
+  {
+    "name": "AppleScript Utility",
+    "bundle_id": "com.apple.AppleScriptUtility"
+  },
+  {
+    "name": "Arc",
+    "bundle_id": "company.thebrowser.Browser"
+  },
+  {
+    "name": "Arc Helper",
+    "bundle_id": "company.thebrowser.browser.helper"
+  },
+  {
+    "name": "Arc Helper (Alerts)",
+    "bundle_id": "company.thebrowser.browser.framework.AlertNotificationService"
+  },
+  {
+    "name": "Arc Helper (GPU)",
+    "bundle_id": "company.thebrowser.browser.helper"
+  },
+  {
+    "name": "Arc Helper (Plugin)",
+    "bundle_id": "company.thebrowser.browser.helper.plugin"
+  },
+  {
+    "name": "Arc Helper (Renderer)",
+    "bundle_id": "company.thebrowser.browser.helper.renderer"
+  },
+  {
+    "name": "Archi",
+    "bundle_id": "com.archimatetool.editor"
+  },
+  {
+    "name": "Archive Utility",
+    "bundle_id": "com.apple.archiveutility"
+  },
+  {
+    "name": "ARDAgent",
+    "bundle_id": "com.apple.RemoteDesktopAgent"
+  },
+  {
+    "name": "AskToMessagesHost",
+    "bundle_id": "com.apple.AskToMessagesHost"
+  },
+  {
+    "name": "Audio MIDI Setup",
+    "bundle_id": "com.apple.audio.AudioMIDISetup"
+  },
+  {
+    "name": "Automator",
+    "bundle_id": "com.apple.Automator"
+  },
+  {
+    "name": "Automator Application Stub",
+    "bundle_id": "com.apple.Automator.Automator-Application-Stub"
+  },
+  {
+    "name": "Automator Installer",
+    "bundle_id": "com.apple.AutomatorInstaller"
+  },
+  {
+    "name": "Autoupdate",
+    "bundle_id": "org.sparkle-project.Sparkle.Autoupdate"
+  },
+  {
+    "name": "Autoupdate",
+    "bundle_id": "com.bittorrent.-"
+  },
+  {
+    "name": "AVB Configuration",
+    "bundle_id": "com.apple.AVB-Audio-Configuration"
+  },
+  {
+    "name": "backgroundinstruments",
+    "bundle_id": "com.apple.dt.instruments.backgroundinstruments"
+  },
+  {
+    "name": "Batteries",
+    "bundle_id": "com.apple.Batteries"
+  },
+  {
+    "name": "Bluetooth File Exchange",
+    "bundle_id": "com.apple.BluetoothFileExchange"
+  },
+  {
+    "name": "BluetoothSetupAssistant",
+    "bundle_id": "com.apple.BluetoothSetupAssistant"
+  },
+  {
+    "name": "BluetoothUIServer",
+    "bundle_id": "com.apple.BluetoothUIServer"
+  },
+  {
+    "name": "BluetoothUIService",
+    "bundle_id": "com.apple.BluetoothUIService"
+  },
+  {
+    "name": "Books",
+    "bundle_id": "com.apple.iBooksX"
+  },
+  {
+    "name": "Boot Camp Assistant",
+    "bundle_id": "com.apple.bootcampassistant"
+  },
+  {
+    "name": "Calculator",
+    "bundle_id": "com.apple.calculator"
+  },
+  {
+    "name": "Calendar",
+    "bundle_id": "com.apple.iCal"
+  },
+  {
+    "name": "CalendarFileHandler",
+    "bundle_id": "com.apple.CalendarFileHandler"
+  },
+  {
+    "name": "CamTwist",
+    "bundle_id": "com.allocinit.CamTwist"
+  },
+  {
+    "name": "Captive Network Assistant",
+    "bundle_id": "com.apple.CaptiveNetworkAssistant"
+  },
+  {
+    "name": "Certificate Assistant",
+    "bundle_id": "com.apple.CertificateAssistant"
+  },
+  {
+    "name": "ChatGPT",
+    "bundle_id": "com.openai.chat"
+  },
+  {
+    "name": "Chess",
+    "bundle_id": "com.apple.Chess"
+  },
+  {
+    "name": "Clock",
+    "bundle_id": "com.apple.clock"
+  },
+  {
+    "name": "Code Helper",
+    "bundle_id": "com.microsoft.VSCode.helper"
+  },
+  {
+    "name": "Code Helper (GPU)",
+    "bundle_id": "com.github.Electron.helper"
+  },
+  {
+    "name": "Code Helper (Plugin)",
+    "bundle_id": "com.github.Electron.helper"
+  },
+  {
+    "name": "Code Helper (Renderer)",
+    "bundle_id": "com.github.Electron.helper"
+  },
+  {
+    "name": "ColorSync Utility",
+    "bundle_id": "com.apple.ColorSyncUtility"
+  },
+  {
+    "name": "Computer",
+    "bundle_id": "com.apple.finder.Open-Computer"
+  },
+  {
+    "name": "Console",
+    "bundle_id": "com.apple.Console"
+  },
+  {
+    "name": "Contacts",
+    "bundle_id": "com.apple.AddressBook"
+  },
+  {
+    "name": "ControlCenter",
+    "bundle_id": "com.apple.controlcenter"
+  },
+  {
+    "name": "ControlStrip",
+    "bundle_id": "com.apple.controlstrip"
+  },
+  {
+    "name": "Corel Font Manager",
+    "bundle_id": "com.corel.coreldrawsuite.2022.fontmanager"
+  },
+  {
+    "name": "Corel PHOTO-PAINT",
+    "bundle_id": "com.corel.coreldrawsuite.2022.photopaint"
+  },
+  {
+    "name": "CorelDRAW",
+    "bundle_id": "com.corel.coreldrawsuite.2022.coreldraw"
+  },
+  {
+    "name": "CoreLocationAgent",
+    "bundle_id": "com.apple.CoreLocationAgent"
+  },
+  {
+    "name": "CoreServicesUIAgent",
+    "bundle_id": "com.apple.coreservices.uiagent"
+  },
+  {
+    "name": "Coverage Details",
+    "bundle_id": "com.apple.NewDeviceOutreachApp"
+  },
+  {
+    "name": "crash_report_sender",
+    "bundle_id": "com.Breakpad.crash_report_sender"
+  },
+  {
+    "name": "Create ML",
+    "bundle_id": "com.apple.CreateML"
+  },
+  {
+    "name": "Cursor",
+    "bundle_id": "com.todesktop.230313mzl4w4u92"
+  },
+  {
+    "name": "Cursor Helper",
+    "bundle_id": "com.todesktop.230313mzl4w4u92.helper"
+  },
+  {
+    "name": "Cursor Helper (GPU)",
+    "bundle_id": "com.github.Electron.helper"
+  },
+  {
+    "name": "Cursor Helper (Plugin)",
+    "bundle_id": "com.github.Electron.helper"
+  },
+  {
+    "name": "Cursor Helper (Renderer)",
+    "bundle_id": "com.github.Electron.helper"
+  },
+  {
+    "name": "Database Events",
+    "bundle_id": "com.apple.databaseevents"
+  },
+  {
+    "name": "Desk View",
+    "bundle_id": "com.apple.DeskCam"
+  },
+  {
+    "name": "Diagnostics Reporter",
+    "bundle_id": "com.apple.DiagnosticsReporter"
+  },
+  {
+    "name": "Dictionary",
+    "bundle_id": "com.apple.Dictionary"
+  },
+  {
+    "name": "Digital Color Meter",
+    "bundle_id": "com.apple.DigitalColorMeter"
+  },
+  {
+    "name": "Directory Utility",
+    "bundle_id": "com.apple.DirectoryUtility"
+  },
+  {
+    "name": "DiscHelper",
+    "bundle_id": "com.apple.DiscHelper"
+  },
+  {
+    "name": "Discord",
+    "bundle_id": "com.hnc.Discord"
+  },
+  {
+    "name": "Discord Helper",
+    "bundle_id": "com.hnc.Discord.helper"
+  },
+  {
+    "name": "Discord Helper (GPU)",
+    "bundle_id": "com.hnc.Discord.helper.(GPU)"
+  },
+  {
+    "name": "Discord Helper (Plugin)",
+    "bundle_id": "com.hnc.Discord.helper.(Plugin)"
+  },
+  {
+    "name": "Discord Helper (Renderer)",
+    "bundle_id": "com.hnc.Discord.helper.(Renderer)"
+  },
+  {
+    "name": "Disk Utility",
+    "bundle_id": "com.apple.DiskUtility"
+  },
+  {
+    "name": "DiskImageMounter",
+    "bundle_id": "com.apple.DiskImageMounter"
+  },
+  {
+    "name": "Dock",
+    "bundle_id": "com.apple.dock"
+  },
+  {
+    "name": "DVD Player",
+    "bundle_id": "com.apple.DVDPlayer"
+  },
+  {
+    "name": "Dwell Control",
+    "bundle_id": "com.apple.DwellControl"
+  },
+  {
+    "name": "EasyRes",
+    "bundle_id": "info.chrismiles.easyres"
+  },
+  {
+    "name": "EasyResLaunchHelper",
+    "bundle_id": "info.chrismiles.EasyResLaunchHelper"
+  },
+  {
+    "name": "Enhanced Logging",
+    "bundle_id": "com.apple.EnhancedLogging"
+  },
+  {
+    "name": "Erase Assistant",
+    "bundle_id": "com.apple.EraseAssistant"
+  },
+  {
+    "name": "EscrowSecurityAlert",
+    "bundle_id": "com.apple.EscrowSecurityAlert"
+  },
+  {
+    "name": "Expansion Slot Utility",
+    "bundle_id": "com.apple.ExpansionSlotUtility"
+  },
+  {
+    "name": "ExpressVPN",
+    "bundle_id": "com.expressvpn.ExpressVPN"
+  },
+  {
+    "name": "ExpressVPN IKEv2",
+    "bundle_id": "com.expressvpn.IKEHelper"
+  },
+  {
+    "name": "ExpressVPN Launcher",
+    "bundle_id": "com.expressvpn.ExpressVPN-Launcher"
+  },
+  {
+    "name": "EZbass",
+    "bundle_id": "com.toontrack.ezbasshost"
+  },
+  {
+    "name": "EZkeys",
+    "bundle_id": "com.toontrack.ezkeyshost"
+  },
+  {
+    "name": "EZmix",
+    "bundle_id": "com.toontrack.ezmixhost"
+  },
+  {
+    "name": "FaceTime",
+    "bundle_id": "com.apple.FaceTime"
+  },
+  {
+    "name": "Family",
+    "bundle_id": "com.apple.Family"
+  },
+  {
+    "name": "Feedback Assistant",
+    "bundle_id": "com.apple.appleseed.FeedbackAssistant"
+  },
+  {
+    "name": "FileMerge",
+    "bundle_id": "com.apple.FileMerge"
+  },
+  {
+    "name": "FileProvider-Feedback",
+    "bundle_id": "com.apple.FileProvider-Feedback"
+  },
+  {
+    "name": "FileSystemUIAgent",
+    "bundle_id": "com.apple.FileSystemUIAgent"
+  },
+  {
+    "name": "Final Cut Pro",
+    "bundle_id": "com.apple.FinalCut"
+  },
+  {
+    "name": "Finder",
+    "bundle_id": "com.apple.finder"
+  },
+  {
+    "name": "FindMy",
+    "bundle_id": "com.apple.findmy"
+  },
+  {
+    "name": "Focusrite Control",
+    "bundle_id": "com.focusrite.FocusriteControl"
+  },
+  {
+    "name": "FocusriteControlServer",
+    "bundle_id": "com.focusrite.FocusriteControl.Server"
+  },
+  {
+    "name": "Folder Actions Setup",
+    "bundle_id": "com.apple.FolderActionsSetup"
+  },
+  {
+    "name": "FolderActionsDispatcher",
+    "bundle_id": "com.apple.FolderActionsDispatcher"
+  },
+  {
+    "name": "Font Book",
+    "bundle_id": "com.apple.FontBook"
+  },
+  {
+    "name": "FreeCAD",
+    "bundle_id": "org.freecad.FreeCAD"
+  },
+  {
+    "name": "Freeform",
+    "bundle_id": "com.apple.freeform"
+  },
+  {
+    "name": "Game Center",
+    "bundle_id": "com.apple.gamecenter"
+  },
+  {
+    "name": "GamingAPP",
+    "bundle_id": null
+  },
+  {
+    "name": "Google Chrome",
+    "bundle_id": "com.google.Chrome"
+  },
+  {
+    "name": "Google Chrome Helper",
+    "bundle_id": "com.google.Chrome.helper"
+  },
+  {
+    "name": "Google Chrome Helper (Alerts)",
+    "bundle_id": "com.google.Chrome.framework.AlertNotificationService"
+  },
+  {
+    "name": "Google Chrome Helper (GPU)",
+    "bundle_id": "com.google.Chrome.helper"
+  },
+  {
+    "name": "Google Chrome Helper (Plugin)",
+    "bundle_id": "com.google.Chrome.helper.plugin"
+  },
+  {
+    "name": "Google Chrome Helper (Renderer)",
+    "bundle_id": "com.google.Chrome.helper.renderer"
+  },
+  {
+    "name": "GoogleSoftwareUpdateAgent",
+    "bundle_id": "com.google.Keystone.Agent"
+  },
+  {
+    "name": "GoogleUpdater",
+    "bundle_id": "com.google.GoogleUpdater"
+  },
+  {
+    "name": "GoPro Player",
+    "bundle_id": "com.gopro.GoPro-Player"
+  },
+  {
+    "name": "GPUToolsAgent",
+    "bundle_id": "com.apple.GPUToolsAgent"
+  },
+  {
+    "name": "Grapher",
+    "bundle_id": "com.apple.grapher"
+  },
+  {
+    "name": "Guitar Pro 7",
+    "bundle_id": "com.arobas-music.guitarpro7"
+  },
+  {
+    "name": "Guitar Pro 7 Preferences",
+    "bundle_id": null
+  },
+  {
+    "name": "GuitarLayers",
+    "bundle_id": "com.moreorlessmusic.GuitarLayers"
+  },
+  {
+    "name": "Home",
+    "bundle_id": "com.apple.Home"
+  },
+  {
+    "name": "IBCocoaSimulator",
+    "bundle_id": "com.apple.IBCocoaSimulator3"
+  },
+  {
+    "name": "iCloud",
+    "bundle_id": "com.apple.CloudKit.ShareBear"
+  },
+  {
+    "name": "iCloud Drive",
+    "bundle_id": "com.apple.finder.Open-iCloudDrive"
+  },
+  {
+    "name": "iCloud+",
+    "bundle_id": "com.apple.icq"
+  },
+  {
+    "name": "iLok License Manager",
+    "bundle_id": "com.paceap.eden.iLokLicenseManager"
+  },
+  {
+    "name": "Image Capture",
+    "bundle_id": "com.apple.Image_Capture"
+  },
+  {
+    "name": "Image Events",
+    "bundle_id": "com.apple.imageevents"
+  },
+  {
+    "name": "Image Playground",
+    "bundle_id": "com.apple.GenerativePlaygroundApp"
+  },
+  {
+    "name": "Imaging Edge Desktop",
+    "bundle_id": "com.sony.ImagingEdgeDesktop"
+  },
+  {
+    "name": "Impulse Response Utility",
+    "bundle_id": "com.apple.ImpulseResponseUtility"
+  },
+  {
+    "name": "Info.plist",
+    "bundle_id": null
+  },
+  {
+    "name": "Insta360 Link Controller",
+    "bundle_id": "com.insta360.linkcontroller"
+  },
+  {
+    "name": "Install Command Line Developer Tools",
+    "bundle_id": "com.apple.dt.CommandLineTools.installondemand"
+  },
+  {
+    "name": "Install in Progress",
+    "bundle_id": "com.apple.PackageUIKit.Install-in-Progress"
+  },
+  {
+    "name": "Installer",
+    "bundle_id": "com.apple.installer"
+  },
+  {
+    "name": "Installer Progress",
+    "bundle_id": "com.apple.Installer-Progress"
+  },
+  {
+    "name": "Instruments",
+    "bundle_id": "com.apple.dt.Instruments"
+  },
+  {
+    "name": "iOS App Installer",
+    "bundle_id": "com.apple.IPAInstaller"
+  },
+  {
+    "name": "IOUIAgent",
+    "bundle_id": "com.apple.IOUIAgent"
+  },
+  {
+    "name": "iPhone Mirroring",
+    "bundle_id": "com.apple.ScreenContinuity"
+  },
+  {
+    "name": "IriunWebcam",
+    "bundle_id": "com.iriun.webcam"
+  },
+  {
+    "name": "iTerm",
+    "bundle_id": null
+  },
+  {
+    "name": "iTerm2",
+    "bundle_id": null
+  },
+  {
+    "name": "iZotope Product Portal",
+    "bundle_id": "com.izotope.productportal"
+  },
+  {
+    "name": "JavaLauncher",
+    "bundle_id": "com.apple.JavaLauncher"
+  },
+  {
+    "name": "KeyboardAccessAgent",
+    "bundle_id": "com.apple.KeyboardAccessAgent"
+  },
+  {
+    "name": "KeyboardSetupAssistant",
+    "bundle_id": "com.apple.KeyboardSetupAssistant"
+  },
+  {
+    "name": "Keychain Access",
+    "bundle_id": "com.apple.keychainaccess"
+  },
+  {
+    "name": "Keychain Circle Notification",
+    "bundle_id": "com.apple.security.Keychain-Circle-Notification"
+  },
+  {
+    "name": "Keynote",
+    "bundle_id": "com.apple.iWork.Keynote"
+  },
+  {
+    "name": "Language Chooser",
+    "bundle_id": "com.apple.Language-Chooser"
+  },
+  {
+    "name": "Launcher Disabler",
+    "bundle_id": "com.microsoft.SkyDriveLauncher"
+  },
+  {
+    "name": "Launchpad",
+    "bundle_id": "com.apple.launchpad.launcher"
+  },
+  {
+    "name": "liquiddetectiond",
+    "bundle_id": null
+  },
+  {
+    "name": "LockScreen",
+    "bundle_id": "com.apple.LockScreen"
+  },
+  {
+    "name": "Logi Bolt",
+    "bundle_id": "com.logi.bolt.app"
+  },
+  {
+    "name": "Logi Bolt Uninstaller",
+    "bundle_id": "com.logi.bolt.uninstaller.main"
+  },
+  {
+    "name": "Logi Bolt Updater",
+    "bundle_id": "com.logi.bolt.updater"
+  },
+  {
+    "name": "Logi Options",
+    "bundle_id": "com.logitech.Logi-Options"
+  },
+  {
+    "name": "Logic Pro",
+    "bundle_id": "com.apple.logic10"
+  },
+  {
+    "name": "LogiMgr Uninstaller",
+    "bundle_id": "com.logitech.manager.uninstaller"
+  },
+  {
+    "name": "LogiMgrDaemon",
+    "bundle_id": "com.logitech.manager.daemon"
+  },
+  {
+    "name": "loginwindow",
+    "bundle_id": "com.apple.loginwindow"
+  },
+  {
+    "name": "logioptionsplus",
+    "bundle_id": "com.logi.optionsplus"
+  },
+  {
+    "name": "logioptionsplus Helper",
+    "bundle_id": "com.logi.optionsplus.helper"
+  },
+  {
+    "name": "logioptionsplus Helper (GPU)",
+    "bundle_id": "com.logi.optionsplus.helper"
+  },
+  {
+    "name": "logioptionsplus Helper (Plugin)",
+    "bundle_id": "com.logi.optionsplus.helper"
+  },
+  {
+    "name": "logioptionsplus Helper (Renderer)",
+    "bundle_id": "com.logi.optionsplus.helper"
+  },
+  {
+    "name": "Mail",
+    "bundle_id": "com.apple.mail"
+  },
+  {
+    "name": "ManagedClient",
+    "bundle_id": "com.apple.ManagedClient"
+  },
+  {
+    "name": "Maps",
+    "bundle_id": "com.apple.Maps"
+  },
+  {
+    "name": "mbproximityhelper",
+    "bundle_id": "com.apple.mbproximityhelper"
+  },
+  {
+    "name": "mCallouts Simple 2",
+    "bundle_id": "com.motionVFX.mCallouts-Simple-2"
+  },
+  {
+    "name": "mCallouts Simple 2 Registration",
+    "bundle_id": "com.motionVFX.mCalloutsSimple2"
+  },
+  {
+    "name": "mCallouts Simple 2 Uninstaller",
+    "bundle_id": "com.motionVFX.mCalloutsSimple2Uninstaller"
+  },
+  {
+    "name": "mCallouts Tech",
+    "bundle_id": "com.motionVFX.mCallouts-Tech"
+  },
+  {
+    "name": "mCallouts Tech Registration",
+    "bundle_id": "com.motionVFX.mCalloutsTech"
+  },
+  {
+    "name": "mCallouts Tech Uninstaller",
+    "bundle_id": "com.motionVFX.mCalloutsTechUninstaller"
+  },
+  {
+    "name": "MCXDiskAuthorization",
+    "bundle_id": "com.apple.mcx.MCXDiskAuthorization"
+  },
+  {
+    "name": "MediaMLPluginApp",
+    "bundle_id": "com.apple.MediaMLPluginApp"
+  },
+  {
+    "name": "Memory Slot Utility",
+    "bundle_id": "com.apple.MemorySlotUtility"
+  },
+  {
+    "name": "Messages",
+    "bundle_id": "com.apple.MobileSMS"
+  },
+  {
+    "name": "mFilmLook",
+    "bundle_id": "com.motionVFX.mFilmLook"
+  },
+  {
+    "name": "mFilmLook Registration",
+    "bundle_id": "com.motionVFX.mFilmLook"
+  },
+  {
+    "name": "mFilmLook Uninstaller",
+    "bundle_id": "com.motionVFX.mFilmLookUninstaller"
+  },
+  {
+    "name": "Microsoft Error Reporting",
+    "bundle_id": "com.microsoft.errorreporting"
+  },
+  {
+    "name": "Microsoft Excel",
+    "bundle_id": "com.microsoft.Excel"
+  },
+  {
+    "name": "Microsoft OneNote",
+    "bundle_id": "com.microsoft.onenote.mac"
+  },
+  {
+    "name": "Microsoft Outlook",
+    "bundle_id": "com.microsoft.Outlook"
+  },
+  {
+    "name": "Microsoft PowerPoint",
+    "bundle_id": "com.microsoft.Powerpoint"
+  },
+  {
+    "name": "Microsoft Remote Desktop",
+    "bundle_id": "com.microsoft.rdc.macos"
+  },
+  {
+    "name": "Microsoft SharePoint",
+    "bundle_id": "com.microsoft.SharePoint-mac"
+  },
+  {
+    "name": "Microsoft Teams",
+    "bundle_id": "com.microsoft.teams"
+  },
+  {
+    "name": "Microsoft Teams Helper",
+    "bundle_id": "com.microsoft.teams.helper"
+  },
+  {
+    "name": "Microsoft Teams Helper (GPU)",
+    "bundle_id": "com.microsoft.teams.helper"
+  },
+  {
+    "name": "Microsoft Teams Helper (Plugin)",
+    "bundle_id": "com.microsoft.teams.helper"
+  },
+  {
+    "name": "Microsoft Teams Helper (Renderer)",
+    "bundle_id": "com.microsoft.teams.helper"
+  },
+  {
+    "name": "Microsoft Word",
+    "bundle_id": "com.microsoft.Word"
+  },
+  {
+    "name": "Microsoft.Mashup.Container",
+    "bundle_id": "com.microsoft.Microsoft-Mashup-Container"
+  },
+  {
+    "name": "Migration Assistant",
+    "bundle_id": "com.apple.MigrateAssistant"
+  },
+  {
+    "name": "mInstaller",
+    "bundle_id": "com.motionvfx.mInstaller"
+  },
+  {
+    "name": "Mirror for LG TV",
+    "bundle_id": "tv.airbeam.mirrorforlgtv"
+  },
+  {
+    "name": "Mission Control",
+    "bundle_id": "com.apple.exposelauncher"
+  },
+  {
+    "name": "mLUT",
+    "bundle_id": "mLUT"
+  },
+  {
+    "name": "mLUT Registration",
+    "bundle_id": "com.motionvfx.mLUT-Registration"
+  },
+  {
+    "name": "mLUT Uninstaller",
+    "bundle_id": "com.motionvfx.mLUT-Uninstaller"
+  },
+  {
+    "name": "mMessage",
+    "bundle_id": "com.motionVFX.mMessage"
+  },
+  {
+    "name": "mMessage 2",
+    "bundle_id": "com.motionVFX.mMessage-2"
+  },
+  {
+    "name": "mMessage 2 Generator",
+    "bundle_id": "com.motionVFX.mMessage-2-Generator"
+  },
+  {
+    "name": "mMessage 2 Registration",
+    "bundle_id": "com.motionVFX.mMessage2"
+  },
+  {
+    "name": "mMessage 2 Uninstaller",
+    "bundle_id": "com.motionVFX.mMessage2Uninstaller"
+  },
+  {
+    "name": "mMessage Registration",
+    "bundle_id": "com.motionVFX.mMessage"
+  },
+  {
+    "name": "mMessage Uninstaller",
+    "bundle_id": "com.motionVFX.mMessageUninstaller"
+  },
+  {
+    "name": "mPV Course Logic Pro X 10.1",
+    "bundle_id": "com.nonlineareducating.x.logicpro10x1"
+  },
+  {
+    "name": "MTLReplayer",
+    "bundle_id": "com.apple.MTLReplayer"
+  },
+  {
+    "name": "mTransition Scrub",
+    "bundle_id": "com.motionVFX.mTransition-Scrub"
+  },
+  {
+    "name": "mTransition Scrub Registration",
+    "bundle_id": "com.motionVFX.mTransitionScrub"
+  },
+  {
+    "name": "mTransition Scrub Uninstaller",
+    "bundle_id": "com.motionVFX.mTransitionScrubUninstaller"
+  },
+  {
+    "name": "Music",
+    "bundle_id": "com.apple.Music"
+  },
+  {
+    "name": "MusicRecognitionMac",
+    "bundle_id": "com.apple.musicrecognition.mac"
+  },
+  {
+    "name": "mUtility",
+    "bundle_id": "mUtility"
+  },
+  {
+    "name": "NetAuthAgent",
+    "bundle_id": "com.apple.NetAuthAgent"
+  },
+  {
+    "name": "Network",
+    "bundle_id": "com.apple.finder.Open-Network"
+  },
+  {
+    "name": "News",
+    "bundle_id": "com.apple.news"
+  },
+  {
+    "name": "Notes",
+    "bundle_id": "com.apple.Notes"
+  },
+  {
+    "name": "NotificationCenter",
+    "bundle_id": "com.apple.notificationcenterui"
+  },
+  {
+    "name": "NowPlayingTouchUI",
+    "bundle_id": "com.apple.NowPlayingTouchUI"
+  },
+  {
+    "name": "Numbers",
+    "bundle_id": "com.apple.iWork.Numbers"
+  },
+  {
+    "name": "OBEXAgent",
+    "bundle_id": "com.apple.OBEXAgent"
+  },
+  {
+    "name": "ODSAgent",
+    "bundle_id": "com.apple.ODSAgent"
+  },
+  {
+    "name": "Ollama",
+    "bundle_id": "com.electron.ollama"
+  },
+  {
+    "name": "OneDrive",
+    "bundle_id": "com.microsoft.OneDrive"
+  },
+  {
+    "name": "OneDrive File Handler",
+    "bundle_id": "com.microsoft.OneDrive.OneDriveFileHandler"
+  },
+  {
+    "name": "OneDrive File Launcher",
+    "bundle_id": "com.microsoft.OneDrive.DownloadAndGo"
+  },
+  {
+    "name": "OneDrive Launcher",
+    "bundle_id": "com.microsoft.OneDriveLauncher"
+  },
+  {
+    "name": "OneDrive Updater",
+    "bundle_id": "com.microsoft.OneDriveUpdater"
+  },
+  {
+    "name": "Open XML for Excel",
+    "bundle_id": "com.microsoft.openxml.excel.app"
+  },
+  {
+    "name": "OSDUIHelper",
+    "bundle_id": "com.apple.OSDUIHelper"
+  },
+  {
+    "name": "Outlook Profile Manager",
+    "bundle_id": "com.microsoft.outlook.profilemanager"
+  },
+  {
+    "name": "Pages",
+    "bundle_id": "com.apple.iWork.Pages"
+  },
+  {
+    "name": "Paired Devices",
+    "bundle_id": "com.apple.PairedDevices"
+  },
+  {
+    "name": "Pass Viewer",
+    "bundle_id": "com.apple.Pass-Viewer"
+  },
+  {
+    "name": "Passwords",
+    "bundle_id": "com.apple.Passwords"
+  },
+  {
+    "name": "PasswordsMenuBarExtra",
+    "bundle_id": "com.apple.Passwords.MenuBarExtra"
+  },
+  {
+    "name": "PeopleMessageService",
+    "bundle_id": "com.apple.PeopleMessageService"
+  },
+  {
+    "name": "PeopleViewService",
+    "bundle_id": "com.apple.PeopleViewService"
+  },
+  {
+    "name": "Photo Booth",
+    "bundle_id": "com.apple.PhotoBooth"
+  },
+  {
+    "name": "Photos",
+    "bundle_id": "com.apple.Photos"
+  },
+  {
+    "name": "PIPAgent",
+    "bundle_id": "com.apple.PIPAgent"
+  },
+  {
+    "name": "Podcasts",
+    "bundle_id": "com.apple.podcasts"
+  },
+  {
+    "name": "PowerChime",
+    "bundle_id": "com.apple.PowerChime"
+  },
+  {
+    "name": "Preview",
+    "bundle_id": "com.apple.Preview"
+  },
+  {
+    "name": "PreviewShell",
+    "bundle_id": "com.apple.PreviewShell"
+  },
+  {
+    "name": "Print Center",
+    "bundle_id": "com.apple.printcenter"
+  },
+  {
+    "name": "Pro Display Calibrator",
+    "bundle_id": "com.apple.displaycalibrator"
+  },
+  {
+    "name": "Problem Reporter",
+    "bundle_id": "com.apple.ProblemReporter"
+  },
+  {
+    "name": "Product Portal Helper",
+    "bundle_id": "com.izotope.productportal.helper"
+  },
+  {
+    "name": "Product Portal Helper (GPU)",
+    "bundle_id": "com.izotope.productportal.helperGPU"
+  },
+  {
+    "name": "Product Portal Helper (Renderer)",
+    "bundle_id": "com.izotope.productportal.helperRenderer"
+  },
+  {
+    "name": "ProfileHelper",
+    "bundle_id": "com.apple.mcx.ProfileHelper"
+  },
+  {
+    "name": "Python",
+    "bundle_id": "com.apple.python3"
+  },
+  {
+    "name": "QuickTime Player",
+    "bundle_id": "com.apple.QuickTimePlayerX"
+  },
+  {
+    "name": "RapportUIAgent",
+    "bundle_id": "com.apple.RapportUIAgent"
+  },
+  {
+    "name": "rcd",
+    "bundle_id": "com.apple.rcd"
+  },
+  {
+    "name": "Reality Composer Pro",
+    "bundle_id": "com.apple.RealityComposerPro"
+  },
+  {
+    "name": "Recents",
+    "bundle_id": "com.apple.finder.Open-Recents"
+  },
+  {
+    "name": "RegisterPluginIMApp",
+    "bundle_id": "com.apple.pluginIM.pluginIMRegistrator"
+  },
+  {
+    "name": "RegisterProExtension",
+    "bundle_id": "com.apple.videoapps.RegisterProExtension"
+  },
+  {
+    "name": "Reminders",
+    "bundle_id": "com.apple.reminders"
+  },
+  {
+    "name": "Remote Desktop Message",
+    "bundle_id": "com.apple.RemoteDesktopMessageAgent"
+  },
+  {
+    "name": "Riffer",
+    "bundle_id": "com.audiomodern.riffer"
+  },
+  {
+    "name": "Rig Manager",
+    "bundle_id": "com.kempermusic.rigmanager"
+  },
+  {
+    "name": "Rosetta 2 Updater",
+    "bundle_id": "com.apple.OAHSoftwareUpdateApp"
+  },
+  {
+    "name": "Safari",
+    "bundle_id": "com.apple.Safari"
+  },
+  {
+    "name": "Screen Sharing",
+    "bundle_id": "com.apple.ScreenSharing"
+  },
+  {
+    "name": "Screen Time",
+    "bundle_id": "com.apple.ScreenTimeWidgetApplication"
+  },
+  {
+    "name": "screencaptureui",
+    "bundle_id": "com.apple.screencaptureui"
+  },
+  {
+    "name": "ScreenSaverEngine",
+    "bundle_id": "com.apple.ScreenSaver.Engine"
+  },
+  {
+    "name": "Screenshot",
+    "bundle_id": "com.apple.screenshot.launcher"
+  },
+  {
+    "name": "Script Editor",
+    "bundle_id": "com.apple.ScriptEditor2"
+  },
+  {
+    "name": "Script Menu",
+    "bundle_id": "com.apple.ScriptMenuApp"
+  },
+  {
+    "name": "ScriptMonitor",
+    "bundle_id": "com.apple.ScriptMonitor"
+  },
+  {
+    "name": "Setup Assistant",
+    "bundle_id": "com.apple.SetupAssistant"
+  },
+  {
+    "name": "Share Screen Request",
+    "bundle_id": "com.apple.VNCGuestRequest"
+  },
+  {
+    "name": "Shared Screen Viewer",
+    "bundle_id": "com.apple.ARDForcedViewer"
+  },
+  {
+    "name": "ShortcutDroplet",
+    "bundle_id": "com.apple.shortcuts.droplet"
+  },
+  {
+    "name": "Shortcuts",
+    "bundle_id": "com.apple.shortcuts"
+  },
+  {
+    "name": "Shortcuts Events",
+    "bundle_id": "com.apple.shortcuts.events"
+  },
+  {
+    "name": "ShortcutsActions",
+    "bundle_id": "com.apple.ShortcutsActions"
+  },
+  {
+    "name": "Simulator",
+    "bundle_id": "com.apple.iphonesimulator"
+  },
+  {
+    "name": "Siri",
+    "bundle_id": "com.apple.siri.launcher"
+  },
+  {
+    "name": "Siri",
+    "bundle_id": "com.apple.Siri"
+  },
+  {
+    "name": "Skype",
+    "bundle_id": "com.skype.skype"
+  },
+  {
+    "name": "Skype Helper",
+    "bundle_id": "com.skype.skype.Helper"
+  },
+  {
+    "name": "Skype Helper (GPU)",
+    "bundle_id": "com.skype.skype.Helper-(GPU)"
+  },
+  {
+    "name": "Skype Helper (Renderer)",
+    "bundle_id": "com.skype.skype.Helper-(Renderer)"
+  },
+  {
+    "name": "Software Update",
+    "bundle_id": "com.apple.SoftwareUpdate"
+  },
+  {
+    "name": "SoftwareUpdateLauncher",
+    "bundle_id": "com.apple.SoftwareUpdateLauncher"
+  },
+  {
+    "name": "SpacesTouchBarAgent",
+    "bundle_id": "com.apple.SpacesTouchBarAgent"
+  },
+  {
+    "name": "Spotlight",
+    "bundle_id": "com.apple.Spotlight"
+  },
+  {
+    "name": "SSAssistanceCursor",
+    "bundle_id": "com.apple.SSAssistanceCursor"
+  },
+  {
+    "name": "SSDragHelper",
+    "bundle_id": "com.apple.VNCDragHelper"
+  },
+  {
+    "name": "SSInvitationAgent",
+    "bundle_id": "com.apple.ssinvitationagent"
+  },
+  {
+    "name": "SSMenuAgent",
+    "bundle_id": "com.apple.SSMenuAgent"
+  },
+  {
+    "name": "StageManagerOnboarding",
+    "bundle_id": "com.apple.windowmanager.StageManagerOnboarding"
+  },
+  {
+    "name": "StandaloneUpdater",
+    "bundle_id": "com.microsoft.OneDriveStandaloneUpdater"
+  },
+  {
+    "name": "Stickies",
+    "bundle_id": "com.apple.Stickies"
+  },
+  {
+    "name": "Stocks",
+    "bundle_id": "com.apple.stocks"
+  },
+  {
+    "name": "Superior Drummer 3",
+    "bundle_id": "com.toontrack.superior3host"
+  },
+  {
+    "name": "SyncReporter",
+    "bundle_id": "com.microsoft.SyncReporter"
+  },
+  {
+    "name": "System Events",
+    "bundle_id": "com.apple.systemevents"
+  },
+  {
+    "name": "System Information",
+    "bundle_id": "com.apple.SystemProfiler"
+  },
+  {
+    "name": "System Settings",
+    "bundle_id": "com.apple.systempreferences"
+  },
+  {
+    "name": "SystemUIServer",
+    "bundle_id": "com.apple.systemuiserver"
+  },
+  {
+    "name": "TeamViewer",
+    "bundle_id": "com.teamviewer.TeamViewer"
+  },
+  {
+    "name": "TeamViewer Note",
+    "bundle_id": "com.teamviewer.TeamViewer-Note"
+  },
+  {
+    "name": "TeamViewer_Desktop",
+    "bundle_id": "com.teamviewer.Desktop"
+  },
+  {
+    "name": "Telegram",
+    "bundle_id": "ru.keepcoder.Telegram"
+  },
+  {
+    "name": "Terminal",
+    "bundle_id": "com.apple.Terminal"
+  },
+  {
+    "name": "TextEdit",
+    "bundle_id": "com.apple.TextEdit"
+  },
+  {
+    "name": "TextInputMenuAgent",
+    "bundle_id": "com.apple.TextInputMenuAgent"
+  },
+  {
+    "name": "TextInputSwitcher",
+    "bundle_id": "com.apple.TextInputSwitcher"
+  },
+  {
+    "name": "ThermalTrap",
+    "bundle_id": "com.apple.ThermalTrap"
+  },
+  {
+    "name": "Ticket Viewer",
+    "bundle_id": "com.apple.Ticket-Viewer"
+  },
+  {
+    "name": "Time Machine",
+    "bundle_id": "com.apple.backup.launcher"
+  },
+  {
+    "name": "Tips",
+    "bundle_id": "com.apple.helpviewer"
+  },
+  {
+    "name": "TipsSpotlightHandler",
+    "bundle_id": "com.apple.tips"
+  },
+  {
+    "name": "TMHelperAgent",
+    "bundle_id": "com.apple.timemachine.HelperAgent"
+  },
+  {
+    "name": "Toontrack Product Manager",
+    "bundle_id": "com.toontrack.productmanager"
+  },
+  {
+    "name": "Toontrack Updater",
+    "bundle_id": "com.toontrack.productmanager.updater"
+  },
+  {
+    "name": "TV",
+    "bundle_id": "com.apple.TV"
+  },
+  {
+    "name": "UIKitSystem",
+    "bundle_id": "com.apple.UIKitSystemApp"
+  },
+  {
+    "name": "Uninstall Fresh Air",
+    "bundle_id": null
+  },
+  {
+    "name": "Uninstaller",
+    "bundle_id": "jp.co.roland.RDUSB0230.Uninstaller"
+  },
+  {
+    "name": "UniversalAccessControl",
+    "bundle_id": "com.apple.UniversalAccessControl"
+  },
+  {
+    "name": "UniversalControl",
+    "bundle_id": "com.apple.universalcontrol"
+  },
+  {
+    "name": "UnmountAssistantAgent",
+    "bundle_id": "com.apple.UnmountAssistantAgent"
+  },
+  {
+    "name": "Updater",
+    "bundle_id": "org.sparkle-project.Sparkle.Updater"
+  },
+  {
+    "name": "UserNotificationCenter",
+    "bundle_id": "com.apple.UserNotificationCenter"
+  },
+  {
+    "name": "uTorrent Web",
+    "bundle_id": "com.bitTorrent.utweb"
+  },
+  {
+    "name": "Visual Studio Code",
+    "bundle_id": "com.microsoft.VSCode"
+  },
+  {
+    "name": "VLC",
+    "bundle_id": "org.videolan.vlc"
+  },
+  {
+    "name": "VoiceMemos",
+    "bundle_id": "com.apple.VoiceMemos"
+  },
+  {
+    "name": "VoiceOver",
+    "bundle_id": "com.apple.VoiceOver"
+  },
+  {
+    "name": "VoiceOver Utility",
+    "bundle_id": "com.apple.VoiceOverUtility"
+  },
+  {
+    "name": "VoiceOverUtilityCacheBuilder",
+    "bundle_id": "com.apple.VoiceOverUtilityCacheBuilder"
+  },
+  {
+    "name": "WallpaperAgent",
+    "bundle_id": "com.apple.wallpaper.agent"
+  },
+  {
+    "name": "WatchFaceAlert",
+    "bundle_id": "com.apple.WatchFaceAlert"
+  },
+  {
+    "name": "Waves AU Reg Utility",
+    "bundle_id": "com.WavesAudio.Waves-AU-Reg-Utility.12.7.0"
+  },
+  {
+    "name": "Waves AU Reg Utility 13",
+    "bundle_id": "com.WavesAudio.Waves-AU-Reg-Utility.13.0.0"
+  },
+  {
+    "name": "Waves Central",
+    "bundle_id": "com.WavesAudio.central"
+  },
+  {
+    "name": "Waves Central Helper",
+    "bundle_id": "com.WavesAudio.central.helper"
+  },
+  {
+    "name": "Waves Central Helper (GPU)",
+    "bundle_id": "com.WavesAudio.central.helper.GPU"
+  },
+  {
+    "name": "Waves Central Helper (Plugin)",
+    "bundle_id": "com.WavesAudio.central.helper.Plugin"
+  },
+  {
+    "name": "Waves Central Helper (Renderer)",
+    "bundle_id": "com.WavesAudio.central.helper.Renderer"
+  },
+  {
+    "name": "WAZA Tube Amp Expander Editor",
+    "bundle_id": "jp.co.roland.WAZA-Tube-Amp-Expander-Editor"
+  },
+  {
+    "name": "WAZA-TAE Driver Setup",
+    "bundle_id": "jp.co.roland.WAZA-TAE-Driver-Setup"
+  },
+  {
+    "name": "Weather",
+    "bundle_id": "com.apple.weather"
+  },
+  {
+    "name": "WeatherMenu",
+    "bundle_id": "com.apple.weather.menu"
+  },
+  {
+    "name": "WEDGE FORCE Matcha",
+    "bundle_id": "com.wedgeforce.standalone.matcha"
+  },
+  {
+    "name": "WhatsApp",
+    "bundle_id": "WhatsApp"
+  },
+  {
+    "name": "WhatsApp",
+    "bundle_id": "net.whatsapp.WhatsApp"
+  },
+  {
+    "name": "WhatsApp Helper",
+    "bundle_id": "WhatsApp-Helper"
+  },
+  {
+    "name": "WhatsApp Helper (GPU)",
+    "bundle_id": "WhatsApp-Helper"
+  },
+  {
+    "name": "WhatsApp Helper (Plugin)",
+    "bundle_id": "WhatsApp-Helper"
+  },
+  {
+    "name": "WhatsApp Helper (Renderer)",
+    "bundle_id": "WhatsApp-Helper"
+  },
+  {
+    "name": "WidgetKit Simulator",
+    "bundle_id": "com.apple.widgetkit.simulator"
+  },
+  {
+    "name": "WiFiAgent",
+    "bundle_id": "com.apple.wifi.WiFiAgent"
+  },
+  {
+    "name": "WindowManager",
+    "bundle_id": "com.apple.WindowManager"
+  },
+  {
+    "name": "WindowManagerShowDesktopEducation",
+    "bundle_id": "com.apple.windowmanager.ShowDesktopEducation"
+  },
+  {
+    "name": "Wireless Diagnostics",
+    "bundle_id": "com.apple.wifi.diagnostics"
+  },
+  {
+    "name": "WorkoutAlert-Mac",
+    "bundle_id": "com.apple.WorkoutAlert-Mac"
+  },
+  {
+    "name": "Xcode",
+    "bundle_id": "com.apple.dt.Xcode"
+  },
+  {
+    "name": "Xcode Helper",
+    "bundle_id": "com.apple.dt.Xcode-Helper"
+  },
+  {
+    "name": "XCPreviewAgent",
+    "bundle_id": null
+  },
+  {
+    "name": "XCPreviewAgent",
+    "bundle_id": "previews.com.apple.PreviewAgent.Catalyst"
+  },
+  {
+    "name": "XCPreviewAgent",
+    "bundle_id": "previews.com.apple.PreviewAgent.macOS"
+  },
+  {
+    "name": "XCTRunner",
+    "bundle_id": null
+  },
+  {
+    "name": "XCTRunner",
+    "bundle_id": "$(WRAPPEDPRODUCTBUNDLEIDENTIFIER)"
+  }
+]

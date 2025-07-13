@@ -1,0 +1,54 @@
+{
+  "name": "vision_openai",
+  "description": "Semantic image understanding actions powered by GPT-4 Vision...",
+  "actions": [
+    {
+      "name": "describe_screen",
+      "input_args": ["image_path", "prompt"],
+      "description": "Describe the entire screen based on the prompt using GPT-4 Vision.",
+      "source": "openai"
+    },
+    {
+      "name": "extract_text",
+      "input_args": ["image_path"],
+      "description": "Extract all visible text from the image using GPT-4 Vision.",
+      "source": "openai"
+    },
+    {
+      "name": "locate_button",
+      "input_args": ["image_path", "button_label"],
+      "description": "Return the position or description of the button with the given label.",
+      "source": "openai"
+    },
+    {
+      "name": "summarise_ui_structure",
+      "input_args": ["image_path"],
+      "description": "Summarise the layout of the UI including headings, forms, buttons, and sections.",
+      "source": "openai"
+    },
+    {
+      "name": "classify_screen_type",
+      "input_args": ["image_path"],
+      "description": "Return the screen type (e.g. login, dashboard, error) based on image content.",
+      "source": "openai"
+    },
+    {
+      "name": "find_text_location",
+      "input_args": ["image_path", "text"],
+      "description": "Return position of specific text string on screen.",
+      "source": "openai"
+    },
+    {
+      "name": "interpret_chart_or_graph",
+      "input_args": ["image_path"],
+      "description": "Analyse charts and graphs visually and return their meaning.",
+      "source": "openai"
+    },
+    {
+      "name": "validate_visual_result",
+      "input_args": ["image_path", "expected_result"],
+      "description": "Confirm if an expected visual outcome is present (e.g. success message, change).",
+      "source": "openai"
+    }
+  ]
+}

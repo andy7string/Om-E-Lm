@@ -1,0 +1,718 @@
+{
+  "app_name": "Notes",
+  "bundle_id": "com.apple.Notes",
+  "essential_roles": [
+    "AXButton",
+    "AXTextArea",
+    "AXMenuButton",
+    "AXCheckBox",
+    "AXRadioButton",
+    "AXTable",
+    "AXTextField",
+    "AXStaticText",
+    "AXGroup",
+    "AXToolbar"
+  ],
+  "essential_containers": [
+    "AXSplitGroup",
+    "AXToolbar",
+    "AXTable",
+    "AXScrollArea",
+    "AXGroup",
+    "AXWindow"
+  ],
+  "max_container_depth": 3,
+  "exclude_roles": [
+    "AXImage",
+    "AXCell",
+    "AXRow"
+  ],
+  "elements": [
+    {
+      "id": "el_0",
+      "role": "AXSplitGroup",
+      "description": "UI element (SplitGroup) | Confidence: 0.3",
+      "click": [
+        424.0,
+        274.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXSplitGroup[0]",
+      "type": "other",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_1",
+      "role": "AXScrollArea",
+      "description": "UI element (ScrollArea) | Confidence: 0.3 | AXIdentifier: _NS:120",
+      "click": [
+        133.0,
+        300.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXSplitGroup[0]/AXScrollArea[1]",
+      "type": "scroll_container",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_2",
+      "role": "AXTable",
+      "description": "My Notes | Confidence: 0.3 | AXDescription: My Notes | AXIdentifier: _NS:76",
+      "click": [
+        125.5,
+        1004.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXSplitGroup[0]/AXScrollArea[1]/AXTable[0]",
+      "type": "data_table",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_3",
+      "role": "AXButton",
+      "description": "Interactive button | Confidence: 0.6 | Subrole: AXIncrementPage",
+      "click": [
+        226.5,
+        326.25
+      ],
+      "AXRolePath": "AXWindow[0]/AXSplitGroup[0]/AXScrollArea[1]/AXScrollBar[1]/AXButton[3]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_4",
+      "role": "AXButton",
+      "description": "Interactive button | Confidence: 0.6 | Subrole: AXDecrementPage",
+      "click": [
+        226.5,
+        165.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXSplitGroup[0]/AXScrollArea[1]/AXScrollBar[1]/AXButton[4]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_5",
+      "role": "AXStaticText",
+      "description": "Perform press to show creation date. | Confidence: 0.4 | AXHelp: Perform press to show creation date. | AXValue: 07 June 2025 at 12:26 | AXIdentifier: _NS:7",
+      "click": [
+        518.0,
+        179.5
+      ],
+      "AXRolePath": "AXWindow[0]/AXSplitGroup[0]/AXUnknown[?]/AXStaticText[0]",
+      "type": "text_label",
+      "hints": [],
+      "confidence": 0.4,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_6",
+      "role": "AXScrollArea",
+      "description": "UI element (ScrollArea) | Confidence: 0.3 | AXIdentifier: Note Body Scroll View",
+      "click": [
+        525.5,
+        300.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXSplitGroup[0]/AXScrollArea[4]",
+      "type": "scroll_container",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_7",
+      "role": "AXTextArea",
+      "description": "Text editing area | Confidence: 0.8 | AXValue: Your world is mine | AXIdentifier: Note Body Text View",
+      "click": [
+        518.0,
+        587.25
+      ],
+      "AXRolePath": "AXWindow[0]/AXSplitGroup[0]/AXScrollArea[4]/AXTextArea[0]",
+      "type": "text_editor",
+      "hints": [
+        "text-input",
+        "editable"
+      ],
+      "confidence": 0.8,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_8",
+      "role": "AXToolbar",
+      "description": "UI element (Toolbar) | Confidence: 0.3",
+      "click": [
+        424.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]",
+      "type": "toolbar",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_9",
+      "role": "AXButton",
+      "description": "Show folders | Confidence: 0.6 | AXHelp: Show folders | AXDescription: Folders",
+      "click": [
+        140.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[0]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_10",
+      "role": "AXRadioGroup",
+      "description": "UI element (RadioGroup) | Confidence: 0.3 | AXValue_role: AXRadioButton",
+      "click": [
+        394.5,
+        164.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXGroup[1]/AXRadioGroup[0]",
+      "type": "other",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_11",
+      "role": "AXRadioButton",
+      "description": "View notes as list | Confidence: 0.3 | AXHelp: View notes as list | AXDescription: List View | AXValue: 1",
+      "click": [
+        181.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXGroup[1]/AXRadioGroup[0]/AXRadioButton[0]",
+      "type": "view_control",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_12",
+      "role": "AXRadioButton",
+      "description": "View notes as gallery | Confidence: 0.3 | AXHelp: View notes as gallery | AXDescription: Gallery View | AXValue: 0",
+      "click": [
+        224.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXGroup[1]/AXRadioGroup[0]/AXRadioButton[1]",
+      "type": "view_control",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_13",
+      "role": "AXButton",
+      "description": "Delete | Confidence: 0.6 | AXHelp: Delete | AXDescription: Delete",
+      "click": [
+        271.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[2]",
+      "type": "delete_button",
+      "hints": [
+        "primary-action",
+        "clickable",
+        "destructive-action"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_14",
+      "role": "AXButton",
+      "description": "Create a note | Confidence: 0.6 | AXHelp: Create a note | AXDescription: New Note",
+      "click": [
+        326.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[3]",
+      "type": "action_button",
+      "hints": [
+        "primary-action",
+        "creation-tool",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_15",
+      "role": "AXButton",
+      "description": "Choose a style to apply to text | Confidence: 0.6 | AXHelp: Choose a style to apply to text | AXDescription: Format",
+      "click": [
+        379.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[4]",
+      "type": "format_button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated",
+      "children": [
+        {
+          "id": "virtual_bold",
+          "role": "AXCheckBox",
+          "description": "Bold | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": -68.5,
+          "ratio_y": 46
+        },
+        {
+          "id": "virtual_italic",
+          "role": "AXCheckBox",
+          "description": "Italic | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": -38.5,
+          "ratio_y": 46
+        },
+        {
+          "id": "virtual_underline",
+          "role": "AXCheckBox",
+          "description": "Underline | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": -9.5,
+          "ratio_y": 46
+        },
+        {
+          "id": "virtual_strikethrough",
+          "role": "AXCheckBox",
+          "description": "Strikethrough | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 18.5,
+          "ratio_y": 46
+        },
+        {
+          "id": "virtual_highlight",
+          "role": "AXCheckBox",
+          "description": "Highlight | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 46.5,
+          "ratio_y": 46
+        },
+        {
+          "id": "virtual_title",
+          "role": "AXButton",
+          "description": "TITLE | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 0,
+          "ratio_y": 88
+        },
+        {
+          "id": "virtual_heading",
+          "role": "AXButton",
+          "description": "Heading | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 0,
+          "ratio_y": 146
+        },
+        {
+          "id": "virtual_body",
+          "role": "AXButton",
+          "description": "Body | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 0,
+          "ratio_y": 174
+        },
+        {
+          "id": "virtual_monostyled",
+          "role": "AXButton",
+          "description": "Monostyled | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 0,
+          "ratio_y": 203
+        },
+        {
+          "id": "virtual_\u2022_bulleted_list",
+          "role": "AXButton",
+          "description": "Bulleted List | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 0,
+          "ratio_y": 232
+        },
+        {
+          "id": "virtual_\u2013_dashed_list",
+          "role": "AXButton",
+          "description": "Dashed List | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 0,
+          "ratio_y": 262
+        },
+        {
+          "id": "virtual_1._numbered_list",
+          "role": "AXButton",
+          "description": "Numbered List | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 0,
+          "ratio_y": 290
+        },
+        {
+          "id": "virtual_block_quote",
+          "role": "AXButton",
+          "description": "Block Quote | RatioX: ... | RatioY: ... | Parent: Format",
+          "ratio_x": 0,
+          "ratio_y": 333
+        }
+      ]
+    },
+    {
+      "id": "el_16",
+      "role": "AXButton",
+      "description": "Make a checklist | Confidence: 0.6 | AXHelp: Make a checklist | AXDescription: Checklist | AXValue: Off",
+      "click": [
+        421.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[5]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_17",
+      "role": "AXButton",
+      "description": "Add a table | Confidence: 0.6 | AXHelp: Add a table | AXDescription: Table",
+      "click": [
+        462.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[6]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_18",
+      "role": "AXButton",
+      "description": "Record audio | Confidence: 0.6 | AXHelp: Record audio | AXDescription: Record Audio",
+      "click": [
+        502.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated",
+      "children": [
+        {
+          "id": "virtual_\u2022_bulleted_list",
+          "role": "AXButton",
+          "description": "\u2022 Bulleted List | RatioX: -3.25 | RatioY: 4.453 | Parent: Record audio",
+          "click": [
+            502.5,
+            138.0
+          ],
+          "parent_path": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+          "ratio_x": -3.25,
+          "ratio_y": 4.453,
+          "virtual": true,
+          "visible": false
+        },
+        {
+          "id": "virtual_\u2013_dashed_list",
+          "role": "AXButton",
+          "description": "\u2013 Dashed List | RatioX: -3.25 | RatioY: 5.011 | Parent: Record audio",
+          "click": [
+            502.5,
+            138.0
+          ],
+          "parent_path": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+          "ratio_x": -3.25,
+          "ratio_y": 5.011,
+          "virtual": true,
+          "visible": false
+        },
+        {
+          "id": "virtual_1._numbered_list",
+          "role": "AXButton",
+          "description": "1. Numbered List | RatioX: -3.25 | RatioY: 5.569 | Parent: Record audio",
+          "click": [
+            502.5,
+            138.0
+          ],
+          "parent_path": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+          "ratio_x": -3.25,
+          "ratio_y": 5.569,
+          "virtual": true,
+          "visible": false
+        },
+        {
+          "id": "virtual_block_quote",
+          "role": "AXButton",
+          "description": "block quote | RatioX: -3.25 | RatioY: 6.404 | Parent: Record audio",
+          "click": [
+            502.5,
+            138.0
+          ],
+          "parent_path": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+          "ratio_x": -3.25,
+          "ratio_y": 6.404,
+          "virtual": true,
+          "visible": false
+        }
+      ]
+    },
+    {
+      "id": "el_19",
+      "role": "AXButton",
+      "description": "Add a link | Confidence: 0.6 | AXHelp: Add a link | AXDescription: Link",
+      "click": [
+        554.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[8]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_20",
+      "role": "AXMenuButton",
+      "description": "Add files, media and more | Confidence: 0.3 | AXHelp: Add files, media and more | AXDescription: Media",
+      "click": [
+        605.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXMenuButton[9]",
+      "type": "media_menu",
+      "hints": [
+        "menu-trigger",
+        "dropdown"
+      ],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_21",
+      "role": "AXButton",
+      "description": "Show Writing Tools | Confidence: 0.6 | AXHelp: Show Writing Tools | AXDescription: Writing Tools",
+      "click": [
+        657.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[10]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_22",
+      "role": "AXMenuButton",
+      "description": "Add or remove password locks | Confidence: 0.3 | AXHelp: Add or remove password locks | AXDescription: Lock | AXValue: locked",
+      "click": [
+        704.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXMenuButton[11]",
+      "type": "security_menu",
+      "hints": [
+        "menu-trigger",
+        "dropdown"
+      ],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_23",
+      "role": "AXMenuButton",
+      "description": "Lock | Confidence: 0.3 | AXDescription: Lock | AXValue: locked",
+      "click": [
+        896.75,
+        164.0
+      ],
+      "parent_path": "AXWindow[0]/AXToolbar[1]/AXMenuButton[11]",
+      "type": "menu_button",
+      "hints": [
+        "menu-trigger",
+        "dropdown"
+      ],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_24",
+      "role": "AXButton",
+      "description": "Share this note | Confidence: 0.6 | AXDescription: Share this note",
+      "click": [
+        750.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXButton[12]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_25",
+      "role": "AXGroup",
+      "description": "Quickly find notes and attachments | Confidence: 0.3 | AXHelp: Quickly find notes and attachments",
+      "click": [
+        788.5,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXToolbar[1]/AXGroup[13]",
+      "type": "other",
+      "hints": [],
+      "confidence": 0.3,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_26",
+      "role": "AXButton",
+      "description": "Search | Confidence: 0.6 | AXDescription: Search",
+      "click": [
+        980.75,
+        164.0
+      ],
+      "parent_path": "AXWindow[0]/AXToolbar[1]/AXGroup[13]",
+      "type": "button",
+      "hints": [
+        "primary-action",
+        "clickable"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_27",
+      "role": "AXButton",
+      "description": "Close window button | Confidence: 0.6 | Subrole: AXCloseButton",
+      "click": [
+        58.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXButton[2]",
+      "type": "window_close",
+      "hints": [
+        "window-control"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_28",
+      "role": "AXButton",
+      "description": "this button also has an action to zoom the window | Confidence: 0.6 | Subrole: AXFullScreenButton | AXHelp: this button also has an action to zoom the window",
+      "click": [
+        98.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXButton[3]",
+      "type": "window_fullscreen",
+      "hints": [
+        "window-control"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "el_29",
+      "role": "AXButton",
+      "description": "Minimize window button | Confidence: 0.6 | Subrole: AXMinimizeButton",
+      "click": [
+        78.0,
+        138.0
+      ],
+      "AXRolePath": "AXWindow[0]/AXButton[4]",
+      "type": "window_minimize",
+      "hints": [
+        "window-control"
+      ],
+      "confidence": 0.6,
+      "classification_method": "automated"
+    },
+    {
+      "id": "virtual_\u2022_bulleted_list",
+      "role": "AXButton",
+      "description": "\u2022 Bulleted List | RatioX: -3.25 | RatioY: 4.453 | Parent: Record audio",
+      "click": [
+        571.0,
+        395.556
+      ],
+      "parent_path": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+      "ratio_x": -3.25,
+      "ratio_y": 4.453,
+      "virtual": true,
+      "visible": false
+    },
+    {
+      "id": "virtual_\u2013_dashed_list",
+      "role": "AXButton",
+      "description": "\u2013 Dashed List | RatioX: -3.25 | RatioY: 5.011 | Parent: Record audio",
+      "click": [
+        571.0,
+        424.572
+      ],
+      "parent_path": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+      "ratio_x": -3.25,
+      "ratio_y": 5.011,
+      "virtual": true,
+      "visible": false
+    },
+    {
+      "id": "virtual_1._numbered_list",
+      "role": "AXButton",
+      "description": "1. Numbered List | RatioX: -3.25 | RatioY: 5.569 | Parent: Record audio",
+      "click": [
+        571.0,
+        453.588
+      ],
+      "parent_path": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+      "ratio_x": -3.25,
+      "ratio_y": 5.569,
+      "virtual": true,
+      "visible": false
+    },
+    {
+      "id": "virtual_block_quote",
+      "role": "AXButton",
+      "description": "block quote | RatioX: -3.25 | RatioY: 6.404 | Parent: Record audio",
+      "click": [
+        571.0,
+        497.008
+      ],
+      "parent_path": "AXWindow[0]/AXToolbar[1]/AXButton[7]",
+      "ratio_x": -3.25,
+      "ratio_y": 6.404,
+      "virtual": true,
+      "visible": false
+    }
+  ]
+}
