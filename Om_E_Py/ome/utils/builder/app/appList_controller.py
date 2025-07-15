@@ -1,14 +1,14 @@
 """
 App List Builder & Lookup Utility
 
-This script manages and looks up macOS applications by their names and bundle IDs. It is designed to help you programmatically find bundle IDs for app names (and vice versa), keep an up-to-date list of installed user-visible macOS apps, and automate tasks that require bundle IDs.
+This module is part of the Om_E_Lm project. It manages and looks up macOS applications by their names and bundle IDs, helping you programmatically find bundle IDs for app names (and vice versa), keep an up-to-date list of installed user-visible macOS apps, and automate tasks that require bundle IDs.
 
 ====================
 PURPOSE
 ====================
 - Scans standard macOS application directories for .app bundles.
 - Extracts app names and bundle IDs from each found application.
-- Caches the app list as a JSONL file (location is configurable via your environment).
+- Caches the app list as a JSONL file (location is configurable via the central env.py and .env at the project root).
 - Provides fast lookup utilities to get an app name from a bundle ID, or a bundle ID from an app name.
 - Offers a command-line interface (CLI) for refreshing the app list, performing lookups, and checking existence.
 
@@ -37,13 +37,13 @@ HOW IT WORKS
 1. Scanning: Recursively scans standard macOS app directories (like /Applications, /System/Applications, etc.) for .app bundles.
 2. Filtering: Filters out background-only and non-user-visible apps.
 3. Extracting Info: For each app, reads the Info.plist to get the app's name and bundle ID.
-4. Caching: Results are cached in a JSONL file for fast future lookups.
+4. Caching: Results are cached in a JSONL file for fast future lookups (location set by env.py).
 5. Lookups: Uses in-memory dictionaries for fast name <-> bundle ID lookups, with fuzzy fallback using rapidfuzz if no exact match is found (score threshold: 80).
 
 ====================
 PYTHON API USAGE EXAMPLES
 ====================
-from ome.utils.builder.app.appList_controller import get_app_name, get_bundle_id, app_name_exists, bundle_id_exists
+from Om_E_Py.ome.utils.builder.app.appList_controller import get_app_name, get_bundle_id, app_name_exists, bundle_id_exists
 
 # Lookup app name from bundle ID
 print(get_app_name('com.apple.mail'))        # 'Mail' (exact match)
@@ -69,38 +69,38 @@ print(bundle_id_exists('com.apple.notarealapp')) # False (does not exist)
 COMMAND LINE USAGE EXAMPLES
 ====================
 # Rebuild the app list cache
-python -m ome.utils.builder.app.appList_controller --refresh
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --refresh
 
 # Lookup app name from bundle ID
-python -m ome.utils.builder.app.appList_controller --bundle-to-name com.apple.mail
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --bundle-to-name com.apple.mail
 # Output: Mail
-python -m ome.utils.builder.app.appList_controller --bundle-to-name com.apple.mial
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --bundle-to-name com.apple.mial
 # Output: Mail (fuzzy match)
-python -m ome.utils.builder.app.appList_controller --bundle-to-name com.apple.notarealapp
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --bundle-to-name com.apple.notarealapp
 # Output: [NOT FOUND] No app name for bundle ID: com.apple.notarealapp
 
 # Lookup bundle ID from app name
-python -m ome.utils.builder.app.appList_controller --name-to-bundle Safari
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --name-to-bundle Safari
 # Output: com.apple.Safari
-python -m ome.utils.builder.app.appList_controller --name-to-bundle Safri
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --name-to-bundle Safri
 # Output: com.apple.Safari (fuzzy match)
-python -m ome.utils.builder.app.appList_controller --name-to-bundle NotARealApp
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --name-to-bundle NotARealApp
 # Output: [NOT FOUND] No bundle ID for app name: NotARealApp
 
 # Check if an app name exists (returns canonical name or None)
-python -m ome.utils.builder.app.appList_controller --name-exists Safari
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --name-exists Safari
 # Output: safari
-python -m ome.utils.builder.app.appList_controller --name-exists Safri
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --name-exists Safri
 # Output: safari (fuzzy match)
-python -m ome.utils.builder.app.appList_controller --name-exists NotARealApp
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --name-exists NotARealApp
 # Output: None
 
 # Check if a bundle ID exists (returns canonical bundle ID or None)
-python -m ome.utils.builder.app.appList_controller --bundle-exists com.apple.mail
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --bundle-exists com.apple.mail
 # Output: com.apple.mail
-python -m ome.utils.builder.app.appList_controller --bundle-exists com.apple.mial
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --bundle-exists com.apple.mial
 # Output: com.apple.mail (fuzzy match)
-python -m ome.utils.builder.app.appList_controller --bundle-exists com.apple.notarealapp
+python -m Om_E_Py.ome.utils.builder.app.appList_controller --bundle-exists com.apple.notarealapp
 # Output: None
 
 If no options are provided, the script will print the number of apps in the current app list cache.
@@ -116,7 +116,7 @@ WHEN TO USE
 import os
 import json
 from pathlib import Path
-from ome.utils.env.env import APP_LIST_DIR  # Only need the directory now
+from env import UI_APP_LIST_DIR
 import plistlib
 import time
 from rapidfuzz import process
@@ -130,7 +130,7 @@ APP_DIRS = [
 ]
 
 # Path to the JSONL cache file
-JSONL_PATH = APP_LIST_DIR / "app_list.jsonl"
+JSONL_PATH = Path(UI_APP_LIST_DIR) / "app_list.jsonl"
 
 def extract_bundle_id_from_path(app_path):
     """
@@ -234,7 +234,7 @@ def load_app_list(refresh=False):
     # 🔄 Rebuild the app list and save it
     t1 = time.time()
     apps = scan_apps()
-    APP_LIST_DIR.mkdir(parents=True, exist_ok=True)
+    Path(UI_APP_LIST_DIR).mkdir(parents=True, exist_ok=True)
     with open(JSONL_PATH, "w") as f:
         for app in apps:
             f.write(json.dumps(app, ensure_ascii=False) + "\n")
@@ -365,12 +365,9 @@ def rebuild_app_list(refresh=True):
 
     Args:
         refresh (bool): Force rebuild of the app list.
-
-    Returns:
-        list: The rebuilt app list.
     """
     apps = scan_apps()
-    APP_LIST_DIR.mkdir(parents=True, exist_ok=True)
+    Path(UI_APP_LIST_DIR).mkdir(parents=True, exist_ok=True)
     with open(JSONL_PATH, "w") as f:
         for app in apps:
             f.write(json.dumps(app, ensure_ascii=False) + "\n")

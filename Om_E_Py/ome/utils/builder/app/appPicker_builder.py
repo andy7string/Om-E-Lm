@@ -53,12 +53,12 @@ import os
 import json
 import time
 import argparse
-from ome.utils.builder.app.app_focus import ensure_app_focus
+from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
 import ome
-from ome.utils.builder.app.appNav_builder import extract_omeclick, extract_omeclick_textfield, safe_getattr_textfield
-from ome.utils.env.env import MAX_ROWS, RETRY_DELAY, PICKER_EXPORT_DIR, ACTION_DELAY
-from ome.utils.uiNav.navBigDaDDy import get_active_target_and_windows_from_file
-from ome.AXKeyboard import RETURN, get_keycode
+from Om_E_Py.ome.utils.builder.app.appNav_builder import extract_omeclick, extract_omeclick_textfield, safe_getattr_textfield
+from env import UI_MAX_ROWS, UI_RETRY_DELAY, UI_PICKER_EXPORT_DIR, UI_ACTION_DELAY
+from Om_E_Py.ome.utils.uiNav.navBigDaDDy import get_active_target_and_windows_from_file
+from ome.AXKeyboard import RETURN
 import Quartz
 
 # Picker-specific constants
@@ -105,7 +105,7 @@ def extract_file_picker_rows(bundle_id="com.apple.mail", n=None, row_index=None,
         if app is None:
             print(f"Could not get app object from ensure_app_focus for bundle {bundle_id}.")
             sys.exit(1)
-        time.sleep(RETRY_DELAY)
+        time.sleep(UI_RETRY_DELAY)
     
     t_focus_end = time.time()
     
@@ -303,8 +303,8 @@ def update_picker_jsonl(bundle_id, rows, selected_row_index=None, max_rows=MAX_P
                 row_count += 1
         except Exception as e:
             print(f"[WARNING] Error extracting row {i}: {e}")
-    os.makedirs(PICKER_EXPORT_DIR, exist_ok=True)
-    out_path = os.path.join(PICKER_EXPORT_DIR, f"picker_{bundle_id}.jsonl")
+    os.makedirs(UI_PICKER_EXPORT_DIR, exist_ok=True)
+    out_path = os.path.join(UI_PICKER_EXPORT_DIR, f"picker_{bundle_id}.jsonl")
     with open(out_path, 'w') as f:
         for item in picker_data:
             f.write(json.dumps(item, ensure_ascii=False) + '\n')
@@ -349,15 +349,11 @@ def select_row(bundle_id, row_index, send_keys_after_select=False):
         pyautogui.click(x, y)
         print(f"[SELECT_ROW] Clicked on row {row_index} at coordinates ({x}, {y})")
         if send_keys_after_select:
-            print(f"[SELECT_ROW] Waiting {ACTION_DELAY} seconds before sending Enter key...")
-            time.sleep(ACTION_DELAY)
+            print(f"[SELECT_ROW] Waiting {UI_ACTION_DELAY} seconds before sending Enter key...")
+            time.sleep(UI_ACTION_DELAY)
             print("[SELECT_ROW] Sending Enter key after selection...")
-            keycode = get_keycode(RETURN)
-            if keycode is not None:
-                Quartz.CGEventPost(Quartz.kCGHIDEventTap, Quartz.CGEventCreateKeyboardEvent(None, keycode, True))
-                Quartz.CGEventPost(Quartz.kCGHIDEventTap, Quartz.CGEventCreateKeyboardEvent(None, keycode, False))
-            else:
-                print("[ERROR] Could not resolve keycode for RETURN")
+            Quartz.CGEventPost(Quartz.kCGHIDEventTap, Quartz.CGEventCreateKeyboardEvent(None, RETURN, True))
+            Quartz.CGEventPost(Quartz.kCGHIDEventTap, Quartz.CGEventCreateKeyboardEvent(None, RETURN, False))
         return True
     except Exception as e:
         print(f"[SELECT_ROW] Failed to click on row {row_index}: {e}")
@@ -378,7 +374,7 @@ def select_row_direct(bundle_id, row_index, app_object=None, send_keys_after_sel
         # Use provided app object (fast path)
         app = app_object
         print(f"[INFO] Using provided app object for {bundle_id}")
-        time.sleep(RETRY_DELAY)
+        time.sleep(UI_RETRY_DELAY)
     else:
         # Focus app (slow path)
         focus_result = ensure_app_focus(bundle_id, fullscreen=True)
@@ -387,7 +383,7 @@ def select_row_direct(bundle_id, row_index, app_object=None, send_keys_after_sel
             return False
         
         app = focus_result.get('app')
-        time.sleep(RETRY_DELAY)
+        time.sleep(UI_RETRY_DELAY)
     
     # Find the window with an AXSheet child (where the file picker appears)
     windows = safe_getattr_textfield(app, 'AXWindows') or []
@@ -498,15 +494,11 @@ def select_row_direct(bundle_id, row_index, app_object=None, send_keys_after_sel
         update_picker_jsonl(bundle_id, rows, accessibility_row_index)
         
         if send_keys_after_select:
-            print(f"[SELECT_ROW_DIRECT] Waiting {ACTION_DELAY} seconds before sending Enter key...")
-            time.sleep(ACTION_DELAY)
+            print(f"[SELECT_ROW_DIRECT] Waiting {UI_ACTION_DELAY} seconds before sending Enter key...")
+            time.sleep(UI_ACTION_DELAY)
             print("[SELECT_ROW_DIRECT] Sending Enter key after selection...")
-            keycode = get_keycode(RETURN)
-            if keycode is not None:
-                Quartz.CGEventPost(Quartz.kCGHIDEventTap, Quartz.CGEventCreateKeyboardEvent(None, keycode, True))
-                Quartz.CGEventPost(Quartz.kCGHIDEventTap, Quartz.CGEventCreateKeyboardEvent(None, keycode, False))
-            else:
-                print("[ERROR] Could not resolve keycode for RETURN")
+            Quartz.CGEventPost(Quartz.kCGHIDEventTap, Quartz.CGEventCreateKeyboardEvent(None, RETURN, True))
+            Quartz.CGEventPost(Quartz.kCGHIDEventTap, Quartz.CGEventCreateKeyboardEvent(None, RETURN, False))
         
         return True
     except Exception as e:
@@ -537,8 +529,8 @@ def build_picker_data(bundle_id, app_object=None):
         rows = extract_file_picker_rows(bundle_id=bundle_id, app_object=app_object)
         
         # Write to JSONL file
-        os.makedirs(PICKER_EXPORT_DIR, exist_ok=True)
-        out_path = os.path.join(PICKER_EXPORT_DIR, f"picker_{bundle_id}.jsonl")
+        os.makedirs(UI_PICKER_EXPORT_DIR, exist_ok=True)
+        out_path = os.path.join(UI_PICKER_EXPORT_DIR, f"picker_{bundle_id}.jsonl")
         
         with open(out_path, 'w') as f:
             for item in rows:
@@ -606,8 +598,8 @@ def main():
 
     # Handle row extraction
     rows = extract_file_picker_rows(bundle_id=bundle_id, n=args.n, row_index=args.row)
-    os.makedirs(PICKER_EXPORT_DIR, exist_ok=True)
-    out_path = os.path.join(PICKER_EXPORT_DIR, f"picker_{bundle_id}.jsonl")
+    os.makedirs(UI_PICKER_EXPORT_DIR, exist_ok=True)
+    out_path = os.path.join(UI_PICKER_EXPORT_DIR, f"picker_{bundle_id}.jsonl")
     with open(out_path, 'w') as f:
         for item in rows:
             f.write(json.dumps(item, ensure_ascii=False) + '\n')

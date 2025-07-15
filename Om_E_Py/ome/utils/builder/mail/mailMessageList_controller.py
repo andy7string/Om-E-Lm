@@ -70,8 +70,8 @@ import time
 import re
 import argparse
 import hashlib
-from ome.utils.builder.app.app_focus import ensure_app_focus
-from ome.utils.env.env import MESSAGE_EXPORT_DIR, MAX_ROWS, RETRY_DELAY, ACTION_DELAY
+from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
+from env import UI_MESSAGE_EXPORT_DIR, UI_MAX_ROWS, UI_RETRY_DELAY, UI_ACTION_DELAY
 from datetime import datetime
 
 # PyXA import removed - accessibility API selection works reliably
@@ -263,7 +263,6 @@ def extract_mail_body_for_selected_row_pyxa(row_data=None):
     try:
         print(f"[INFO] [IN-PROCESS] Extracting body for message: {row_data.get('sender', '')} - {row_data.get('subject', '')}")
         import PyXA
-        from ome.utils.env.env import MESSAGE_EXPORT_DIR
         import os, json
         app = PyXA.Application("Mail")
         selected_messages = app.selection
@@ -319,7 +318,7 @@ def extract_mail_body_for_selected_row_pyxa(row_data=None):
             'mailbox': mailbox,
             'row_index': row_data.get('row_index')
         }
-        output_dir = 'ome/data/messages/mailMessageBody'
+        output_dir = os.path.join(UI_MESSAGE_EXPORT_DIR, 'mailMessageBody')
         os.makedirs(output_dir, exist_ok=True)
         filename = f"mail_{message_key}.json"
         out_file = os.path.join(output_dir, filename)
@@ -339,7 +338,7 @@ def extract_first_n_rows_fields(n=None, row_index=None, app_object=None, send_ke
     If send_keys_after_select is True, sends Enter key after selecting the row (for opening message in new window).
     """
     if n is None:
-        n = MAX_ROWS
+        n = UI_MAX_ROWS
     bundle_id = "com.apple.mail"
     messages = []  # Always define messages at the start
     
@@ -347,14 +346,14 @@ def extract_first_n_rows_fields(n=None, row_index=None, app_object=None, send_ke
     if app_object is not None:
         app = app_object
         print(f"[INFO] Using provided app object for {bundle_id}")
-        time.sleep(RETRY_DELAY)  # Add delay for cached app objects
+        time.sleep(UI_RETRY_DELAY)  # Add delay for cached app objects
     else:
         focus_result = ensure_app_focus(bundle_id, fullscreen=True)
         if focus_result["status"] != "success" or not focus_result["app"]:
             print(f"[ERROR] Could not focus or access app: {focus_result.get('error')}")
             return {"status": "error", "error": "Could not get focused window"}
         app = focus_result["app"]
-        time.sleep(RETRY_DELAY)
+        time.sleep(UI_RETRY_DELAY)
     
     t0 = time.time()
     try:
@@ -363,7 +362,7 @@ def extract_first_n_rows_fields(n=None, row_index=None, app_object=None, send_ke
         print("Could not get focused window. Retrying after delay...")
         try:
             app.activate()
-            time.sleep(RETRY_DELAY)
+            time.sleep(UI_RETRY_DELAY)
             window = app.AXFocusedWindow
         except Exception:
             print("[ERROR] Still could not get focused window after retry.")
@@ -415,7 +414,7 @@ def extract_first_n_rows_fields(n=None, row_index=None, app_object=None, send_ke
         total_rows = len(rows)
         center = row_index - 1  # zero-based
         if row_index < 1 or row_index > total_rows:
-            selected_rows = rows[:MAX_ROWS]
+            selected_rows = rows[:UI_MAX_ROWS]
             row_offset = 0
             if rows:
                 try:
@@ -423,19 +422,19 @@ def extract_first_n_rows_fields(n=None, row_index=None, app_object=None, send_ke
                 except Exception as e:
                     pass
         else:
-            half_window = MAX_ROWS // 2
+            half_window = UI_MAX_ROWS // 2
             start = max(center - half_window, 0)
-            end = start + MAX_ROWS
+            end = start + UI_MAX_ROWS
             if end > total_rows:
                 end = total_rows
-                start = max(end - MAX_ROWS, 0)
+                start = max(end - UI_MAX_ROWS, 0)
             try:
                 rows[center].AXSelected = True
                 print(f"[INFO] Selected row {row_index} via accessibility API")
                 if send_keys_after_select:
-                    print(f"[INFO] Waiting ACTION_DELAY ({ACTION_DELAY}s) before sending Enter key...")
-                    time.sleep(ACTION_DELAY)
-                    from ome.AXKeyboard import modKeyFlagConstants
+                    print(f"[INFO] Waiting ACTION_DELAY ({UI_ACTION_DELAY}s) before sending Enter key...")
+                    time.sleep(UI_ACTION_DELAY)
+                    from Om_E_Py.ome.AXKeyboard import modKeyFlagConstants
                     import Quartz
                     enter_key_code = 36
                     event_down = Quartz.CGEventCreateKeyboardEvent(None, enter_key_code, True)
@@ -449,7 +448,7 @@ def extract_first_n_rows_fields(n=None, row_index=None, app_object=None, send_ke
             selected_rows = rows[start:end]
             row_offset = start
     else:
-        selected_rows = rows[:MAX_ROWS]
+        selected_rows = rows[:UI_MAX_ROWS]
         row_offset = 0
         if rows:
             try:
@@ -481,7 +480,7 @@ def extract_first_n_rows_fields(n=None, row_index=None, app_object=None, send_ke
         messages.append(row_data)
     t6 = time.time()
     
-    out_path_inbox = os.path.join(MESSAGE_EXPORT_DIR, "messages", f"mail_{bundle_id}.inbox.jsonl")
+    out_path_inbox = os.path.join(UI_MESSAGE_EXPORT_DIR, "messages", f"mail_{bundle_id}.inbox.jsonl")
     os.makedirs(os.path.dirname(out_path_inbox), exist_ok=True)
     with open(out_path_inbox, 'w') as f_inbox:
         for item in messages:
@@ -513,4 +512,4 @@ if __name__ == '__main__':
     parser.add_argument('--send-keys-after-select', action='store_true', help='Send Enter key after selecting the row (for opening message in new window)')
     args = parser.parse_args()
 
-    extract_first_n_rows_fields(n=MAX_ROWS, row_index=args.row, send_keys_after_select=args.send_keys_after_select) 
+    extract_first_n_rows_fields(n=UI_MAX_ROWS, row_index=args.row, send_keys_after_select=args.send_keys_after_select) 

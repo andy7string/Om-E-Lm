@@ -7,9 +7,8 @@ import json
 from typing import List, Dict
 import ome
 from ome.omeMenus import resolve_ui_element_by_path
-from ome.utils.env import env
 import time
-from ome.utils.env.env import MENU_EXPORT_DIR
+from env import UI_MENU_EXPORT_DIR
 from ome._a11y import ErrorUnsupported, ErrorCannotComplete, ErrorAPIDisabled, ErrorInvalidUIElement
 
 # === Main Scan Functions ===
@@ -281,8 +280,8 @@ def build_menu(bundle_id: str, filter_mode: str = 'all') -> List[Dict]:
             pass
         walk_menu(parent, path=[title], results=all_results)
     # Save to JSONL
-    os.makedirs(MENU_EXPORT_DIR, exist_ok=True)
-    output_path = os.path.join(MENU_EXPORT_DIR, f"menu_attributes_{bundle_id}.jsonl")
+    os.makedirs(UI_MENU_EXPORT_DIR, exist_ok=True)
+    output_path = os.path.join(UI_MENU_EXPORT_DIR, f"menu_attributes_{bundle_id}.jsonl")
     with open(output_path, 'w', encoding='utf-8') as f:
         for item in all_results:
             f.write(json.dumps(item, ensure_ascii=False) + '\n')
@@ -293,4 +292,4 @@ def build_menu(bundle_id: str, filter_mode: str = 'all') -> List[Dict]:
         filtered = [item for item in all_results if not item.get('AXEnabled')]
     else:
         filtered = all_results
-    return filtered 
+    return filtered

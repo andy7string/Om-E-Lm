@@ -1,25 +1,14 @@
 """
 app_focus.py
 
-This script brings a macOS application (specified by its bundle ID) to the foreground and attempts to set it to true full screen using accessibility API. It also returns the accessibility app object for further automation if needed.
+This module is part of the Om_E_Lm project and provides a function to bring a macOS application (by bundle ID) to the foreground and optionally set it to true full screen using the accessibility API. It returns the accessibility app object for further automation if needed.
 
 USAGE:
-    python -m ome.utils.builder.app.app_focus <bundle_id>
-
-ARGUMENTS:
-    <bundle_id>   (required) The macOS bundle identifier of the app to focus (e.g., com.apple.mail).
-
-DEFAULTS:
-    - The script will always attempt to set the app to true full screen (fullscreen=True by default).
-    - No other command-line arguments are supported.
-    - Only works on macOS (Darwin).
-
-EXAMPLES:
     # Command line usage (status and bundle_id are printed)
-    python -m ome.utils.builder.app.app_focus com.apple.mail
+    python -m Om_E_Py.ome.utils.builder.app.app_focus <bundle_id>
 
     # Python usage (get status and accessibility app object)
-    from ome.utils.builder.app.app_focus import ensure_app_focus
+    from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
     result = ensure_app_focus('com.apple.mail')
     if result['status'] == 'success' and result['app']:
         app = result['app']
@@ -29,36 +18,40 @@ EXAMPLES:
     else:
         print(f"Failed to focus app: {result.get('error')}")
 
-RETURN VALUE:
-    The ensure_app_focus function always returns a dictionary with:
+ARGUMENTS:
+    <bundle_id>   (required) The macOS bundle identifier of the app to focus (e.g., com.apple.mail).
+
+NOTES:
+    - Uses the central env.py for all environment variables (delivered via .env at the project root).
+    - All imports use the Om_E_Py.ome package structure.
+    - This function uses the accessibility API for maximum reliability.
+    - The returned app object can be used for further accessibility scripting (window manipulation, UI automation, etc.).
+    - The function always returns a dictionary with:
         - 'status': 'success' or 'failed'
         - 'bundle_id': the bundle identifier
         - 'app': the accessibility app object (or None on failure)
         - 'error': error message (only present on failure)
-
-NOTES:
-    - This function uses accessibility API for maximum reliability.
-    - The returned app object can be used for further accessibility scripting (window manipulation, UI automation, etc.).
+    - Only works on macOS (Darwin).
     - Backward compatible: scripts that only check 'status' and 'bundle_id' will continue to work.
 
 """
 import time
 import sys
 import platform
-import ome
+import os
 import subprocess
-# Import bundle_id_exists from appList_controller
-from ome.utils.builder.app.appList_controller import bundle_id_exists
+import Om_E_Py.ome as ome
 
-# Optionally import delays from env, fallback to defaults if not available
-try:
-    from ome.utils.env.env import APP_LAUNCH_DELAY, SLEEP_AFTER_ACTIVATE, ACTION_DELAY, SLEEP_AFTER_FULLSCREEN
-except ImportError:
-    APP_LAUNCH_DELAY = 1.0
-    SLEEP_AFTER_ACTIVATE = 0.5
-    ACTION_DELAY = 0.5
+from Om_E_Py.ome.utils.builder.app.appList_controller import bundle_id_exists
+from env import (
+    UI_APP_LAUNCH_DELAY,
+    UI_SLEEP_AFTER_ACTIVATE,
+    UI_ACTION_DELAY,
+    UI_SLEEP_AFTER_FULLSCREEN
+)
 
-print(f"SLEEP_AFTER_ACTIVATE = {SLEEP_AFTER_ACTIVATE}")
+
+print(f"SLEEP_AFTER_ACTIVATE = {UI_SLEEP_AFTER_ACTIVATE}")
 
 
 def activate_app(bundle_id):
@@ -71,7 +64,7 @@ def activate_app(bundle_id):
     else:
         script = f'tell application id "{bundle_id}" to activate'
     subprocess.run(['osascript', '-e', script])
-    time.sleep(SLEEP_AFTER_ACTIVATE)  # Use global delay
+    time.sleep(UI_SLEEP_AFTER_ACTIVATE)  # Use global delay
 
 
 def ensure_app_focus(bundle_id, fullscreen=True):
@@ -120,7 +113,7 @@ def ensure_app_focus(bundle_id, fullscreen=True):
                     break
             except Exception as e:
                 print(f"[DEBUG] Exception while getting windows: {e}")
-            time.sleep(ACTION_DELAY)
+            time.sleep(UI_ACTION_DELAY)
             waited = time.time() - start_time
             if waited > max_wait:
                 print(f"[ERROR] Timed out waiting for a window for {canonical_bundle_id} after {max_wait} seconds.")
@@ -140,7 +133,7 @@ def ensure_app_focus(bundle_id, fullscreen=True):
                 for win in app.AXWindows:
                     if hasattr(win, 'AXMinimized') and getattr(win, 'AXMinimized', False):
                         setattr(win, 'AXMinimized', False)
-                        time.sleep(ACTION_DELAY)  # Use global delay
+                        time.sleep(UI_ACTION_DELAY)  # Use global delay
         except Exception:
             pass
         # Explicitly set main window as AXMain and AXFocused, and raise it
@@ -153,7 +146,7 @@ def ensure_app_focus(bundle_id, fullscreen=True):
                     setattr(win, 'AXFocused', True)
                 if hasattr(win, 'AXRaise'):
                     win.AXRaise()
-                time.sleep(ACTION_DELAY)
+                time.sleep(UI_ACTION_DELAY)
         except Exception:
             pass
         # Try to maximize (full screen) the frontmost window if possible
@@ -163,7 +156,7 @@ def ensure_app_focus(bundle_id, fullscreen=True):
                     win = app.AXWindows[0]
                     if hasattr(win, 'AXFullScreen') and not getattr(win, 'AXFullScreen', False):
                         setattr(win, 'AXFullScreen', True)
-                        time.sleep(SLEEP_AFTER_FULLSCREEN)
+                        time.sleep(UI_SLEEP_AFTER_FULLSCREEN)
             except Exception:
                 pass
         return {"status": "success", "bundle_id": canonical_bundle_id, "app": app}
@@ -172,8 +165,8 @@ def ensure_app_focus(bundle_id, fullscreen=True):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python -m ome.utils.builder.app.app_focus <bundle_id>")
-        print("Example: python -m ome.utils.builder.app.app_focus com.apple.mail")
+        print("Usage: python -m Om_E_Py.ome.utils.builder.app.app_focus <bundle_id>")
+        print("Example: python -m Om_E_Py.ome.utils.builder.app.app_focus com.apple.mail")
         sys.exit(1)
     bundle_id = sys.argv[1]
     print(f"Ensuring focus for bundle_id: {bundle_id}")

@@ -4,7 +4,7 @@ import os
 from ome.omeMenus import ensure_app_focus
 import pyautogui
 import time
-from ome.utils.env.env import MAX_ROWS, MESSAGE_EXPORT_DIR
+from env import UI_MAX_ROWS, UI_MESSAGE_EXPORT_DIR
 
 # mailMessageList_controller.py
 #
@@ -229,7 +229,7 @@ def scroll_table_to_top(window):
 
 def scan_and_write_message_list_jsonl(bundle_id, out_path, max_rows=None):
     if max_rows is None:
-        max_rows = MAX_ROWS
+        max_rows = UI_MAX_ROWS
     app = ensure_app_focus(bundle_id)
     try:
         window = app.AXFocusedWindow
@@ -287,7 +287,7 @@ def select_mail_by_index(jsonl_path, index, bundle_id, drag_time=0.4, focus_wait
 if __name__ == '__main__':
     import time
     bundle_id = "com.apple.mail"
-    messages_dir = os.path.join(MESSAGE_EXPORT_DIR, "messages")
+    messages_dir = os.path.join(UI_MESSAGE_EXPORT_DIR, "messages")
     os.makedirs(messages_dir, exist_ok=True)
     out_path = os.path.join(messages_dir, f"mail_{bundle_id}.jsonl")
     start_time = time.time()

@@ -154,24 +154,19 @@ import glob
 import subprocess
 import hashlib
 
-try:
-    import ome
-    from ome.utils.builder.app.app_focus import ensure_app_focus
-    from ome.utils.windows.winD_controller import get_active_target_and_windows
-except ImportError:
-    print("This script must be run from the Om-E-py project root with the correct environment.")
-    sys.exit(1)
+# Add the project root to the Python path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+import ome
+from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
+from env import UI_MESSAGE_EXPORT_DIR
 
 try:
     import PyXA
 except ImportError:
-    print("PyXA is not installed. Please install it with 'pip install pyxa'.")
-    sys.exit(1)
-
-try:
-    from ome.utils.env.env import MESSAGE_EXPORT_DIR
-except ImportError:
-    print("[ERROR] Could not import MESSAGE_EXPORT_DIR from ome.utils.env.env")
+    print("mac-pyxa is not installed. Please install it with 'pip install mac-pyxa'.")
     sys.exit(1)
 
 def safe_getattr(obj, attr):
@@ -577,9 +572,13 @@ def main():
     if args.out and os.path.isdir(args.out):
         output_dir = args.out
     elif args.out:
-        output_dir = os.path.dirname(args.out) or 'ome/data/messages/mailMessageBody'
+        output_dir = os.path.dirname(args.out)
     else:
-        output_dir = 'ome/data/messages/mailMessageBody'
+        output_dir = UI_MESSAGE_EXPORT_DIR
+    
+    if not output_dir:
+        output_dir = UI_MESSAGE_EXPORT_DIR
+
     os.makedirs(output_dir, exist_ok=True)
 
     filename = f"mail_{message_key}.json"

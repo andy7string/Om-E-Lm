@@ -1,0 +1,13 @@
+{
+  "active_target": {
+    "type": "window",
+    "window_title": "Finder (Active via cli)",
+    "window_ref": "com.apple.finder.active",
+    "nav_map_name": "appNav_com.apple.finder_active.jsonl",
+    "timestamp": "2025-07-15T06:27:28.337467Z"
+  },
+  "bundle_id": "com.apple.finder",
+  "app_name": "Finder",
+  "source": "cli",
+  "last_updated": "2025-07-15T06:27:28.337469Z"
+}

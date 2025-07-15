@@ -12,10 +12,10 @@ USAGE:
 import sys, time, json, argparse, os
 from pathlib import Path
 from collections import defaultdict
-from ome.utils.env.env import MAX_CHILDREN, WINDOW_DEPTH, TOOLBAR_DEPTH, WINDOW_MAPS_DIR
+from env import TREE_MAX_CHILDREN, TREE_WINDOW_DEPTH, TREE_TOOLBAR_DEPTH, TREE_WINDOW_MAPS_DIR
 from ome.handlers import system_handler
 
-WINDOW_MAPS_DIR.mkdir(parents=True, exist_ok=True)
+TREE_WINDOW_MAPS_DIR.mkdir(parents=True, exist_ok=True)
 
 import atomacos as atomac
 import subprocess
@@ -54,7 +54,7 @@ def serialize_element(element, depth=0, max_depth=4, path=None, flat=None, tag_t
         helptext = getattr(element, 'AXHelp', None)
         pos = getattr(element, 'AXPosition', None)
         size = getattr(element, 'AXSize', None)
-        children = getattr(element, 'AXChildren', [])[:MAX_CHILDREN] if hasattr(element, 'AXChildren') else []
+        children = getattr(element, 'AXChildren', [])[:TREE_MAX_CHILDREN] if hasattr(element, 'AXChildren') else []
 
         label = title or desc or value or identifier or helptext
 
@@ -179,18 +179,18 @@ def scan_window(bundle_id):
     print(f"[INFO] Scanning: {bundle_id}")
     flat_index = []
 
-    serialize_element(win, max_depth=WINDOW_DEPTH, flat=flat_index)
+    serialize_element(win, max_depth=TREE_WINDOW_DEPTH, flat=flat_index)
 
     toolbar = find_toolbar(win)
     if toolbar:
-        serialize_element(toolbar, max_depth=TOOLBAR_DEPTH, path=["Toolbar"], flat=flat_index, tag_toolbar=True)
+        serialize_element(toolbar, max_depth=TREE_TOOLBAR_DEPTH, path=["Toolbar"], flat=flat_index, tag_toolbar=True)
     else:
         print("[INFO] No AXToolbar found.")
 
     deduped = dedupe_entries(flat_index)
     grouped = group_by_role(deduped)
 
-    out_file = WINDOW_MAPS_DIR / f"{bundle_id.replace('.', '_')}_windowMap.jsonl"
+    out_file = TREE_WINDOW_MAPS_DIR / f"{bundle_id.replace('.', '_')}_windowMap.jsonl"
     with open(out_file, 'w', encoding='utf-8') as f:
         for item in grouped:
             f.write(json.dumps(item, ensure_ascii=False, separators=(',', ':')) + '\n')

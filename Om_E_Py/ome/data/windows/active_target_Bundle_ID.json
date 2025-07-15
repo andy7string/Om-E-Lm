@@ -1,8 +1,8 @@
 {
-  "active_bundle_id": "com.apple.mail",
-  "last_updated": "2025-07-12T08:12:24.fZ",
-  "source": "cli",
-  "status": "quit",
+  "active_bundle_id": "com.apple.finder",
+  "last_updated": "2025-07-15T11:45:33.fZ",
+  "source": "winD_controller_init",
+  "status": "running",
   "refresh": false,
   "refresh_reason": null
 }

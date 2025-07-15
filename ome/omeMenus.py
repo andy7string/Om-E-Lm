@@ -4,13 +4,12 @@ import ome.cleanup
 import time
 import os
 import json
-from ome.utils.env.env import MENU_EXPORT_DIR
-from ome.utils.env import env
+from env import UI_MENU_EXPORT_DIR, UI_WINDOW_MAXIMIZE_DELAY, UI_RETRY_DELAY
 from ome._a11y import ErrorUnsupported, ErrorCannotComplete, ErrorAPIDisabled, ErrorInvalidUIElement
 
 
-WINDOW_MAXIMIZE_DELAY = env.WINDOW_MAXIMIZE_DELAY
-RETRY_DELAY = env.RETRY_DELAY
+WINDOW_MAXIMIZE_DELAY = UI_WINDOW_MAXIMIZE_DELAY
+RETRY_DELAY = UI_RETRY_DELAY
 
 def scan_children(element, filters=None, depth=1, parent_path=None):
     filters = filters or {}
@@ -297,8 +296,8 @@ def export_menu_attributes(bundle_id, output_path=None, filters=None):
             pass
         walk_menu(parent, path=[title], results=all_results)
     if output_path is None:
-        os.makedirs(MENU_EXPORT_DIR, exist_ok=True)
-        output_path = os.path.join(MENU_EXPORT_DIR, f"menu_attributes_{bundle_id}.jsonl")
+        os.makedirs(UI_MENU_EXPORT_DIR, exist_ok=True)
+        output_path = os.path.join(UI_MENU_EXPORT_DIR, f"menu_attributes_{bundle_id}.jsonl")
     with open(output_path, 'w', encoding='utf-8') as f:
         for item in all_results:
             f.write(json.dumps(item, ensure_ascii=False) + '\n')
@@ -677,7 +676,7 @@ def enrich_menu_jsonl_with_omeclicks(bundle_id, jsonl_path=None, save_path=None,
     ensure_app_focus(bundle_id)
     delay = delay if delay is not None else env.MENU_ITEM_CLICK_DELAY
     if jsonl_path is None:
-        jsonl_path = os.path.join(MENU_EXPORT_DIR, f"menu_attributes_{bundle_id}.jsonl")
+        jsonl_path = os.path.join(UI_MENU_EXPORT_DIR, f"menu_attributes_{bundle_id}.jsonl")
     if save_path is None:
         save_path = jsonl_path
     # Load JSONL

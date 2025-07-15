@@ -1,0 +1,13 @@
+{
+  "active_target": {
+    "type": "window",
+    "window_title": "Mail (Active via cli)",
+    "window_ref": "com.apple.mail.active",
+    "nav_map_name": "appNav_com.apple.mail_active.jsonl",
+    "timestamp": "2025-07-15T06:26:57.865926Z"
+  },
+  "bundle_id": "com.apple.mail",
+  "app_name": "Mail",
+  "source": "cli",
+  "last_updated": "2025-07-15T06:26:57.865928Z"
+}

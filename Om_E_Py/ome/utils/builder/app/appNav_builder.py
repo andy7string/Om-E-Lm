@@ -1,26 +1,26 @@
 """
-ome/utils/builder/app/appNav_builder.py
+Om_E_Py/ome/utils/builder/app/appNav_builder.py
 
-This script dynamically crawls the active window or sheet of a macOS application, focusing on actionable UI elements (buttons, popups, rows, etc.) using the accessibility API.
+This module is part of the Om_E_Lm project. It dynamically crawls the active window or sheet of a macOS application, focusing on actionable UI elements (buttons, popups, rows, etc.) using the accessibility API.
 
 Main Purpose:
 - Focuses a macOS application and finds the active window or sheet.
 - Dynamically crawls the accessibility tree, efficiently extracting actionable elements.
 - Only queries expensive attributes (title, description, etc.) for actionable elements, avoiding slow queries on containers/structural nodes.
 - Outputs a JSONL file with one actionable element per line, suitable for navigation, automation, or UI testing.
-- Configurable via JSONL config for roles, max depth, max lines, and more.
+- Configurable via JSONL config for roles, max depth, max lines, and more (set by env.py and .env at the project root).
 
 Key Features:
 - Actionable Element Extraction: Finds and exports actionable UI elements (buttons, popups, rows, etc.) for the focused window/sheet.
 - Efficient Attribute Fetching: Only fetches expensive attributes for actionable roles, not for containers.
 - Finder/File Row Heuristics: Special logic for Finder/file rows to extract file names, kinds, and other metadata.
 - Config-Driven: Reads roles, max depth, and other parameters from a JSONL config file per app/window context.
-- Output: Saves results as a JSONL file in the navigation export directory, with each line representing an actionable element.
+- Output: Saves results as a JSONL file in the navigation export directory (set by env.py), with each line representing an actionable element.
 - Command-Line Interface: Can be run directly to crawl any app by bundle ID.
 - Debugging: Optionally prints the accessibility tree structure for inspection.
 
 How to Use (Command Line):
-    python -m ome.utils.builder.app.appNav_builder --bundle com.apple.mail [--force] [--debug]
+    python -m Om_E_Py.ome.utils.builder.app.appNav_builder --bundle com.apple.mail [--force] [--debug]
 
 Arguments:
     --bundle: The bundle ID of the app (default: com.apple.mail)
@@ -28,11 +28,11 @@ Arguments:
     --debug: Print the accessibility tree structure (first 3 levels)
 
 Example:
-    python -m ome.utils.builder.app.appNav_builder --bundle com.apple.mail --force
+    python -m Om_E_Py.ome.utils.builder.app.appNav_builder --bundle com.apple.mail --force
     # Crawls the Mail app's main window and exports actionable elements.
 
 Output:
-- A JSONL file named appNav_<bundle_id>_<window_ref>.jsonl in the navigation export directory.
+- A JSONL file named appNav_<bundle_id>_<window_ref>.jsonl in the navigation export directory (set by env.py).
 - Each line is a JSON object representing an actionable element, with attributes like AXRole, AXTitle, omeClick, and more.
 
 When to Use:
@@ -49,17 +49,13 @@ import re
 import os
 from collections import defaultdict
 import time as _time
-try:
-    import ome
-    from ome.utils.builder.app.app_focus import ensure_app_focus
-    from ome.utils.env.env import RETRY_DELAY
-    from ome.utils.env.env import NAV_EXPORT_DIR
-    from ome.utils.env.env import APPNAV_CONFIG_PATH
-    from ome.utils.uiNav.navBigDaDDy import get_active_target_and_windows_from_file
-    from ome._a11y import Error as OMEA11yError
-except ImportError:
-    print("This script must be run from the Om-E-py project root with the correct environment.")
-    sys.exit(1)
+
+import Om_E_Py.ome as ome
+from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
+from env import UI_RETRY_DELAY, UI_NAV_EXPORT_DIR, UI_WINDOW_REF_MAP_CONFIG
+from Om_E_Py.ome.utils.uiNav.navBigDaDDy import get_active_target_and_windows_from_file
+from Om_E_Py.ome._a11y import Error as OMEA11yError
+
 
 # Timing stats
 timing_stats = defaultdict(float)
@@ -633,7 +629,7 @@ def main(app_object=None):
             if rule['bundle_id'] == '*' and rule['window_ref'] == '*':
                 return rule
         return {}
-    config = load_crawler_config(APPNAV_CONFIG_PATH)
+    config = load_crawler_config(UI_WINDOW_REF_MAP_CONFIG)
     context_config = get_config_for_context(config, bundle_id, window_ref)
     BUTTON_ROLES = set(context_config.get('button_roles', ["AXButton", "AXMenuButton", "AXPopUpButton", "AXCheckBox", "AXCell"]))
     STRUCTURAL_ROLES = set(context_config.get('structural_roles', [
@@ -648,10 +644,10 @@ def main(app_object=None):
     custom_textfield_labels = context_config.get('textfield_labels', {})
     if window_ref:
         out_filename = f"appNav_{bundle_id}_{window_ref}.jsonl"
-        out_path = os.path.join(NAV_EXPORT_DIR, out_filename)
+        out_path = os.path.join(UI_NAV_EXPORT_DIR, out_filename)
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
     else:
-        out_path = os.path.join(NAV_EXPORT_DIR, "dynamic_window_crawler_output.jsonl")
+        out_path = os.path.join(UI_NAV_EXPORT_DIR, "dynamic_window_crawler_output.jsonl")
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
     # Add force check before writing output

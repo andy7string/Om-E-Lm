@@ -19,7 +19,7 @@ def build_window(bundle_id: str, window_id: str = None, fullscreen: bool = True,
         Pass regions=['AXToolbar'] to exclude the sidebar.
     Prints start and end time for performance measurement.
     """
-    from ome.utils.env.env import MENU_EXPORT_DIR
+    from env import UI_MENU_EXPORT_DIR
     start_time = time.time()
     print(f"[window_builder] Scan started at {time.strftime('%X', time.localtime(start_time))}")
     # Ensure the app is running and focused
@@ -36,7 +36,7 @@ def build_window(bundle_id: str, window_id: str = None, fullscreen: bool = True,
         raise RuntimeError("No window found for app.")
     win_title = getattr(window, 'AXTitle', None)
     window_id = window_id or (win_title if win_title else 'main')
-    output_dir = os.path.join(MENU_EXPORT_DIR, '..', 'windows')
+    output_dir = os.path.join(UI_MENU_EXPORT_DIR, '..', 'windows')
     os.makedirs(output_dir, exist_ok=True)
     safe_title = str(window_id).replace(' ', '_').replace('/', '_')
     output_path = os.path.join(output_dir, f"window_{bundle_id}_{safe_title}.jsonl")

@@ -1,11 +1,5 @@
 {
-  "active_target": {
-    "type": "window",
-    "window_title": "Andy7StringM1",
-    "window_ref": "FinderWindow",
-    "nav_map_name": "appNav_com.apple.finder_FinderWindow.jsonl",
-    "timestamp": "2025-07-11T11:14:04.002611Z"
-  },
+  "active_target": null,
   "bundle_id": "com.apple.finder",
   "source": "winD_controller"
 }

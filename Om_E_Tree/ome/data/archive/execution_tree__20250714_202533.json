@@ -1,0 +1,42 @@
+{
+  "goal_id": "open-mail-goal",
+  "description": "Open the Mail application",
+  "status": "complete",
+  "created_at": "2025-07-14T19:15:44.332988",
+  "objectives": [
+    {
+      "objective_id": "open-mail-obj",
+      "goal_id": "open-mail-goal",
+      "description": "Launch the Mail application",
+      "status": "complete",
+      "created_at": "2025-07-14T19:15:44.332988",
+      "tasks": [
+        {
+          "task_id": "launch-mail-task",
+          "objective_id": "open-mail-obj",
+          "description": "Use the system handler to open Mail application",
+          "status": "complete",
+          "created_at": "2025-07-14T19:15:44.332988",
+          "actions": [
+            {
+              "name": "launch_app",
+              "source": "system",
+              "input_args": {
+                "app_name": "Mail"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T10:55:33.096322+00:00"
+            }
+          ],
+          "completed_at": "2025-07-14T10:55:33.103127+00:00"
+        }
+      ],
+      "last_task_id": "launch-mail-task",
+      "completed_at": "2025-07-14T10:55:33.105384+00:00"
+    }
+  ],
+  "last_objective_id": "open-mail-obj",
+  "completed_at": "2025-07-14T10:55:33.106617+00:00"
+}

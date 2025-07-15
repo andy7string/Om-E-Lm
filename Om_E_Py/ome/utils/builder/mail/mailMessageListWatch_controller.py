@@ -14,8 +14,8 @@ import os
 import argparse
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from ome.utils.env.env import COM_CONTROL_DIR
-from ome.utils.builder.app.app_focus import ensure_app_focus
+from env import UI_MESSAGE_EXPORT_DIR, UI_MAX_ROWS, UI_RETRY_DELAY, UI_ACTION_DELAY
+from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
 from datetime import datetime
 import re
 import ome
@@ -23,10 +23,8 @@ import ome
 MAIL_JSONL = 'ome/data/windows/win_com.apple.mail.jsonl'
 ACTIVE_BUNDLE_JSON = 'ome/data/windows/active_target_Bundle_ID.json'
 MAIL_BUNDLE_ID = 'com.apple.mail'
-MAIL_SELECTOR_FILE = os.path.join(COM_CONTROL_DIR, 'mailMessageList_selector.jsonl')
-MAX_ROWS = 10
-RETRY_DELAY = 0.2
-ACTION_DELAY = 0.1
+MAIL_SELECTOR_FILE = os.path.join('Om_E_Py/ome/data/comControl', 'mailMessageList_selector.jsonl')
+
 
 # --- Extraction logic (self-contained) ---
 def safe_getattr(obj, attr):
@@ -144,9 +142,9 @@ def extract_row_type_based_fast(children, row_index, mailbox=None):
     fields['message_key'] = message_key
     return {k: v for k, v in fields.items() if v is not None or k == 'sender'}
 
-def extract_first_n_rows_fields(n=MAX_ROWS, row_index=None, app_object=None, send_keys_after_select=False):
+def extract_first_n_rows_fields(n=None, row_index=None, app_object=None, send_keys_after_select=False):
     if n is None:
-        n = MAX_ROWS
+        n = UI_MAX_ROWS
     bundle_id = MAIL_BUNDLE_ID
     messages = []
     app = app_object
@@ -157,7 +155,7 @@ def extract_first_n_rows_fields(n=MAX_ROWS, row_index=None, app_object=None, sen
         print("Could not get focused window. Retrying after delay...")
         try:
             app.activate()
-            time.sleep(RETRY_DELAY)
+            time.sleep(UI_RETRY_DELAY)
             window = app.AXFocusedWindow
         except Exception:
             print("[ERROR] Still could not get focused window after retry.")
@@ -202,7 +200,7 @@ def extract_first_n_rows_fields(n=MAX_ROWS, row_index=None, app_object=None, sen
         total_rows = len(rows)
         center = row_index - 1
         if row_index < 1 or row_index > total_rows:
-            selected_rows = rows[:MAX_ROWS]
+            selected_rows = rows[:UI_MAX_ROWS]
             row_offset = 0
             if rows:
                 try:
@@ -210,18 +208,18 @@ def extract_first_n_rows_fields(n=MAX_ROWS, row_index=None, app_object=None, sen
                 except Exception:
                     pass
         else:
-            half_window = MAX_ROWS // 2
+            half_window = UI_MAX_ROWS // 2
             start = max(center - half_window, 0)
-            end = start + MAX_ROWS
+            end = start + UI_MAX_ROWS
             if end > total_rows:
                 end = total_rows
-                start = max(end - MAX_ROWS, 0)
+                start = max(end - UI_MAX_ROWS, 0)
             try:
                 rows[center].AXSelected = True
                 print(f"[INFO] Selected row {row_index} via accessibility API")
                 if send_keys_after_select:
-                    print(f"[INFO] Waiting ACTION_DELAY ({ACTION_DELAY}s) before sending Enter key...")
-                    time.sleep(ACTION_DELAY)
+                    print(f"[INFO] Waiting ACTION_DELAY ({UI_ACTION_DELAY}s) before sending Enter key...")
+                    time.sleep(UI_ACTION_DELAY)
                     import Quartz
                     enter_key_code = 36
                     event_down = Quartz.CGEventCreateKeyboardEvent(None, enter_key_code, True)
@@ -235,7 +233,7 @@ def extract_first_n_rows_fields(n=MAX_ROWS, row_index=None, app_object=None, sen
             selected_rows = rows[start:end]
             row_offset = start
     else:
-        selected_rows = rows[:MAX_ROWS]
+        selected_rows = rows[:UI_MAX_ROWS]
         row_offset = 0
         if rows:
             try:
@@ -264,7 +262,7 @@ def extract_first_n_rows_fields(n=MAX_ROWS, row_index=None, app_object=None, sen
         row_data = extract_row_type_based_fast(children, current_row_index)
         messages.append(row_data)
     t6 = time.time()
-    out_path_inbox = os.path.join('ome/data/messages/messages', f"mail_{bundle_id}.inbox.jsonl")
+    out_path_inbox = os.path.join(UI_MESSAGE_EXPORT_DIR, 'messages', f"mail_{bundle_id}.inbox.jsonl")
     os.makedirs(os.path.dirname(out_path_inbox), exist_ok=True)
     with open(out_path_inbox, 'w') as f_inbox:
         for item in messages:

@@ -1,0 +1,42 @@
+{
+  "goal_id": "open-mail-goal",
+  "description": "Open the Mail application",
+  "status": "complete",
+  "created_at": "2024-01-01T00:00:00Z",
+  "objectives": [
+    {
+      "objective_id": "open-mail-obj",
+      "goal_id": "open-mail-goal",
+      "description": "Launch the Mail application",
+      "status": "complete",
+      "created_at": "2024-01-01T00:00:00Z",
+      "tasks": [
+        {
+          "task_id": "launch-mail-task",
+          "objective_id": "open-mail-obj",
+          "description": "Use the system handler to launch Mail using the macOS open command.",
+          "status": "complete",
+          "created_at": "2024-01-01T00:00:00Z",
+          "actions": [
+            {
+              "name": "launch_app",
+              "source": "system",
+              "input_args": {
+                "app_name": "Mail"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T10:57:50.980873+00:00"
+            }
+          ],
+          "completed_at": "2025-07-14T10:57:50.986467+00:00"
+        }
+      ],
+      "last_task_id": "launch-mail-task",
+      "completed_at": "2025-07-14T10:57:50.989737+00:00"
+    }
+  ],
+  "last_objective_id": "open-mail-obj",
+  "completed_at": "2025-07-14T10:57:50.991928+00:00"
+}

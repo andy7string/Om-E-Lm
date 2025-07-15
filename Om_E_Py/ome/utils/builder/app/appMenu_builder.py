@@ -1,37 +1,37 @@
 """
-ome/utils/builder/app/appMenu_builder.py
+Om_E_Py/ome/utils/builder/app/appMenu_builder.py
 
-This script extracts, processes, and exports the menu structure of a macOS application, given its bundle ID.
+This module is part of the Om_E_Lm project. It extracts, processes, and exports the menu structure of a macOS application, given its bundle ID.
 
 Main Purpose:
 - Scans and extracts all menu items from a specified macOS app (using its bundle ID).
 - Processes and filters menu item attributes for clarity and usability.
-- Exports the menu structure as a JSONL file (one menu item per line).
+- Exports the menu structure as a JSONL file (one menu item per line) to a directory set by the central env.py and .env at the project root.
 - Allows filtering of menu items (all, enabled, or disabled) **at extraction time for efficiency**.
 - Can be run as a script from the command line.
 
 Key Features:
-- Menu Extraction: Uses macOS accessibility APIs (via the ome package) to walk through the menu bar and all submenus of the target app.
+- Menu Extraction: Uses macOS accessibility APIs (via the Om_E_Py.ome package) to walk through the menu bar and all submenus of the target app.
 - Attribute Processing: Cleans up, renames, and filters menu item attributes for easier downstream use (e.g., for automation, accessibility, or UI testing).
 - **Filter-Aware Extraction:** Filtering (all, enabled, disabled) is now applied during the menu walk, so only relevant items are processed and exported. This improves performance and reduces memory usage.
 - **Efficient Attribute Extraction:** Attributes are only extracted for menu items that match the filter criteria.
-- Export: Saves the processed menu structure as a JSONL file in a configurable export directory.
+- Export: Saves the processed menu structure as a JSONL file in a configurable export directory (set by env.py).
 - Command-Line Interface: You can run the script directly and specify the app and filter mode.
 - **Default Behavior:** If no filter is provided, only enabled menu items are extracted (default is 'enabled').
 
 How to Use (Command Line):
-    python -m ome.utils.builder.app.appMenu_builder <bundle_id> [--filter all|enabled|disabled]
+    python -m Om_E_Py.ome.utils.builder.app.appMenu_builder <bundle_id> [--filter all|enabled|disabled]
 
 Arguments:
     <bundle_id>: The bundle ID of the app (e.g., com.apple.mail)
     --filter: (optional) Filter mode for menu items (all, enabled, or disabled). Default is enabled.
 
 Example:
-    python -m ome.utils.builder.app.appMenu_builder com.apple.mail --filter enabled
+    python -m Om_E_Py.ome.utils.builder.app.appMenu_builder com.apple.mail --filter enabled
     # This will export all enabled menu items from the Mail app.
 
 Output:
-- A JSONL file named menu_<bundle_id>.jsonl in the directory specified by MENU_EXPORT_DIR (from your environment config).
+- A JSONL file named menu_<bundle_id>.jsonl in the directory specified by UI_MENU_EXPORT_DIR (from env.py).
 - Each line in the file is a JSON object representing a menu item, with attributes like title, shortcut, enabled/disabled state, and more.
 
 When to Use:
@@ -46,10 +46,10 @@ import time
 from typing import List, Dict
 from ome._a11y import ErrorUnsupported, ErrorCannotComplete, ErrorAPIDisabled, ErrorInvalidUIElement
 import ome
-from ome.utils.builder.app.app_focus import ensure_app_focus
-from ome.utils.env.env import MENU_EXPORT_DIR, get_default_position
-from ome.utils.builder.app.appList_controller import bundle_id_exists, get_bundle_id
-from ome.utils.uiNav.navBigDaDDy import get_active_target_and_windows_from_file
+from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
+from env import UI_MENU_EXPORT_DIR, UI_DEFAULT_POSITION
+from Om_E_Py.ome.utils.builder.app.appList_controller import bundle_id_exists, get_bundle_id
+from Om_E_Py.ome.utils.uiNav.navBigDaDDy import get_active_target_and_windows_from_file
 
 def build_menu(bundle_id: str, filter_mode: str = 'all', app_object=None) -> List[Dict]:
     """
@@ -76,7 +76,7 @@ def build_menu(bundle_id: str, filter_mode: str = 'all', app_object=None) -> Lis
     REMOVE_ATTRS = {
         'AXMenuItemPrimaryUIElement', 'AXRole', 'AXMenuItemCmdGlyph', 'AXChildren'
     }
-    DEFAULT_POSITION = get_default_position()
+    DEFAULT_POSITION = tuple(map(float, UI_DEFAULT_POSITION.split(',')))
     MODIFIER_MAP = {
         0: '', 1: '⇧', 2: '⌃', 4: '⌥', 8: '⌘', 10: '⌃⌘', 12: '⌥⌘', 9: '⇧⌘', 5: '⇧⌥', 3: '⇧⌃', 6: '⌃⌥', 24: '⌘⇧⌥', 28: '⌘⌥⇧', 13: '⇧⌃⌘', 14: '⌃⌥⌘', 15: '⇧⌃⌥⌘',
     }
@@ -266,8 +266,8 @@ def build_menu(bundle_id: str, filter_mode: str = 'all', app_object=None) -> Lis
         walk_menu(parent, path=[], results=all_results, filter_mode=filter_mode)
     print(f"[TIMER] Menu walk for {bundle_id} took {time.time() - walk_start:.3f} seconds.")
     # Save filtered results to JSONL (apply filter as you write)
-    os.makedirs(MENU_EXPORT_DIR, exist_ok=True)
-    output_base = os.path.join(MENU_EXPORT_DIR, f"menu_{bundle_id}")
+    os.makedirs(UI_MENU_EXPORT_DIR, exist_ok=True)
+    output_base = os.path.join(UI_MENU_EXPORT_DIR, f"menu_{bundle_id}")
     written_items = []
     if filter_mode == 'all':
         def dedup(items):
@@ -348,7 +348,7 @@ if __name__ == "__main__":
     if not input_id:
         # Read from active_target_Bundle_ID.json
         import json, os
-        active_target_path = os.path.join("ome", "data", "windows", "active_target_Bundle_ID.json")
+        active_target_path = os.path.join("Om_E_Py/ome", "data", "windows", "active_target_Bundle_ID.json")
         try:
             with open(active_target_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -360,7 +360,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"[ERROR] Could not read {active_target_path}: {e}")
             exit(1)
-    from ome.utils.builder.app.appList_controller import bundle_id_exists, get_bundle_id
+    from Om_E_Py.ome.utils.builder.app.appList_controller import bundle_id_exists, get_bundle_id
     canonical_bundle_id = bundle_id_exists(input_id)
     if not canonical_bundle_id:
         # Try to resolve as app name

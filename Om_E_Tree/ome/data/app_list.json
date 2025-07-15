@@ -720,6 +720,26 @@
     "bundle_id": null
   },
   {
+    "name": "LM Studio",
+    "bundle_id": "ai.elementlabs.lmstudio"
+  },
+  {
+    "name": "LM Studio Helper",
+    "bundle_id": "ai.elementlabs.lmstudio.helper"
+  },
+  {
+    "name": "LM Studio Helper (GPU)",
+    "bundle_id": "ai.elementlabs.lmstudio.helper.GPU"
+  },
+  {
+    "name": "LM Studio Helper (Plugin)",
+    "bundle_id": "ai.elementlabs.lmstudio.helper.Plugin"
+  },
+  {
+    "name": "LM Studio Helper (Renderer)",
+    "bundle_id": "ai.elementlabs.lmstudio.helper.Renderer"
+  },
+  {
     "name": "LockScreen",
     "bundle_id": "com.apple.LockScreen"
   },

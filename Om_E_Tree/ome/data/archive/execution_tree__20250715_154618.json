@@ -1,0 +1,107 @@
+{
+  "goal_id": "open-chrome-open-openai-and-say-goal",
+  "description": "Open Google Chrome, navigate to openai.com, and speak the text 'I'm a horny badger'",
+  "status": "complete",
+  "created_at": "2025-07-15T15:45:12.317748",
+  "objectives": [
+    {
+      "objective_id": "open-chrome-obj",
+      "goal_id": "open-chrome-open-openai-and-say-goal",
+      "description": "Launch the Google Chrome browser",
+      "status": "complete",
+      "created_at": "2025-07-15T15:45:12.317748",
+      "tasks": [
+        {
+          "task_id": "launch-chrome-task",
+          "objective_id": "open-chrome-obj",
+          "description": "Use the system handler to open Google Chrome",
+          "status": "complete",
+          "created_at": "2025-07-15T15:45:12.317748",
+          "actions": [
+            {
+              "name": "open_browser",
+              "source": "system",
+              "input_args": {
+                "browser": "Google Chrome"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-15T06:15:41.281574+00:00"
+            }
+          ],
+          "completed_at": "2025-07-15T06:15:41.283705+00:00"
+        }
+      ],
+      "last_task_id": "launch-chrome-task",
+      "completed_at": "2025-07-15T06:15:41.285831+00:00"
+    },
+    {
+      "objective_id": "navigate-openai-obj",
+      "goal_id": "open-chrome-open-openai-and-say-goal",
+      "description": "Navigate to openai.com in Google Chrome",
+      "status": "complete",
+      "created_at": "2025-07-15T15:45:12.317748",
+      "tasks": [
+        {
+          "task_id": "navigate-openai-task",
+          "objective_id": "navigate-openai-obj",
+          "description": "Use the system handler to open openai.com in Google Chrome",
+          "status": "complete",
+          "created_at": "2025-07-15T15:45:12.317748",
+          "actions": [
+            {
+              "name": "open_url",
+              "source": "system",
+              "input_args": {
+                "url": "https://openai.com",
+                "browser": "Google Chrome"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-15T06:15:41.665484+00:00"
+            }
+          ],
+          "completed_at": "2025-07-15T06:15:41.667934+00:00"
+        }
+      ],
+      "last_task_id": "navigate-openai-task",
+      "completed_at": "2025-07-15T06:15:41.669950+00:00"
+    },
+    {
+      "objective_id": "speak-text-obj",
+      "goal_id": "open-chrome-open-openai-and-say-goal",
+      "description": "Speak the text 'I'm a horny badger'",
+      "status": "complete",
+      "created_at": "2025-07-15T15:45:12.317748",
+      "tasks": [
+        {
+          "task_id": "speak-text-task",
+          "objective_id": "speak-text-obj",
+          "description": "Use the system handler to speak the text 'I'm a horny badger'",
+          "status": "complete",
+          "created_at": "2025-07-15T15:45:12.317748",
+          "actions": [
+            {
+              "name": "say_text",
+              "source": "system",
+              "input_args": {
+                "text": "I'm a horny badger"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-15T06:15:43.791740+00:00"
+            }
+          ],
+          "completed_at": "2025-07-15T06:15:43.799414+00:00"
+        }
+      ],
+      "last_task_id": "speak-text-task",
+      "completed_at": "2025-07-15T06:15:43.804271+00:00"
+    }
+  ],
+  "last_objective_id": "speak-text-obj",
+  "completed_at": "2025-07-15T06:16:18.317540+00:00"
+}

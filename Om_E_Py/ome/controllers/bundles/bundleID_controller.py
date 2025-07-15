@@ -25,28 +25,28 @@ How to Use:
 
 Command Line Interface:
     # Get the active bundle ID
-    python -m ome.controllers.bundles.bundleID_controller --get
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --get
     
     # Switch to a different app (supports app names or bundle IDs with fuzzy matching)
-    python -m ome.controllers.bundles.bundleID_controller --set "Safari"  # App name
-    python -m ome.controllers.bundles.bundleID_controller --set "com.apple.mail"  # Bundle ID
-    python -m ome.controllers.bundles.bundleID_controller --set "safri"  # Fuzzy match
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --set "Safari"  # App name
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --set "com.apple.mail"  # Bundle ID
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --set "safri"  # Fuzzy match
     
     # Request a refresh
-    python -m ome.controllers.bundles.bundleID_controller --refresh "Mail" --reason "app_quit_relaunch"
-    python -m ome.controllers.bundles.bundleID_controller --refresh "com.apple.Safari" --reason "manual_request"
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --refresh "Mail" --reason "app_quit_relaunch"
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --refresh "com.apple.Safari" --reason "manual_request"
     
     # Show full state
-    python -m ome.controllers.bundles.bundleID_controller --state
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --state
     
     # Watch for changes
-    python -m ome.controllers.bundles.bundleID_controller --watch
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --watch
     
     # Resolve bundle ID or app name (with fuzzy matching)
-    python -m ome.controllers.bundles.bundleID_controller --resolve "safri"
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --resolve "safri"
     
     # Validate bundle ID or app name
-    python -m ome.controllers.bundles.bundleID_controller --validate "Mail"
+    python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --validate "Mail"
 
 Programmatic Usage:
     # Get the active bundle ID
@@ -110,15 +110,23 @@ class BundleIDController:
     bundle ID resolution and validation.
     """
     
-    def __init__(self, data_dir="ome/data/windows"):
+    def __init__(self, data_dir=None):
         """
         Initialize the BundleIDController.
         
         Args:
-            data_dir (str): Directory for storing bundle ID and refresh files
+            data_dir (str, optional): Directory for storing bundle ID and refresh files.
+                                      If None, defaults to '<project_root>/Om_E_Py/ome/data/windows'.
         """
-        self.data_dir = data_dir
-        self.bundle_id_file = os.path.join(data_dir, "active_target_Bundle_ID.json")
+        if data_dir is None:
+            # Construct the absolute path relative to this file's location
+            controller_dir = os.path.dirname(os.path.abspath(__file__))
+            # Navigate up to the 'ome' directory, then down to 'data/windows'
+            self.data_dir = os.path.join(os.path.dirname(os.path.dirname(controller_dir)), 'data', 'windows')
+        else:
+            self.data_dir = data_dir
+            
+        self.bundle_id_file = os.path.join(self.data_dir, "active_target_Bundle_ID.json")
         self._ensure_data_dir()
         self._initialize_if_needed()
     
@@ -460,22 +468,22 @@ def main():
     
     Usage Examples:
         # Get current active app
-        python -m ome.controllers.bundles.bundleID_controller --get
+        python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --get
         
         # Switch to Safari (with fuzzy matching)
-        python -m ome.controllers.bundles.bundleID_controller --set "safri"
+        python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --set "safri"
         
         # Request refresh for Mail
-        python -m ome.controllers.bundles.bundleID_controller --refresh "Mail" --reason "app_quit_relaunch"
+        python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --refresh "Mail" --reason "app_quit_relaunch"
         
         # Watch for changes
-        python -m ome.controllers.bundles.bundleID_controller --watch
+        python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --watch
         
         # Resolve fuzzy app name
-        python -m ome.controllers.bundles.bundleID_controller --resolve "safri"
+        python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --resolve "safri"
         
         # Validate app name
-        python -m ome.controllers.bundles.bundleID_controller --validate "Mail"
+        python -m Om_E_Py.ome.controllers.bundles.bundleID_controller --validate "Mail"
     """
     import argparse
     

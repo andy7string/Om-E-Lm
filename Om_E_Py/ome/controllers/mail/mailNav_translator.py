@@ -48,7 +48,7 @@ import sys
 import argparse
 from typing import List, Dict, Any
 from ome.utils.uiNav.navBigDaDDy import get_active_target_and_windows_from_file
-from ome.utils.env.env import NAV_EXPORT_DIR, APPNAV_CONFIG_PATH, TRANSLATOR_EXPORT_DIR
+from env import UI_NAV_EXPORT_DIR, UI_WINDOW_REF_MAP_CONFIG, UI_TRANSLATOR_EXPORT_DIR
 from ome.controllers.mail.mail_controller import MailController
 
 class MailNavTranslator:
@@ -111,7 +111,7 @@ class MailNavTranslator:
         """
         window_ref = self.get_canonical_window_ref()
         nav_filename = f"appNav_{self.bundle_id}_{window_ref}.jsonl"
-        nav_file_path = os.path.join(NAV_EXPORT_DIR, nav_filename)
+        nav_file_path = os.path.join(UI_NAV_EXPORT_DIR, nav_filename)
         return nav_file_path
     
     def extract_mailbox_items(self) -> List[Dict[str, Any]]:
@@ -561,7 +561,7 @@ class MailNavTranslator:
         """
         Load translator configuration from JSONL file using canonical window_ref.
         """
-        config_path = os.path.join(os.path.dirname(APPNAV_CONFIG_PATH), "mailNav_translator_config.jsonl")
+        config_path = os.path.join(os.path.dirname(UI_WINDOW_REF_MAP_CONFIG), "mailNav_translator_config.jsonl")
         if not os.path.exists(config_path):
             print(f"[MailNavTranslator] Translator config not found: {config_path}")
             print(f"[MailNavTranslator] Using default empty config")
@@ -593,11 +593,11 @@ class MailNavTranslator:
         """
         Output the hierarchical structure to a JSONL file using canonical window_ref.
         """
-        os.makedirs(TRANSLATOR_EXPORT_DIR, exist_ok=True)
+        os.makedirs(UI_TRANSLATOR_EXPORT_DIR, exist_ok=True)
         if not output_filename:
             window_ref = self.get_canonical_window_ref()
             output_filename = f"hierarchical_{self.bundle_id}_{window_ref}.jsonl"
-        output_path = os.path.join(TRANSLATOR_EXPORT_DIR, output_filename)
+        output_path = os.path.join(UI_TRANSLATOR_EXPORT_DIR, output_filename)
         hierarchy = self.build_hierarchy_with_rules()
         try:
             with open(output_path, 'w', encoding='utf-8') as f:

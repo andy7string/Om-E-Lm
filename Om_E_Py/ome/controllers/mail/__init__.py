@@ -8,8 +8,7 @@ This package contains three main controllers for Mail app automation:
 3. mail_message_controller.py - Individual message operations (body, attachments, actions)
 """
 
-from .mail_controller import MailController
 from .message_list_controller import MessageListController
 from .mail_message_controller import MailMessageController
 
-__all__ = ['MailController', 'MessageListController', 'MailMessageController'] 
+__all__ = ['MessageListController', 'MailMessageController'] 

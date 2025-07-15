@@ -1,7 +1,6 @@
-from ome.utils.env.env import OPENAI_API_KEY
-from ome.utils.env.constants import TREE_PATH, LOGS_DIR, ARCHIVE_DIR
+from env import TREE_OPENAI_API_KEY, TREE_TREE_PATH, TREE_LOGS_DIR, TREE_ARCHIVE_DIR
 
-print("🔑 OPENAI_API_KEY:", OPENAI_API_KEY)
-print("📄 TREE_PATH:", TREE_PATH)
-print("📂 LOGS_DIR:", LOGS_DIR)
-print("📂 ARCHIVE_DIR:", ARCHIVE_DIR)
+print("🔑 OPENAI_API_KEY:", TREE_OPENAI_API_KEY)
+print("📄 TREE_PATH:", TREE_TREE_PATH)
+print("📂 LOGS_DIR:", TREE_LOGS_DIR)
+print("📂 ARCHIVE_DIR:", TREE_ARCHIVE_DIR)

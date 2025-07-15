@@ -1,29 +1,54 @@
 """
-winD_controller.py
+Om_E_Py/ome/utils/windows/winD_controller.py
 
-A consolidated event listener that runs two main functions in parallel processes:
-1. App Quit Listener: Monitors for application launch and quit events.
-2. Window Event Listener: Monitors a specific application for window creation,
-   focus changes, and classifies windows (e.g., FilePicker, main window).
+This module is part of the Om_E_Lm project. It provides a consolidated event listener and window state manager for macOS applications, combining app quit detection and real-time window classification into a single, robust controller.
 
-This single script replaces the need for app_quit_listener.py, 
-clean_event_listener_classified.py, and combined_event_listener.py.
+Main Purpose:
+- Monitors application launch and quit events for a target app (by bundle ID).
+- Monitors and classifies all windows for the target app, including main windows, sheets, dialogs, and special windows (e.g., FilePicker).
+- Writes real-time window state and active target information to JSONL files for use by navigation and automation layers.
+- Replaces the need for separate app_quit_listener.py, clean_event_listener_classified.py, and combined_event_listener.py scripts.
+- Uses multiprocessing to run app quit and window event listeners in parallel, ensuring reliability and isolation.
 
-It uses multiprocessing to ensure the two event loops (NSRunLoop for app 
-notifications and the polling loop for windows) run in isolation, preventing 
-potential conflicts with AppKit.
+Key Features:
+- App Quit Listener: Uses AppKit notifications to detect app launch/quit and updates status in the shared state file.
+- Window Event Listener: Polls the accessibility API to detect new windows, focus changes, and classifies window types.
+- Real-Time State Files: Writes window state and active target info to Om_E_Py/ome/data/windows/win_<bundleid>.jsonl and updates Om_E_Py/ome/data/windows/active_target_Bundle_ID.json.
+- Robust Recovery: Handles app relaunch, switching, and refresh requests gracefully.
+- Mouse Corner Exit: Move mouse to top-right corner to exit the listener process.
+- Multiprocessing: Runs both listeners in separate processes for maximum reliability.
+- Configurable via env.py and .env at the project root.
 
-Usage:
-    python ome/utils/windows/winD_controller.py [bundle_id_or_app_name]
-    
-The optional argument is passed to the window event listener to target a
-specific application. If omitted, it defaults to the active bundle ID managed
-by BundleIDController.
+How to Use (Command Line):
+    python -m Om_E_Py.ome.utils.windows.winD_controller [bundle_id_or_app_name]
+
+Arguments:
+    [bundle_id_or_app_name]: (optional) The bundle ID or app name to monitor. If omitted, uses the active bundle ID from the shared state file.
+
+Example:
+    python -m Om_E_Py.ome.utils.windows.winD_controller com.apple.mail
+    # Starts monitoring Mail for app quit/launch and window events.
+
+Output:
+- Writes real-time window state to Om_E_Py/ome/data/windows/win_<bundleid>.jsonl
+- Updates active bundle ID and status in Om_E_Py/ome/data/windows/active_target_Bundle_ID.json
+- Prints status and event information to the console for debugging.
+
+When to Use:
+- To provide real-time window and app state for navigation, automation, or accessibility workflows.
+- As the backend event/state manager for Om_E_Lm navigation and UI automation layers.
+- To replace legacy event listeners with a single, robust, and multiprocessing-aware controller.
+
 """
 import sys
 import os
+
+# Get project root from env.py to ensure consistency. This is more robust
+# than calculating from __file__, especially when dealing with multiprocessing.
+from env import PROJECT_ROOT, UI_POLL_INTERVAL, UI_ACTIVE_BUNDLE_JSON, UI_WIN_LIST_DIR
+
 # Add the project root to the Python path to allow absolute imports from 'ome'
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+project_root = str(PROJECT_ROOT)
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
@@ -34,7 +59,6 @@ import threading
 import argparse
 import json
 from datetime import datetime
-from ome.utils.env.env import LISTENER_POLL_INTERVAL, ACTIVE_BUNDLE_JSON
 
 # ==============================================================================
 # SECTION 1: APP QUIT LISTENER LOGIC
@@ -46,8 +70,8 @@ def run_app_quit_listener(project_root):
     Monitors for application launch and quit events using AppKit notifications.
     This function is intended to be run in a separate process.
     """
-    # Set the correct working directory to resolve relative paths for data files.
-    os.chdir(project_root)
+    # No longer need to change directory. We rely on absolute paths from env.py.
+    # os.chdir(project_root)
 
     import objc
     from Foundation import NSObject, NSRunLoop, NSDate
@@ -63,7 +87,7 @@ def run_app_quit_listener(project_root):
 
     def update_json_status(bundle_id, status):
         try:
-            with open(ACTIVE_BUNDLE_JSON, "r", encoding="utf-8") as f:
+            with open(UI_ACTIVE_BUNDLE_JSON, "r", encoding="utf-8") as f:
                 data = json.load(f)
             if data.get("active_bundle_id") != bundle_id:
                 return
@@ -71,10 +95,10 @@ def run_app_quit_listener(project_root):
                 return
             data["status"] = status
             data["last_updated"] = time.strftime("%Y-%m-%dT%H:%M:%S.%fZ", time.gmtime())
-            with open(ACTIVE_BUNDLE_JSON, "w", encoding="utf-8") as f:
+            with open(UI_ACTIVE_BUNDLE_JSON, "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
         except Exception as e:
-            print(f"[AppQuitListener ERROR] Could not update status in {ACTIVE_BUNDLE_JSON}: {e}")
+            print(f"[AppQuitListener ERROR] Could not update status in {UI_ACTIVE_BUNDLE_JSON}: {e}")
 
     class AppEventListener(NSObject):
         def initWithBundleId_(self, bundle_id):
@@ -108,7 +132,7 @@ def run_app_quit_listener(project_root):
 
     def read_active_bundle_id():
         try:
-            with open(ACTIVE_BUNDLE_JSON, "r", encoding="utf-8") as f:
+            with open(UI_ACTIVE_BUNDLE_JSON, "r", encoding="utf-8") as f:
                 data = json.load(f)
             bundle_id = data.get("active_bundle_id")
             if not bundle_id or not isinstance(bundle_id, str):
@@ -117,7 +141,7 @@ def run_app_quit_listener(project_root):
         except Exception:
             return None
 
-    print(f"[AppQuitListener] Monitoring for launch/quit events based on {ACTIVE_BUNDLE_JSON}")
+    print(f"[AppQuitListener] Monitoring for launch/quit events based on {UI_ACTIVE_BUNDLE_JSON}")
     listener = None
     current_bundle_id = None
     last_status = None
@@ -138,7 +162,7 @@ def run_app_quit_listener(project_root):
                 if status != last_status:
                     update_json_status(current_bundle_id, status)
                     last_status = status
-            NSRunLoop.currentRunLoop().runUntilDate_(NSDate.dateWithTimeIntervalSinceNow_(LISTENER_POLL_INTERVAL))
+            NSRunLoop.currentRunLoop().runUntilDate_(NSDate.dateWithTimeIntervalSinceNow_(UI_POLL_INTERVAL))
     except (KeyboardInterrupt, SystemExit):
         pass
     finally:
@@ -157,14 +181,14 @@ def run_clean_event_listener_classified(project_root, cli_args):
     Monitors and classifies windows for a target application.
     This function is intended to be run in a separate process.
     """
-    # Set up the environment for the child process
-    os.chdir(project_root)
+    # Set up the environment for the child process.
+    # We add the project root to sys.path but avoid changing the CWD.
     sys.path.insert(0, project_root)
 
-    from ome.AXClasses import NativeUIElement
-    from ome.utils.builder.app.app_focus import ensure_app_focus
-    from ome.utils.builder.app.appList_controller import bundle_id_exists, get_bundle_id
-    from ome.controllers.bundles.bundleID_controller import BundleIDController
+    from Om_E_Py.ome.AXClasses import NativeUIElement
+    from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
+    from Om_E_Py.ome.utils.builder.app.appList_controller import bundle_id_exists, get_bundle_id
+    from Om_E_Py.ome.controllers.bundles.bundleID_controller import BundleIDController
     
     class MouseExitMonitor:
         def __init__(self, corner_size=50):
@@ -319,17 +343,14 @@ def run_clean_event_listener_classified(project_root, cli_args):
     mouse_monitor = MouseExitMonitor()
     mouse_monitor.start()
     
-    app = reacquire_app_reference(bundle_id)
-    if not app:
-        print("[WindowListener] Could not get initial app reference. Waiting for app to be available.")
-
+    app = None  # Start with no app reference
     existing_windows = set()
     last_poll_time = 0
 
     try:
         while True:
             # Main polling loop, targeting configured interval
-            if time.time() - last_poll_time < LISTENER_POLL_INTERVAL:
+            if time.time() - last_poll_time < UI_POLL_INTERVAL:
                 time.sleep(0.05) # Sleep for a short duration to prevent busy-waiting
                 continue
             last_poll_time = time.time()
@@ -337,10 +358,10 @@ def run_clean_event_listener_classified(project_root, cli_args):
             # Read the shared state file directly
             state = {}
             try:
-                with open(ACTIVE_BUNDLE_JSON, "r") as f:
+                with open(UI_ACTIVE_BUNDLE_JSON, "r") as f:
                     state = json.load(f)
             except (FileNotFoundError, json.JSONDecodeError):
-                print("[WindowListener WARNING] Could not read state file, will retry.")
+                print(f"[WindowListener WARNING] Could not read state file, will retry. Path attempted: {UI_ACTIVE_BUNDLE_JSON}")
                 time.sleep(1)
                 continue
 
@@ -352,7 +373,7 @@ def run_clean_event_listener_classified(project_root, cli_args):
             if active_bundle_id and active_bundle_id != bundle_id:
                 print(f"\n[WindowListener] Switching from '{bundle_id}' to '{active_bundle_id}'")
                 bundle_id = active_bundle_id
-                app = reacquire_app_reference(bundle_id)
+                app = None  # Reset app reference for new bundle
                 existing_windows.clear()
                 continue # Restart loop with new app
 
@@ -368,19 +389,24 @@ def run_clean_event_listener_classified(project_root, cli_args):
                 existing_windows.clear()
                 # Loop will now wait for status to be 'running' before re-acquiring
             
-            # 3. If app is not running or we have no reference, wait.
-            if app_status != 'running' or app is None:
-                if app is None and app_status == 'running':
-                    # App has been relaunched, get a new reference
-                    app = reacquire_app_reference(bundle_id)
-                else:
-                    # App is quit or we failed to get a ref, so just wait.
-                    print(f"[WindowListener] App '{bundle_id}' is not running or reference is missing. Waiting...")
-                    time.sleep(1) # Extra sleep to avoid spamming logs
+            # 3. If app is not running, wait.
+            if app_status not in ['running', 'active']:
+                print(f"[WindowListener] App '{bundle_id}' is not running. Status: '{app_status}'. Waiting...")
+                time.sleep(1)
+                continue
+            
+            # 4. If app is running but we have no reference, try to get one
+            if app is None:
+                print(f"[WindowListener] App '{bundle_id}' is running but no reference. Attempting to acquire...")
+                app = reacquire_app_reference(bundle_id)
+                if app is None:
+                    print(f"[WindowListener] Failed to acquire app reference for '{bundle_id}'. Will retry...")
+                    time.sleep(1)
                     continue
             
             # 4. If we have an app reference and it's running, scan for windows
-            output_path = os.path.join("ome/data/windows", f"win_{bundle_id}.jsonl")
+            os.makedirs(UI_WIN_LIST_DIR, exist_ok=True)
+            output_path = os.path.join(UI_WIN_LIST_DIR, f"win_{bundle_id}.jsonl")
             try:
                 all_window_infos = [scan_window(w, i) for i, w in enumerate(app.windows() or [])]
                 current_windows = {get_window_signature(w) for w in (app.windows() or [])}
@@ -423,17 +449,17 @@ def run_clean_event_listener_classified(project_root, cli_args):
 # ==============================================================================
 
 if __name__ == "__main__":
-    # Calculate the project root directory, which is three levels up from this script.
-    # ome/utils/windows -> ome/utils -> ome -> project_root
-    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
-
+    # The project_root is now defined globally by importing it from env.py.
+    # This ensures a single, reliable source of truth for the project path,
+    # which is crucial for the multiprocessing context used below.
     cli_args = sys.argv[1:]
 
-    # For macOS, 'fork' is a bit more reliable for inheriting state, but let's
+    # For macOS, 'fork' is a bit more reliable for inheriting state, but we
     # stick to the safer default ('spawn') and set up the environment explicitly.
     
     print("[winD_controller] Starting event listeners...")
     
+    # Pass the absolute project_root string to the subprocesses
     p1 = multiprocessing.Process(target=run_app_quit_listener, args=(project_root,))
     p2 = multiprocessing.Process(target=run_clean_event_listener_classified, args=(project_root, cli_args))
     

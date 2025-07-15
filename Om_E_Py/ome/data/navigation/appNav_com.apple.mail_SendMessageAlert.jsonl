@@ -1,4 +1,0 @@
-# --- ACTIONABLE ELEMENTS BELOW ---
-{"AXRole": "AXButton", "AXTitle": "Save", "AXFocused": false, "omeClick": [1965.0, 788.0], "parent_path": [{"role": "AXSheet", "identifier": "Mail.sendMessageAlert", "description": "alert"}, {"role": "AXButton", "identifier": "action-button-1"}]}
-{"AXRole": "AXButton", "AXTitle": "Don’t Save", "AXFocused": false, "omeClick": [1965.0, 822.0], "parent_path": [{"role": "AXSheet", "identifier": "Mail.sendMessageAlert", "description": "alert"}, {"role": "AXButton", "identifier": "action-button-3"}]}
-{"AXRole": "AXButton", "AXTitle": "Cancel", "AXFocused": true, "omeClick": [1965.0, 866.0], "parent_path": [{"role": "AXSheet", "identifier": "Mail.sendMessageAlert", "description": "alert"}, {"role": "AXButton", "identifier": "action-button-2"}]}

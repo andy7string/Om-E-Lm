@@ -1,0 +1,75 @@
+{
+  "goal_id": "open-chrome-and-google-goal",
+  "description": "Open Google Chrome and navigate to google.com",
+  "status": "complete",
+  "created_at": "2025-07-14T17:23:32.168363",
+  "objectives": [
+    {
+      "objective_id": "open-chrome-obj",
+      "goal_id": "open-chrome-and-google-goal",
+      "description": "Launch the Google Chrome browser",
+      "status": "complete",
+      "created_at": "2025-07-14T17:23:32.168363",
+      "tasks": [
+        {
+          "task_id": "launch-chrome-task",
+          "objective_id": "open-chrome-obj",
+          "description": "Use the system handler to open Google Chrome",
+          "status": "complete",
+          "created_at": "2025-07-14T17:23:32.168363",
+          "actions": [
+            {
+              "name": "open_browser",
+              "source": "system",
+              "input_args": {
+                "browser": "Google Chrome"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T08:04:03.886835+00:00"
+            }
+          ],
+          "completed_at": "2025-07-14T08:04:03.894770+00:00"
+        }
+      ],
+      "last_task_id": "launch-chrome-task",
+      "completed_at": "2025-07-14T08:04:03.897933+00:00"
+    },
+    {
+      "objective_id": "navigate-google-obj",
+      "goal_id": "open-chrome-and-google-goal",
+      "description": "Navigate to google.com in Google Chrome",
+      "status": "complete",
+      "created_at": "2025-07-14T17:23:32.168363",
+      "tasks": [
+        {
+          "task_id": "navigate-google-task",
+          "objective_id": "navigate-google-obj",
+          "description": "Use the system handler to open google.com in Google Chrome",
+          "status": "complete",
+          "created_at": "2025-07-14T17:23:32.168363",
+          "actions": [
+            {
+              "name": "open_url",
+              "source": "system",
+              "input_args": {
+                "url": "https://www.google.com",
+                "browser": "Google Chrome"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T08:04:04.279383+00:00"
+            }
+          ],
+          "completed_at": "2025-07-14T08:04:04.286777+00:00"
+        }
+      ],
+      "last_task_id": "navigate-google-task",
+      "completed_at": "2025-07-14T08:04:04.291403+00:00"
+    }
+  ],
+  "last_objective_id": "navigate-google-obj",
+  "completed_at": "2025-07-14T08:04:04.293864+00:00"
+}

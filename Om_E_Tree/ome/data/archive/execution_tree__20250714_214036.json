@@ -1,0 +1,126 @@
+{
+  "goal_id": "launch-safari-and-navigate-to-apple-goal",
+  "description": "Launch Safari browser and navigate to apple.com, speak a welcome message, and take a screenshot of the homepage saved to the Desktop as 'apple_homepage.png'.",
+  "status": "complete",
+  "objectives": [
+    {
+      "objective_id": "launch-safari-obj",
+      "description": "Launch Safari browser",
+      "status": "complete",
+      "tasks": [
+        {
+          "task_id": "launch-safari-task",
+          "description": "Use the system handler to open Safari",
+          "status": "complete",
+          "actions": [
+            {
+              "name": "launch_app",
+              "source": "system",
+              "input_args": {
+                "app_name": "Safari"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T12:10:31.457121+00:00"
+            }
+          ],
+          "objective_id": "launch-safari-obj",
+          "completed_at": "2025-07-14T12:10:31.464962+00:00"
+        }
+      ],
+      "last_task_id": "launch-safari-task",
+      "completed_at": "2025-07-14T12:10:31.472162+00:00"
+    },
+    {
+      "objective_id": "navigate-apple-obj",
+      "description": "Navigate to apple.com in Safari",
+      "status": "complete",
+      "tasks": [
+        {
+          "task_id": "navigate-apple-task",
+          "description": "Use the system handler to open apple.com in Safari",
+          "status": "complete",
+          "actions": [
+            {
+              "name": "open_url",
+              "source": "system",
+              "input_args": {
+                "url": "https://www.apple.com",
+                "browser": "Safari"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T12:10:31.862796+00:00"
+            }
+          ],
+          "objective_id": "navigate-apple-obj",
+          "completed_at": "2025-07-14T12:10:31.866451+00:00"
+        }
+      ],
+      "last_task_id": "navigate-apple-task",
+      "completed_at": "2025-07-14T12:10:31.870002+00:00"
+    },
+    {
+      "objective_id": "speak-welcome-obj",
+      "description": "Speak a welcome message using the macOS voice synthesiser",
+      "status": "complete",
+      "tasks": [
+        {
+          "task_id": "speak-welcome-task",
+          "description": "Use the system handler to speak a welcome message",
+          "status": "complete",
+          "actions": [
+            {
+              "name": "say_text",
+              "source": "system",
+              "input_args": {
+                "text": "Welcome to the Apple homepage!"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T12:10:35.015603+00:00"
+            }
+          ],
+          "objective_id": "speak-welcome-obj",
+          "completed_at": "2025-07-14T12:10:35.020129+00:00"
+        }
+      ],
+      "last_task_id": "speak-welcome-task",
+      "completed_at": "2025-07-14T12:10:35.024504+00:00"
+    },
+    {
+      "objective_id": "screenshot-apple-obj",
+      "description": "Take a screenshot of the apple.com homepage and save it to the Desktop as 'apple_homepage.png'",
+      "status": "complete",
+      "tasks": [
+        {
+          "task_id": "screenshot-apple-task",
+          "description": "Use the system handler to take a screenshot of apple.com and save it as 'apple_homepage.png' on the Desktop",
+          "status": "complete",
+          "actions": [
+            {
+              "name": "take_screenshot",
+              "source": "system",
+              "input_args": {
+                "save_path": "/Users/andy7string/Desktop/apple_homepage.png"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T12:10:36.184636+00:00"
+            }
+          ],
+          "objective_id": "screenshot-apple-obj",
+          "completed_at": "2025-07-14T12:10:36.187055+00:00"
+        }
+      ],
+      "last_task_id": "screenshot-apple-task",
+      "completed_at": "2025-07-14T12:10:36.189909+00:00"
+    }
+  ],
+  "last_objective_id": "screenshot-apple-obj",
+  "completed_at": "2025-07-14T12:10:36.191842+00:00"
+}

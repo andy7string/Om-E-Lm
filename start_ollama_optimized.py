@@ -16,7 +16,7 @@ OLLAMA_ENV = {
 }
 
 OLLAMA_SERVER_URL = "http://127.0.0.1:11434"
-MODEL_NAME = "deepseek-r1:1.5b"
+MODEL_NAME = "mistral:7b"
 
 
 def is_ollama_running():

@@ -5,7 +5,7 @@ import time
 import re
 import argparse
 from ome.utils.app_focus import ensure_app_focus
-from ome.utils.env.env import MESSAGE_EXPORT_DIR, MAX_ROWS
+from env import UI_MESSAGE_EXPORT_DIR, UI_MAX_ROWS
 
 def extract_omeclick(element):
     try:
@@ -25,7 +25,7 @@ def safe_getattr(obj, attr):
 
 def extract_first_n_rows_fields(n=None, row_index=None):
     if n is None:
-        n = MAX_ROWS
+        n = UI_MAX_ROWS
     bundle_id = "com.apple.mail"
     app = ensure_app_focus(bundle_id)
     t0 = time.time()
@@ -74,7 +74,7 @@ def extract_first_n_rows_fields(n=None, row_index=None):
         total_rows = len(rows)
         center = row_index - 1  # zero-based
         if row_index < 1 or row_index > total_rows:
-            selected_rows = rows[:MAX_ROWS]
+            selected_rows = rows[:UI_MAX_ROWS]
             row_offset = 0
             if rows:
                 try:
@@ -82,12 +82,12 @@ def extract_first_n_rows_fields(n=None, row_index=None):
                 except Exception as e:
                     pass
         else:
-            half_window = MAX_ROWS // 2
+            half_window = UI_MAX_ROWS // 2
             start = max(center - half_window, 0)
-            end = start + MAX_ROWS
+            end = start + UI_MAX_ROWS
             if end > total_rows:
                 end = total_rows
-                start = max(end - MAX_ROWS, 0)
+                start = max(end - UI_MAX_ROWS, 0)
             try:
                 rows[center].AXSelected = True
             except Exception as e:
@@ -95,7 +95,7 @@ def extract_first_n_rows_fields(n=None, row_index=None):
             selected_rows = rows[start:end]
             row_offset = start
     else:
-        selected_rows = rows[:MAX_ROWS]
+        selected_rows = rows[:UI_MAX_ROWS]
         row_offset = 0
         if rows:
             try:
@@ -313,7 +313,7 @@ def extract_first_n_rows_fields(n=None, row_index=None):
             print(f"  children[{idx}].AXValue: {val!r}")
         messages.append(row_data)
     t6 = time.time()
-    out_path = os.path.join(MESSAGE_EXPORT_DIR, "messages", f"mail_{bundle_id}.jsonl")
+    out_path = os.path.join(UI_MESSAGE_EXPORT_DIR, "messages", f"mail_{bundle_id}.jsonl")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, 'w') as f:
         for item in messages:
@@ -335,4 +335,4 @@ if __name__ == '__main__':
     parser.add_argument('--row', '-r', type=int, default=None, help='Row index (1-based) to select/focus. If not set, selects the first row.')
     args = parser.parse_args()
 
-    extract_first_n_rows_fields(n=MAX_ROWS, row_index=args.row) 
+    extract_first_n_rows_fields(n=UI_MAX_ROWS, row_index=args.row) 

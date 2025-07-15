@@ -4,6 +4,7 @@ import time
 from typing import List, Dict
 from ome._a11y import ErrorUnsupported, ErrorCannotComplete, ErrorAPIDisabled, ErrorInvalidUIElement
 import ome
+from env import UI_MENU_EXPORT_DIR
 
 def build_menu(bundle_id: str, filter_mode: str = 'all') -> List[Dict]:
     """
@@ -11,7 +12,6 @@ def build_menu(bundle_id: str, filter_mode: str = 'all') -> List[Dict]:
     Scans all menu items for the given app (by bundle_id), outputs a JSONL, and returns a filtered list.
     filter_mode: 'all', 'enabled', or 'disabled'
     """
-    from ome.utils.env.env import MENU_EXPORT_DIR
     # Default filters (from omeMenus.py)
     EXCLUDE_ATTRS = {
         'AXFrame', 'AXParent', 'AXTopLevelMenuBar', 'AXTopLevelUIElement',
@@ -174,8 +174,8 @@ def build_menu(bundle_id: str, filter_mode: str = 'all') -> List[Dict]:
             pass
         walk_menu(parent, path=[title], results=all_results)
     # Save to JSONL
-    os.makedirs(MENU_EXPORT_DIR, exist_ok=True)
-    output_path = os.path.join(MENU_EXPORT_DIR, f"menu_{bundle_id}.jsonl")
+    os.makedirs(UI_MENU_EXPORT_DIR, exist_ok=True)
+    output_path = os.path.join(UI_MENU_EXPORT_DIR, f"menu_{bundle_id}.jsonl")
     with open(output_path, 'w', encoding='utf-8') as f:
         for item in all_results:
             f.write(json.dumps(item, ensure_ascii=False) + '\n')

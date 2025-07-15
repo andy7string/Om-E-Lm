@@ -1,0 +1,13 @@
+{
+  "active_target": {
+    "type": "window",
+    "window_title": "TextEdit (Active via cli)",
+    "window_ref": "com.apple.TextEdit.active",
+    "nav_map_name": "appNav_com.apple.TextEdit_active.jsonl",
+    "timestamp": "2025-07-15T06:38:59.235725Z"
+  },
+  "bundle_id": "com.apple.TextEdit",
+  "app_name": "TextEdit",
+  "source": "cli",
+  "last_updated": "2025-07-15T06:38:59.235727Z"
+}

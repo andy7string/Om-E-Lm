@@ -1,0 +1,13 @@
+{
+  "active_target": {
+    "type": "window",
+    "window_title": "Notes (Active via cli)",
+    "window_ref": "com.apple.Notes.active",
+    "nav_map_name": "appNav_com.apple.Notes_active.jsonl",
+    "timestamp": "2025-07-15T06:39:42.492868Z"
+  },
+  "bundle_id": "com.apple.Notes",
+  "app_name": "Notes",
+  "source": "cli",
+  "last_updated": "2025-07-15T06:39:42.492871Z"
+}

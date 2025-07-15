@@ -1,0 +1,204 @@
+{"title": "Finder", "menu_path": ["Finder"], "omeClick": [76.0, 12.0], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:895", "AXEnabled": true, "ShortModifier": 8, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "About Finder", "menu_path": ["Finder", "About Finder"], "omeClick": [129.0, 41.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:319", "AXEnabled": true, "ShortModifier": 8}
+{"title": "Settings…", "menu_path": ["Finder", "Settings…"], "omeClick": [129.0, 75.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:325", "AXEnabled": true, "ShortModifier": 0, "ShortKey": ","}
+{"title": "Empty Bin…", "menu_path": ["Finder", "Empty Bin…"], "omeClick": [129.0, 109.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:332", "AXEnabled": true, "ShortModifier": 1, "AXMenuItemCmdVirtualKey": 51, "ShortKey": "\b"}
+{"title": "Empty Bin", "menu_path": ["Finder", "Empty Bin"], "omeClick": [129.0, 109.5], "shortcut_modifiers": "⇧⌃", "AXIdentifier": "_NS:339", "AXEnabled": true, "ShortModifier": 3, "AXMenuItemCmdVirtualKey": 51, "ShortKey": "\b"}
+{"title": "Services", "menu_path": ["Finder", "Services"], "omeClick": [129.0, 143.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:906", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Activity Monitor", "menu_path": ["Finder", "Services", "Activity Monitor"], "shortcut_modifiers": "", "AXIdentifier": "_processRequest:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Allocations & Leaks", "menu_path": ["Finder", "Services", "Allocations & Leaks"], "shortcut_modifiers": "", "AXIdentifier": "_processRequest:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "File Activity", "menu_path": ["Finder", "Services", "File Activity"], "shortcut_modifiers": "", "AXIdentifier": "_processRequest:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "System Trace", "menu_path": ["Finder", "Services", "System Trace"], "shortcut_modifiers": "", "AXIdentifier": "_processRequest:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Time Profile Active Application", "menu_path": ["Finder", "Services", "Time Profile Active Application"], "shortcut_modifiers": "", "AXIdentifier": "_processRequest:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Time Profile App Under Mouse", "menu_path": ["Finder", "Services", "Time Profile App Under Mouse"], "shortcut_modifiers": "", "AXIdentifier": "_processRequest:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Time Profile Entire System", "menu_path": ["Finder", "Services", "Time Profile Entire System"], "shortcut_modifiers": "", "AXIdentifier": "_processRequest:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Toggle Instruments Recording", "menu_path": ["Finder", "Services", "Toggle Instruments Recording"], "shortcut_modifiers": "", "AXIdentifier": "_processRequest:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Services Settings…", "menu_path": ["Finder", "Services", "Services Settings…"], "shortcut_modifiers": "", "AXIdentifier": "_configureServicesMenu:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Hide Finder", "menu_path": ["Finder", "Hide Finder"], "omeClick": [129.0, 177.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:344", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "H"}
+{"title": "Hide Others", "menu_path": ["Finder", "Hide Others"], "omeClick": [129.0, 200.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:355", "AXEnabled": true, "ShortModifier": 2, "ShortKey": "H"}
+{"title": "Show All", "menu_path": ["Finder", "Show All"], "omeClick": [129.0, 223.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:361", "AXEnabled": false, "ShortModifier": 0}
+{"title": "File", "menu_path": ["File"], "omeClick": [129.5, 12.0], "shortcut_modifiers": "", "AXIdentifier": "_NS:917", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "New Finder Window", "menu_path": ["File", "New Finder Window"], "omeClick": [234.0, 41.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:866", "AXEnabled": true, "ShortModifier": 2, "ShortKey": "N"}
+{"title": "New Folder", "menu_path": ["File", "New Folder"], "omeClick": [234.0, 64.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:562", "AXEnabled": false, "ShortModifier": 1, "ShortKey": "N"}
+{"title": "New Folder with Selection", "menu_path": ["File", "New Folder with Selection"], "omeClick": [234.0, 87.5], "shortcut_modifiers": "⌥", "AXIdentifier": "_NS:602", "AXEnabled": false, "ShortModifier": 4, "ShortKey": "N"}
+{"title": "New Smart Folder", "menu_path": ["File", "New Smart Folder"], "omeClick": [234.0, 110.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:530", "AXEnabled": true, "ShortModifier": 8}
+{"title": "New Tab", "menu_path": ["File", "New Tab"], "omeClick": [234.0, 133.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:715", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "T"}
+{"title": "Open", "menu_path": ["File", "Open"], "omeClick": [234.0, 156.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:596", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "O"}
+{"title": "Open in New Tab", "menu_path": ["File", "Open in New Tab"], "omeClick": [234.0, 156.5], "shortcut_modifiers": "⌥", "AXIdentifier": "_NS:469", "AXEnabled": true, "ShortModifier": 4, "ShortKey": "O"}
+{"title": "Open in New Window and Close", "menu_path": ["File", "Open in New Window and Close"], "omeClick": [234.0, 156.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:383", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "O"}
+{"title": "Open With", "menu_path": ["File", "Open With"], "omeClick": [234.0, 179.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:543", "AXEnabled": false, "ShortModifier": 8, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Item", "menu_path": ["File", "Open With", "Item"], "shortcut_modifiers": "", "AXIdentifier": "_NS:551", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Always Open With", "menu_path": ["File", "Always Open With"], "omeClick": [234.0, 179.5], "shortcut_modifiers": "⌃⌘", "AXIdentifier": "_NS:455", "AXEnabled": false, "ShortModifier": 10, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Item", "menu_path": ["File", "Always Open With", "Item"], "shortcut_modifiers": "", "AXIdentifier": "_NS:463", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Close Window", "menu_path": ["File", "Close Window"], "omeClick": [234.0, 202.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:589", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "W"}
+{"title": "Close All", "menu_path": ["File", "Close All"], "omeClick": [234.0, 202.5], "shortcut_modifiers": "⌃", "AXIdentifier": "closeAll:", "AXEnabled": true, "ShortModifier": 2, "ShortKey": "W"}
+{"title": "Get Info", "menu_path": ["File", "Get Info"], "omeClick": [234.0, 236.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:583", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "I"}
+{"title": "Show Inspector", "menu_path": ["File", "Show Inspector"], "omeClick": [234.0, 236.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:449", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "I"}
+{"title": "Get Summary Info", "menu_path": ["File", "Get Summary Info"], "omeClick": [234.0, 236.5], "shortcut_modifiers": "⌥", "AXIdentifier": "_NS:442", "AXEnabled": false, "ShortModifier": 4, "ShortKey": "I"}
+{"title": "Rename", "menu_path": ["File", "Rename"], "omeClick": [234.0, 259.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:773", "AXEnabled": false, "ShortModifier": 8}
+{"title": "Compress", "menu_path": ["File", "Compress"], "omeClick": [234.0, 282.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:481", "AXEnabled": false, "ShortModifier": 8}
+{"title": "Duplicate", "menu_path": ["File", "Duplicate"], "omeClick": [234.0, 305.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:569", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "D"}
+{"title": "Duplicate Exactly", "menu_path": ["File", "Duplicate Exactly"], "omeClick": [234.0, 305.5], "shortcut_modifiers": "⇧⌃", "AXIdentifier": "_NS:628", "AXEnabled": false, "ShortModifier": 3, "ShortKey": "D"}
+{"title": "Make Alias", "menu_path": ["File", "Make Alias"], "omeClick": [234.0, 328.5], "shortcut_modifiers": "⌥", "AXIdentifier": "_NS:556", "AXEnabled": false, "ShortModifier": 4, "ShortKey": "A"}
+{"title": "Quick Look", "menu_path": ["File", "Quick Look"], "omeClick": [234.0, 351.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:475", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "Y"}
+{"title": "Slideshow", "menu_path": ["File", "Slideshow"], "omeClick": [234.0, 351.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:435", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "Y"}
+{"title": "Print", "menu_path": ["File", "Print"], "omeClick": [234.0, 374.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:576", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "P"}
+{"title": "Share…", "menu_path": ["File", "Share…"], "omeClick": [234.0, 408.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:809", "AXEnabled": false, "ShortModifier": 8}
+{"title": "Show in Enclosing Folder", "menu_path": ["File", "Show in Enclosing Folder"], "omeClick": [234.0, 442.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:511", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "R"}
+{"title": "Add to Sidebar", "menu_path": ["File", "Add to Sidebar"], "omeClick": [234.0, 465.5], "shortcut_modifiers": "⌥", "AXIdentifier": "_NS:518", "AXEnabled": false, "ShortModifier": 4, "ShortKey": "T"}
+{"title": "Add to Dock", "menu_path": ["File", "Add to Dock"], "omeClick": [234.0, 465.5], "shortcut_modifiers": "⇧⌥", "AXIdentifier": "_NS:428", "AXEnabled": false, "ShortModifier": 5, "ShortKey": "T"}
+{"title": "Move to Bin", "menu_path": ["File", "Move to Bin"], "omeClick": [234.0, 499.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:505", "AXEnabled": false, "ShortModifier": 0, "AXMenuItemCmdVirtualKey": 51, "ShortKey": "\b"}
+{"title": "Delete Immediately…", "menu_path": ["File", "Delete Immediately…"], "omeClick": [234.0, 499.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:416", "AXEnabled": false, "ShortModifier": 2, "AXMenuItemCmdVirtualKey": 51, "ShortKey": "\b"}
+{"title": "Eject", "menu_path": ["File", "Eject"], "omeClick": [234.0, 522.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:499", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "E"}
+{"title": "radio button", "menu_path": ["File", "Add “” label"], "omeClick": [16.0, 691.0], "AXEnabled": false, "AXValue": 0}
+{"title": "radio button", "menu_path": ["File", "Add “Red” label"], "omeClick": [130.0, 557.0], "AXEnabled": false, "AXValue": 0}
+{"title": "radio button", "menu_path": ["File", "Add “Orange” label"], "omeClick": [154.0, 557.0], "AXEnabled": false, "AXValue": 0}
+{"title": "radio button", "menu_path": ["File", "Add “Yellow” label"], "omeClick": [178.0, 557.0], "AXEnabled": false, "AXValue": 0}
+{"title": "radio button", "menu_path": ["File", "Add “Green” label"], "omeClick": [202.0, 557.0], "AXEnabled": false, "AXValue": 0}
+{"title": "radio button", "menu_path": ["File", "Add “Blue” label"], "omeClick": [226.0, 557.0], "AXEnabled": false, "AXValue": 0}
+{"title": "radio button", "menu_path": ["File", "Add “Purple” label"], "omeClick": [250.0, 557.0], "AXEnabled": false, "AXValue": 0}
+{"title": "radio button", "menu_path": ["File", "Add “Grey” label"], "omeClick": [274.0, 557.0], "AXEnabled": false, "AXValue": 0}
+{"title": "Find", "menu_path": ["File", "Find"], "omeClick": [234.0, 616.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:487", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "F"}
+{"title": "Find by Name…", "menu_path": ["File", "Find by Name…"], "omeClick": [234.0, 616.5], "shortcut_modifiers": "⇧⌥", "AXIdentifier": "_NS:397", "AXEnabled": true, "ShortModifier": 5, "ShortKey": "F"}
+{"title": "Edit", "menu_path": ["Edit"], "omeClick": [173.5, 12.0], "shortcut_modifiers": "", "AXIdentifier": "_NS:931", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Undo Move of 2 Items", "menu_path": ["Edit", "Undo Move of 2 Items"], "omeClick": [262.5, 41.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:24", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "Z"}
+{"title": "Redo", "menu_path": ["Edit", "Redo"], "omeClick": [262.5, 64.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:224", "AXEnabled": false, "ShortModifier": 1, "ShortKey": "Z"}
+{"title": "Cut", "menu_path": ["Edit", "Cut"], "omeClick": [262.5, 98.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:31", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "X"}
+{"title": "Copy", "menu_path": ["Edit", "Copy"], "omeClick": [262.5, 121.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:8", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "C"}
+{"title": "Copy as Pathname", "menu_path": ["Edit", "Copy as Pathname"], "omeClick": [262.5, 121.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:791", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "C"}
+{"title": "Copy as Link", "menu_path": ["Edit", "Copy as Link"], "omeClick": [262.5, 121.5], "shortcut_modifiers": "⌃⌥", "AXIdentifier": "_NS:878", "AXEnabled": false, "ShortModifier": 6, "ShortKey": "C"}
+{"title": "Paste", "menu_path": ["Edit", "Paste"], "omeClick": [262.5, 144.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:608", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "V"}
+{"title": "Move Items Here", "menu_path": ["Edit", "Move Items Here"], "omeClick": [262.5, 144.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:38", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "V"}
+{"title": "Paste Exactly", "menu_path": ["Edit", "Paste Exactly"], "omeClick": [262.5, 144.5], "shortcut_modifiers": "⇧⌃", "AXIdentifier": "_NS:621", "AXEnabled": false, "ShortModifier": 3, "ShortKey": "V"}
+{"title": "Select All", "menu_path": ["Edit", "Select All"], "omeClick": [262.5, 167.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:45", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "A"}
+{"title": "Deselect All", "menu_path": ["Edit", "Deselect All"], "omeClick": [262.5, 167.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:231", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "A"}
+{"title": "Show Clipboard", "menu_path": ["Edit", "Show Clipboard"], "omeClick": [262.5, 201.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:66", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Writing Tools", "menu_path": ["Edit", "Writing Tools"], "omeClick": [262.5, 235.5], "shortcut_modifiers": "", "AXIdentifier": "__NSTextViewContextSubmenuIdentifierWritingTools", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Show Writing Tools", "menu_path": ["Edit", "Writing Tools", "Show Writing Tools"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Proofread", "menu_path": ["Edit", "Writing Tools", "Proofread"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Rewrite", "menu_path": ["Edit", "Writing Tools", "Rewrite"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Make Friendly", "menu_path": ["Edit", "Writing Tools", "Make Friendly"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Make Professional", "menu_path": ["Edit", "Writing Tools", "Make Professional"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Make Concise", "menu_path": ["Edit", "Writing Tools", "Make Concise"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Summarise", "menu_path": ["Edit", "Writing Tools", "Summarise"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Create Key Points", "menu_path": ["Edit", "Writing Tools", "Create Key Points"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Make List", "menu_path": ["Edit", "Writing Tools", "Make List"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Make Table", "menu_path": ["Edit", "Writing Tools", "Make Table"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Compose…", "menu_path": ["Edit", "Writing Tools", "Compose…"], "shortcut_modifiers": "", "AXIdentifier": "showWritingTools:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "AutoFill", "menu_path": ["Edit", "AutoFill"], "omeClick": [262.5, 258.5], "shortcut_modifiers": "", "AXIdentifier": "_NSMenuItemAutoFillIdentifier", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Contact…", "menu_path": ["Edit", "AutoFill", "Contact…"], "shortcut_modifiers": "", "AXIdentifier": "_handleInsertFromContactsCommand:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Passwords…", "menu_path": ["Edit", "AutoFill", "Passwords…"], "shortcut_modifiers": "", "AXIdentifier": "_handleInsertFromPasswordsCommand:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Start Dictation…", "menu_path": ["Edit", "Start Dictation…"], "omeClick": [262.5, 281.5], "shortcut_modifiers": "⌘", "AXIdentifier": "startDictation:", "AXEnabled": true, "ShortModifier": 8}
+{"title": "Emoji & Symbols", "menu_path": ["Edit", "Emoji & Symbols"], "omeClick": [262.5, 304.5], "shortcut_modifiers": "⌘⇧⌥", "AXIdentifier": "orderFrontCharacterPalette:", "AXEnabled": true, "ShortModifier": 24, "ShortKey": "E"}
+{"title": "View", "menu_path": ["View"], "omeClick": [222.0, 12.0], "shortcut_modifiers": "", "AXIdentifier": "_NS:941", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "as Icons", "menu_path": ["View", "as Icons"], "omeClick": [303.0, 41.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:73", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "1"}
+{"title": "as List", "menu_path": ["View", "as List"], "omeClick": [303.0, 64.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:52", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "2", "AXMenuItemMarkChar": "✓"}
+{"title": "as Columns", "menu_path": ["View", "as Columns"], "omeClick": [303.0, 87.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:80", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "3"}
+{"title": "as Gallery", "menu_path": ["View", "as Gallery"], "omeClick": [303.0, 110.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:210", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "4"}
+{"title": "Use Groups", "menu_path": ["View", "Use Groups"], "omeClick": [303.0, 144.5], "shortcut_modifiers": "⌥", "AXIdentifier": "_NS:842", "AXEnabled": true, "ShortModifier": 4, "ShortKey": "0"}
+{"title": "Sort By", "menu_path": ["View", "Sort By"], "omeClick": [303.0, 167.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:269", "AXEnabled": true, "ShortModifier": 8, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Name", "menu_path": ["View", "Sort By", "Name"], "shortcut_modifiers": "⌃⌥", "AXIdentifier": "_NS:102", "AXEnabled": true, "ShortModifier": 6, "ShortKey": "1"}
+{"title": "Kind", "menu_path": ["View", "Sort By", "Kind"], "shortcut_modifiers": "⌃⌥", "AXIdentifier": "_NS:105", "AXEnabled": true, "ShortModifier": 6, "ShortKey": "2"}
+{"title": "Date Last Opened", "menu_path": ["View", "Sort By", "Date Last Opened"], "shortcut_modifiers": "⌃⌥", "AXIdentifier": "_NS:114", "AXEnabled": true, "ShortModifier": 6, "ShortKey": "3", "AXMenuItemMarkChar": "✓"}
+{"title": "Date Added", "menu_path": ["View", "Sort By", "Date Added"], "shortcut_modifiers": "⌃⌥", "AXIdentifier": "_NS:117", "AXEnabled": true, "ShortModifier": 6, "ShortKey": "4"}
+{"title": "Date Modified", "menu_path": ["View", "Sort By", "Date Modified"], "shortcut_modifiers": "⌃⌥", "AXIdentifier": "_NS:120", "AXEnabled": true, "ShortModifier": 6, "ShortKey": "5"}
+{"title": "Date Created", "menu_path": ["View", "Sort By", "Date Created"], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:123", "AXEnabled": true, "ShortModifier": 8}
+{"title": "Size", "menu_path": ["View", "Sort By", "Size"], "shortcut_modifiers": "⌃⌥", "AXIdentifier": "_NS:126", "AXEnabled": true, "ShortModifier": 6, "ShortKey": "6"}
+{"title": "Tags", "menu_path": ["View", "Sort By", "Tags"], "shortcut_modifiers": "⌃⌥", "AXIdentifier": "_NS:129", "AXEnabled": true, "ShortModifier": 6, "ShortKey": "7"}
+{"title": "Clean Up", "menu_path": ["View", "Clean Up"], "omeClick": [303.0, 190.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:237", "AXEnabled": false, "ShortModifier": 8}
+{"title": "Clean Up Selection", "menu_path": ["View", "Clean Up Selection"], "omeClick": [303.0, 190.5], "shortcut_modifiers": "⌃⌘", "AXIdentifier": "_NS:87", "AXEnabled": false, "ShortModifier": 10}
+{"title": "Clean Up By", "menu_path": ["View", "Clean Up By"], "omeClick": [303.0, 213.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:654", "AXEnabled": false, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Name", "menu_path": ["View", "Clean Up By", "Name"], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:662", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "1"}
+{"title": "Kind", "menu_path": ["View", "Clean Up By", "Kind"], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:666", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "2"}
+{"title": "Date Modified", "menu_path": ["View", "Clean Up By", "Date Modified"], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:678", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "5"}
+{"title": "Date Created", "menu_path": ["View", "Clean Up By", "Date Created"], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:683", "AXEnabled": false, "ShortModifier": 8}
+{"title": "Size", "menu_path": ["View", "Clean Up By", "Size"], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:687", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "6"}
+{"title": "Tags", "menu_path": ["View", "Clean Up By", "Tags"], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:692", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "7"}
+{"title": "Show Tab Bar", "menu_path": ["View", "Show Tab Bar"], "omeClick": [303.0, 247.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:822", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "T"}
+{"title": "Show All Tabs", "menu_path": ["View", "Show All Tabs"], "omeClick": [303.0, 270.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:815", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "\\"}
+{"title": "Hide Sidebar", "menu_path": ["View", "Hide Sidebar"], "omeClick": [303.0, 304.5], "shortcut_modifiers": "⌥", "AXIdentifier": "_NS:104", "AXEnabled": true, "ShortModifier": 4, "ShortKey": "S"}
+{"title": "Show Preview", "menu_path": ["View", "Show Preview"], "omeClick": [303.0, 327.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:721", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "P"}
+{"title": "Hide Toolbar", "menu_path": ["View", "Hide Toolbar"], "omeClick": [303.0, 361.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:217", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "T"}
+{"title": "Hide Path Bar", "menu_path": ["View", "Hide Path Bar"], "omeClick": [303.0, 384.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:760", "AXEnabled": true, "ShortModifier": 2, "ShortKey": "P"}
+{"title": "Show Status Bar", "menu_path": ["View", "Show Status Bar"], "omeClick": [303.0, 407.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:117", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "/"}
+{"title": "Customise Toolbar…", "menu_path": ["View", "Customise Toolbar…"], "omeClick": [303.0, 441.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:111", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Show View Options", "menu_path": ["View", "Show View Options"], "omeClick": [303.0, 475.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:124", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "J"}
+{"title": "Show Preview Options", "menu_path": ["View", "Show Preview Options"], "omeClick": [303.0, 498.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:785", "AXEnabled": false, "ShortModifier": 8}
+{"title": "Exit Full Screen", "menu_path": ["View", "Exit Full Screen"], "omeClick": [303.0, 532.5], "shortcut_modifiers": "⌘⇧⌥", "AXIdentifier": "_NS:728", "AXEnabled": true, "ShortModifier": 24, "ShortKey": "F"}
+{"title": "Go", "menu_path": ["Go"], "omeClick": [267.5, 12.0], "shortcut_modifiers": "", "AXIdentifier": "_NS:956", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Back", "menu_path": ["Go", "Back"], "omeClick": [353.5, 41.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:59", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "["}
+{"title": "Forward", "menu_path": ["Go", "Forward"], "omeClick": [353.5, 64.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:131", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "]"}
+{"title": "Enclosing Folder", "menu_path": ["Go", "Enclosing Folder"], "omeClick": [353.5, 87.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:138", "AXEnabled": false, "ShortModifier": 0, "AXMenuItemCmdVirtualKey": 126, "ShortKey": ""}
+{"title": "Enclosing Folder in New Window", "menu_path": ["Go", "Enclosing Folder in New Window"], "omeClick": [353.5, 87.5], "shortcut_modifiers": "⌥", "AXIdentifier": "_NS:243", "AXEnabled": false, "ShortModifier": 4, "AXMenuItemCmdVirtualKey": 126, "ShortKey": ""}
+{"title": "Select Startup Disk on Desktop", "menu_path": ["Go", "Select Startup Disk on Desktop"], "omeClick": [353.5, 87.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:249", "AXEnabled": true, "ShortModifier": 1, "AXMenuItemCmdVirtualKey": 126, "ShortKey": ""}
+{"title": "Recents", "menu_path": ["Go", "Recents"], "omeClick": [353.5, 121.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:286", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "F"}
+{"title": "Documents", "menu_path": ["Go", "Documents"], "omeClick": [353.5, 144.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:647", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "O"}
+{"title": "Desktop", "menu_path": ["Go", "Desktop"], "omeClick": [353.5, 167.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:159", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "D"}
+{"title": "Downloads", "menu_path": ["Go", "Downloads"], "omeClick": [353.5, 190.5], "shortcut_modifiers": "⌃", "AXIdentifier": "_NS:614", "AXEnabled": true, "ShortModifier": 2, "ShortKey": "L"}
+{"title": "Home", "menu_path": ["Go", "Home"], "omeClick": [353.5, 213.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:152", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "H"}
+{"title": "Library", "menu_path": ["Go", "Library"], "omeClick": [353.5, 236.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:634", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "L"}
+{"title": "Computer", "menu_path": ["Go", "Computer"], "omeClick": [353.5, 259.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:145", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "C"}
+{"title": "AirDrop", "menu_path": ["Go", "AirDrop"], "omeClick": [353.5, 282.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:640", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "R"}
+{"title": "Network", "menu_path": ["Go", "Network"], "omeClick": [353.5, 305.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:262", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "K"}
+{"title": "iCloud Drive", "menu_path": ["Go", "iCloud Drive"], "omeClick": [353.5, 328.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:884", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "I"}
+{"title": "Shared", "menu_path": ["Go", "Shared"], "omeClick": [353.5, 351.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:871", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "S"}
+{"title": "Applications", "menu_path": ["Go", "Applications"], "omeClick": [353.5, 374.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:166", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "A"}
+{"title": "Utilities", "menu_path": ["Go", "Utilities"], "omeClick": [353.5, 398.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:173", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "U"}
+{"title": "OneDrive", "menu_path": ["Go", "OneDrive"], "omeClick": [353.5, 422.5], "shortcut_modifiers": "", "AXIdentifier": "invokeGlue:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Recent Folders", "menu_path": ["Go", "Recent Folders"], "omeClick": [353.5, 456.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:187", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "env", "menu_path": ["Go", "Recent Folders", "env"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "lmstudio-community", "menu_path": ["Go", "Recent Folders", "lmstudio-community"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "mlx-community", "menu_path": ["Go", "Recent Folders", "mlx-community"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "models", "menu_path": ["Go", "Recent Folders", "models"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Om_E_Tree", "menu_path": ["Go", "Recent Folders", "Om_E_Tree"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Om-E-Lm", "menu_path": ["Go", "Recent Folders", "Om-E-Lm"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Projects", "menu_path": ["Go", "Recent Folders", "Projects"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Recents", "menu_path": ["Go", "Recent Folders", "Recents"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "utils", "menu_path": ["Go", "Recent Folders", "utils"], "shortcut_modifiers": "", "AXIdentifier": "cmdRecentFoldersItem:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Clear Menu", "menu_path": ["Go", "Recent Folders", "Clear Menu"], "shortcut_modifiers": "", "AXIdentifier": "cmdClearRecentFolders:", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Go to Folder…", "menu_path": ["Go", "Go to Folder…"], "omeClick": [353.5, 490.5], "shortcut_modifiers": "⇧", "AXIdentifier": "_NS:180", "AXEnabled": true, "ShortModifier": 1, "ShortKey": "G"}
+{"title": "Connect to Server…", "menu_path": ["Go", "Connect to Server…"], "omeClick": [353.5, 513.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:203", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "K"}
+{"title": "Window", "menu_path": ["Window"], "omeClick": [323.0, 12.0], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:967", "AXEnabled": true, "ShortModifier": 8, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Minimise", "menu_path": ["Window", "Minimise"], "omeClick": [405.5, 41.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:293", "AXEnabled": false, "ShortModifier": 0, "ShortKey": "M"}
+{"title": "Minimise All", "menu_path": ["Window", "Minimise All"], "omeClick": [405.5, 41.5], "shortcut_modifiers": "⌃", "AXIdentifier": "miniaturizeAll:", "AXEnabled": false, "ShortModifier": 2, "ShortKey": "M"}
+{"title": "Zoom", "menu_path": ["Window", "Zoom"], "omeClick": [405.5, 64.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:300", "AXEnabled": false, "ShortModifier": 8}
+{"title": "Zoom All", "menu_path": ["Window", "Zoom All"], "omeClick": [405.5, 64.5], "shortcut_modifiers": "⌃⌘", "AXIdentifier": "zoomAll:", "AXEnabled": false, "ShortModifier": 10}
+{"title": "Fill", "menu_path": ["Window", "Fill"], "omeClick": [405.5, 87.5], "shortcut_modifiers": "⌘⌥⇧", "AXIdentifier": "_zoomFill:", "AXEnabled": false, "ShortModifier": 28, "ShortKey": "F"}
+{"title": "Centre", "menu_path": ["Window", "Centre"], "omeClick": [405.5, 110.5], "shortcut_modifiers": "⌘⌥⇧", "AXIdentifier": "_zoomCenter:", "AXEnabled": false, "ShortModifier": 28, "ShortKey": "C"}
+{"title": "Move & Resize", "menu_path": ["Window", "Move & Resize"], "omeClick": [405.5, 144.5], "shortcut_modifiers": "", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Halves", "menu_path": ["Window", "Move & Resize", "Halves"], "shortcut_modifiers": "", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Left", "menu_path": ["Window", "Move & Resize", "Left"], "shortcut_modifiers": "⌘⌥⇧", "AXIdentifier": "_zoomLeft:", "AXEnabled": false, "ShortModifier": 28, "AXMenuItemCmdVirtualKey": 123}
+{"title": "Right", "menu_path": ["Window", "Move & Resize", "Right"], "shortcut_modifiers": "⌘⌥⇧", "AXIdentifier": "_zoomRight:", "AXEnabled": false, "ShortModifier": 28, "AXMenuItemCmdVirtualKey": 124}
+{"title": "Top", "menu_path": ["Window", "Move & Resize", "Top"], "shortcut_modifiers": "⌘⌥⇧", "AXIdentifier": "_zoomTop:", "AXEnabled": false, "ShortModifier": 28, "AXMenuItemCmdVirtualKey": 126}
+{"title": "Bottom", "menu_path": ["Window", "Move & Resize", "Bottom"], "shortcut_modifiers": "⌘⌥⇧", "AXIdentifier": "_zoomBottom:", "AXEnabled": false, "ShortModifier": 28, "AXMenuItemCmdVirtualKey": 125}
+{"title": "Quarters", "menu_path": ["Window", "Move & Resize", "Quarters"], "shortcut_modifiers": "", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Top Left", "menu_path": ["Window", "Move & Resize", "Top Left"], "shortcut_modifiers": "", "AXIdentifier": "_zoomTopLeft:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Top Right", "menu_path": ["Window", "Move & Resize", "Top Right"], "shortcut_modifiers": "", "AXIdentifier": "_zoomTopRight:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Bottom Left", "menu_path": ["Window", "Move & Resize", "Bottom Left"], "shortcut_modifiers": "", "AXIdentifier": "_zoomBottomLeft:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Bottom Right", "menu_path": ["Window", "Move & Resize", "Bottom Right"], "shortcut_modifiers": "", "AXIdentifier": "_zoomBottomRight:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Arrange", "menu_path": ["Window", "Move & Resize", "Arrange"], "shortcut_modifiers": "", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Left & Right", "menu_path": ["Window", "Move & Resize", "Left & Right"], "shortcut_modifiers": "29", "AXIdentifier": "_zoomLeftAndRight:", "AXEnabled": false, "ShortModifier": 29, "AXMenuItemCmdVirtualKey": 123}
+{"title": "Left & Quarters", "menu_path": ["Window", "Move & Resize", "Left & Quarters"], "shortcut_modifiers": "31", "AXIdentifier": "_zoomLeftThreeUp:", "AXEnabled": false, "ShortModifier": 31, "AXMenuItemCmdVirtualKey": 123}
+{"title": "Right & Left", "menu_path": ["Window", "Move & Resize", "Right & Left"], "shortcut_modifiers": "29", "AXIdentifier": "_zoomRightAndLeft:", "AXEnabled": false, "ShortModifier": 29, "AXMenuItemCmdVirtualKey": 124}
+{"title": "Right & Quarters", "menu_path": ["Window", "Move & Resize", "Right & Quarters"], "shortcut_modifiers": "31", "AXIdentifier": "_zoomRightThreeUp:", "AXEnabled": false, "ShortModifier": 31, "AXMenuItemCmdVirtualKey": 124}
+{"title": "Top & Bottom", "menu_path": ["Window", "Move & Resize", "Top & Bottom"], "shortcut_modifiers": "29", "AXIdentifier": "_zoomTopAndBottom:", "AXEnabled": false, "ShortModifier": 29, "AXMenuItemCmdVirtualKey": 126}
+{"title": "Top & Quarters", "menu_path": ["Window", "Move & Resize", "Top & Quarters"], "shortcut_modifiers": "31", "AXIdentifier": "_zoomTopThreeUp:", "AXEnabled": false, "ShortModifier": 31, "AXMenuItemCmdVirtualKey": 126}
+{"title": "Bottom & Top", "menu_path": ["Window", "Move & Resize", "Bottom & Top"], "shortcut_modifiers": "29", "AXIdentifier": "_zoomBottomAndTop:", "AXEnabled": false, "ShortModifier": 29, "AXMenuItemCmdVirtualKey": 125}
+{"title": "Bottom & Quarters", "menu_path": ["Window", "Move & Resize", "Bottom & Quarters"], "shortcut_modifiers": "31", "AXIdentifier": "_zoomBottomThreeUp:", "AXEnabled": false, "ShortModifier": 31, "AXMenuItemCmdVirtualKey": 125}
+{"title": "Return to Previous Size", "menu_path": ["Window", "Move & Resize", "Return to Previous Size"], "shortcut_modifiers": "⌘⌥⇧", "AXIdentifier": "_zoomUntile:", "AXEnabled": false, "ShortModifier": 28, "ShortKey": "R"}
+{"title": "Full-Screen Tile", "menu_path": ["Window", "Full-Screen Tile"], "omeClick": [405.5, 167.5], "shortcut_modifiers": "", "AXEnabled": true, "ShortModifier": 0, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Left of Screen", "menu_path": ["Window", "Full-Screen Tile", "Left of Screen"], "shortcut_modifiers": "", "AXIdentifier": "_tileLeft:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Right of Screen", "menu_path": ["Window", "Full-Screen Tile", "Right of Screen"], "shortcut_modifiers": "", "AXIdentifier": "_tileRight:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Remove Window from Set", "menu_path": ["Window", "Remove Window from Set"], "omeClick": [405.5, 201.5], "shortcut_modifiers": "", "AXIdentifier": "_removeWindowFromStageManagerSet:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Cycle Through Windows", "menu_path": ["Window", "Cycle Through Windows"], "omeClick": [405.5, 224.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:312", "AXEnabled": true, "ShortModifier": 0, "ShortKey": "`"}
+{"title": "Show Progress Window", "menu_path": ["Window", "Show Progress Window"], "omeClick": [405.5, 247.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:797", "AXEnabled": false, "ShortModifier": 8}
+{"title": "Bring All to Front", "menu_path": ["Window", "Bring All to Front"], "omeClick": [405.5, 281.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:306", "AXEnabled": true, "ShortModifier": 8}
+{"title": "Arrange in Front", "menu_path": ["Window", "Arrange in Front"], "omeClick": [405.5, 281.5], "shortcut_modifiers": "⌃⌘", "AXIdentifier": "alternateArrangeInFront:", "AXEnabled": true, "ShortModifier": 10}
+{"title": "Show Previous Tab", "menu_path": ["Window", "Show Previous Tab"], "omeClick": [405.5, 315.5], "shortcut_modifiers": "⇧⌃⌘", "AXIdentifier": "selectPreviousTab:", "AXEnabled": false, "ShortModifier": 13, "AXMenuItemCmdVirtualKey": 48, "ShortKey": "\t"}
+{"title": "Show Next Tab", "menu_path": ["Window", "Show Next Tab"], "omeClick": [405.5, 338.5], "shortcut_modifiers": "⌥⌘", "AXIdentifier": "selectNextTab:", "AXEnabled": false, "ShortModifier": 12, "AXMenuItemCmdVirtualKey": 48, "ShortKey": "\t"}
+{"title": "Move Tab to New Window", "menu_path": ["Window", "Move Tab to New Window"], "omeClick": [405.5, 361.5], "shortcut_modifiers": "", "AXIdentifier": "moveTabToNewWindow:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Merge All Windows", "menu_path": ["Window", "Merge All Windows"], "omeClick": [405.5, 384.5], "shortcut_modifiers": "", "AXIdentifier": "mergeAllWindows:", "AXEnabled": false, "ShortModifier": 0}
+{"title": "Recents", "menu_path": ["Window", "Recents"], "omeClick": [405.5, 418.5], "shortcut_modifiers": "", "AXIdentifier": "makeKeyAndOrderFront:", "AXEnabled": true, "ShortModifier": 0, "AXMenuItemMarkChar": "✓"}
+{"title": "Help", "menu_path": ["Help"], "omeClick": [384.0, 12.0], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:977", "AXEnabled": true, "ShortModifier": 8, "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "search result", "menu_path": ["Help", "search result"], "omeClick": [535.0, 51.0], "AXIdentifier": "_SC_RESULTS_TABLE", "AXChildrenInNavigationOrder": "[<ome.AXClasses.NativeUIElement AXColumn 'column'>]", "AXLayoutDirection": 0, "AXEnabled": true, "AXSelectedCells": [], "AXSelectedColumns": [], "AXRows": [], "AXVisibleRows": [], "AXSelectedRows": [], "AXColumns": "[<ome.AXClasses.NativeUIElement AXColumn 'column'>]", "AXVisibleColumns": "[<ome.AXClasses.NativeUIElement AXColumn 'column'>]", "child_count": 1, "children_titles": ["<no title>"]}
+{"title": "Mac User Guide", "menu_path": ["Help", "Mac User Guide"], "omeClick": [535.0, 67.5], "shortcut_modifiers": "", "AXIdentifier": "_NS:279", "AXEnabled": true, "ShortModifier": 0}
+{"title": "Tips for Your Mac", "menu_path": ["Help", "Tips for Your Mac"], "omeClick": [535.0, 90.5], "shortcut_modifiers": "⌘", "AXIdentifier": "_NS:855", "AXEnabled": true, "ShortModifier": 8}

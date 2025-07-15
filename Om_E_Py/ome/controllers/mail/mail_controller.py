@@ -1,67 +1,75 @@
 """
-ome/controllers/mail/mail_controller.py
+Om_E_Py/ome/controllers/mail/mail_controller.py
 
 This script provides a high-level controller for automating and managing the Apple Mail app on macOS.
 
+Module Path: Om_E_Py.ome.controllers.mail.mail_controller
+
 Main Purpose:
-- Automates account and mailbox management in the Mail app using accessibility and scripting bridges.
+- Automates account and mailbox management in the Mail app using PyXA for backend logic.
 - Provides a command-line interface for testing and interacting with Mail accounts and mailboxes.
-- Supports navigation lookups for UI automation (e.g., finding omeClick coordinates for sidebar navigation).
+- Supports optional UI navigation for automation (e.g., finding omeClick coordinates for sidebar navigation).
 
 Key Features:
 - App Focus Management: Ensures the Mail app is focused and ready for automation.
-- Account & Mailbox Management: Lists, switches, and queries accounts and mailboxes.
-- Navigation Data Lookup: Finds UI navigation points (omeClick) for accounts/mailboxes using hierarchical JSONL data.
+- Account & Mailbox Management: Lists, switches, and queries accounts and mailboxes using PyXA.
+- Optional UI Navigation: Can use navBigDaDDy for UI clicks when needed.
 - Command-Line Interface: Run tests and queries directly from the terminal for development and debugging.
-- Error Handling: Gracefully handles missing app, accounts, or navigation data.
+- Error Handling: Gracefully handles a missing app, accounts, or navigation data.
 
 How to Use (Command Line):
-    ¸
-    python ome/controllers/mail/mail_controller.py --mailboxes Google
-    python ome/controllers/mail/mail_controller.py --test-nav-action Google
-    python ome/controllers/mail/mail_controller.py --all
+    # List all mail accounts (PyXA only, no UI navigation)
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --accounts
 
-Arguments:
-    --accounts: List all available mail accounts
-    --mailboxes <account>: List mailboxes for the specified account
-    --test-nav: Test hierarchical navigation file reading/building
-    --test-nav-action <account>: Test navigation lookup for an account
-    --context: Show current account/mailbox context
-    --all: Run all tests
-    --no-front-nav: Disable front navigation (omeClick); use PyXA only (overrides .env setting)
+    # List mailboxes for a specific account (e.g., Google)
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --mailboxes Google
+
+    # Show the current account and mailbox context
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --context
+
+    # Get structured accounts data with mailboxes
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --accounts-data
+
+    # Test the hierarchical navigation file reading and building
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --test-nav
+
+    # Test a navigation action lookup for an account
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --test-nav-action Google
+
+    # Run all tests
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --all
+
+    # Disable UI navigation and use PyXA only
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --all --no-front-nav
+
+    # Get mailbox names using AppleScript (faster timing test)
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --mailbox-names-applescript Google
+
+    # Get mailbox names using PyXA only (no navigation)
+    python -m Om_E_Py.ome.controllers.mail.mail_controller --mailboxes-pyxa-only Google
 
 Output:
-- Prints results to the terminal (accounts, mailboxes, navigation lookups, etc.)
+- Prints results to the terminal (accounts, mailboxes, navigation lookups, etc.).
 - Useful for debugging, development, and integration with other automation tools.
 
 When to Use:
+- To get PyXA data without UI navigation overhead.
 - To automate or test Mail app account/mailbox management.
-- For UI automation or navigation using omeClick coordinates.
-- For development, debugging, or integration with other Om-E-py modules.
+- For UI automation that requires synchronized backend (PyXA) and frontend (UI clicks) actions.
+- For development and debugging of mail-related automation workflows.
 """
 
 import os
 import sys
 import time
-
-# Always add the project root to sys.path
-project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
-
-"""
-Mail Controller
-
-High-level controller for Mail app, account, and mailbox management.
-Uses the same app focus pattern as mailMessageBody_controller.py.
-"""
-
-import PyXA
-from ome.utils.builder.app.app_focus import ensure_app_focus
-from ome.utils.uiNav.navBigDaDDy import navBigDaDDy
 import json
 import subprocess
-from ome.utils.env.env import TRANSLATOR_EXPORT_DIR, USE_FRONT_NAV
+
+import PyXA
+
+from Om_E_Py.ome.utils.builder.app.app_focus import ensure_app_focus
+from Om_E_Py.ome.utils.uiNav.navBigDaDDy import navBigDaDDy
+from env import UI_TRANSLATOR_EXPORT_DIR, UI_USE_FRONT_NAV
 
 
 class MailController:
@@ -93,22 +101,31 @@ class MailController:
         'Archive': 'Archive',
     }
     
-    def __init__(self):
+    def __init__(self, skip_navigation=False):
         """
         Initialize the MailController and ensure the Mail app is focused and ready.
+        
+        Args:
+            skip_navigation (bool): If True, skip navigation initialization for faster PyXA-only operations
         """
         t0 = time.time()
         self.app = None
         self.current_account = None
         self.current_mailbox = None
-        self.use_front_nav = USE_FRONT_NAV
+        self.use_front_nav = UI_USE_FRONT_NAV and not skip_navigation
         self._nav_cache = {'window_ref': None, 'nav_items': []}  # Cache for nav data
         self._initialize_app()
         t1 = time.time()
         print(f"[TIMER] MailController._initialize_app: {t1-t0:.3f}s")
-        self.nav = navBigDaDDy(self.BUNDLE_ID, app=self.app)
-        t2 = time.time()
-        print(f"[TIMER] navBigDaDDy init: {t2-t1:.3f}s")
+        
+        # Only initialize navigation if not skipped
+        if not skip_navigation:
+            self.nav = navBigDaDDy(self.BUNDLE_ID, app=self.app)
+            t2 = time.time()
+            print(f"[TIMER] navBigDaDDy init: {t2-t1:.3f}s")
+        else:
+            self.nav = None
+            print("[MailController] Navigation initialization skipped")
     
     def _initialize_app(self):
         """
@@ -732,7 +749,7 @@ class MailController:
         if filename is None:
             window_ref = self.get_current_window_ref() or 'MainWindow'
             filename = f"hierarchical_{self.BUNDLE_ID}_{window_ref}.jsonl"
-        nav_path = os.path.join(TRANSLATOR_EXPORT_DIR, filename)
+        nav_path = os.path.join(UI_TRANSLATOR_EXPORT_DIR, filename)
         # Check cache first
         window_ref = filename.split('_')[-1].replace('.jsonl', '')
         if self._nav_cache['window_ref'] == window_ref and self._nav_cache['nav_items']:
@@ -763,7 +780,7 @@ class MailController:
         try:
             # Call the translator as a subprocess
             result = subprocess.run(
-                ["python", "-m", "ome.controllers.mail.mailNav_translator", "--force"],
+                ["python", "-m", "Om_E_Py.ome.controllers.mail.mailNav_translator", "--force"],
                 capture_output=True, text=True
             )
             print(result.stdout)
@@ -846,6 +863,11 @@ Examples:
         help='List all available accounts'
     )
     parser.add_argument(
+        '--accounts-data', 
+        action='store_true', 
+        help='Get structured accounts data with mailboxes'
+    )
+    parser.add_argument(
         '--mailboxes', 
         type=str, 
         help='List mailboxes for specified account (e.g., "Google")'
@@ -887,11 +909,67 @@ Examples:
     
     args = parser.parse_args()
     
+    # Determine if we should skip navigation for faster PyXA-only operations
+    skip_nav = args.no_front_nav or args.accounts or args.accounts_data or args.mailboxes is not None or args.mailboxes_pyxa_only is not None
+    
     start_time = time.time()
     t0 = time.time()
-    controller = MailController()
+    controller = MailController(skip_navigation=skip_nav)
     t1 = time.time()
     print(f"[TIMER] MailController total init: {t1-t0:.3f}s")
+    
+    # Handle --accounts argument
+    if args.accounts or args.all:
+        t0 = time.time()
+        accounts = controller.get_accounts()
+        t1 = time.time()
+        print(f"[TIMER] get_accounts: {t1-t0:.3f}s")
+        print(f"Available accounts: {[account.name for account in accounts]}")
+        if args.accounts and not args.all:
+            return
+    
+    # Handle --accounts-data argument
+    if args.accounts_data or args.all:
+        t0 = time.time()
+        accounts_data = controller.get_accounts_data()
+        t1 = time.time()
+        print(f"[TIMER] get_accounts_data: {t1-t0:.3f}s")
+        print(f"Accounts data: {json.dumps(accounts_data, indent=2)}")
+        if args.accounts_data and not args.all:
+            return
+    
+    # Handle --context argument
+    if args.context or args.all:
+        context = controller.get_current_context()
+        print(f"Current context: {context}")
+        if args.context and not args.all:
+            return
+    
+    # Handle --test-nav argument
+    if args.test_nav or args.all:
+        t0 = time.time()
+        nav_items = controller.get_hierarchical_nav()
+        t1 = time.time()
+        print(f"[TIMER] get_hierarchical_nav: {t1-t0:.3f}s")
+        print(f"Found {len(nav_items)} navigation items")
+        if args.test_nav and not args.all:
+            return
+    
+    # Handle --test-nav-action argument
+    if args.test_nav_action or args.all:
+        if args.test_nav_action:
+            t0 = time.time()
+            result = controller.handle_navigation_action({
+                'action': 'switch_account',
+                'account_name': args.test_nav_action,
+                'execute_click': False
+            })
+            t1 = time.time()
+            print(f"[TIMER] handle_navigation_action: {t1-t0:.3f}s")
+            print(f"Navigation action result: {result}")
+            if not args.all:
+                return
+    
     if args.mailboxes or args.all:
         if args.mailboxes:
             account_name = args.mailboxes

@@ -1,13 +1,13 @@
 {
   "active_target": {
     "type": "window",
-    "window_title": "Safari (Active via cli)",
+    "window_title": "Safari (Active via refresh_request)",
     "window_ref": "com.apple.Safari.active",
     "nav_map_name": "appNav_com.apple.Safari_active.jsonl",
-    "timestamp": "2025-07-08T11:35:41.031664Z"
+    "timestamp": "2025-07-15T06:44:19.533152Z"
   },
   "bundle_id": "com.apple.Safari",
   "app_name": "Safari",
-  "source": "cli",
-  "last_updated": "2025-07-08T11:35:41.031666Z"
+  "source": "refresh_request",
+  "last_updated": "2025-07-15T06:44:19.533154Z"
 }

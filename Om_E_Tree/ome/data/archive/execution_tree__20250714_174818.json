@@ -1,0 +1,93 @@
+{
+  "goal_id": "open-mail-and-openai-goal",
+  "description": "Open Google Chrome and navigate to mail.com",
+  "status": "complete",
+  "created_at": "2024-01-01T00:00:00Z",
+  "objectives": [
+    {
+      "objective_id": "open-mail-obj",
+      "goal_id": "open-mail-and-openai-goal",
+      "description": "Launch the Google Chrome browser",
+      "status": "complete",
+      "created_at": "2024-01-01T00:00:00Z",
+      "tasks": [
+        {
+          "task_id": "launch-mail-task",
+          "objective_id": "open-mail-obj",
+          "description": "Use the system handler to open Google Mail",
+          "status": "complete",
+          "created_at": "2024-01-01T00:00:00Z",
+          "actions": [
+            {
+              "name": "open_url",
+              "source": "system",
+              "input_args": {
+                "url": "https://mail.google.com",
+                "browser": "Google Chrome"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T08:17:38.241955+00:00"
+            }
+          ],
+          "completed_at": "2025-07-14T08:17:38.255124+00:00"
+        }
+      ],
+      "actions": [
+        {
+          "name": "open_url",
+          "source": "system",
+          "input_args": {
+            "url": "https://mail.google.com",
+            "browser": "Google Chrome"
+          },
+          "defaults": {
+            "url": "https://mail.google.com",
+            "browser": "Google Chrome"
+          },
+          "description": "Opens the mail.com in Google Chrome.",
+          "status": "pending",
+          "created_at": "2024-01-01T00:00:00Z"
+        }
+      ],
+      "last_task_id": "launch-mail-task",
+      "completed_at": "2025-07-14T08:17:38.265663+00:00"
+    },
+    {
+      "objective_id": "navigate-mail",
+      "goal_id": "open-mail-and-openai-goal",
+      "description": "Navigate to mail.com in Google Chrome",
+      "status": "complete",
+      "created_at": "2024-01-01T00:00:00Z",
+      "tasks": [
+        {
+          "task_id": "navigate-mail-task",
+          "objective_id": "navigate-mail",
+          "description": "Use the system handler to open mail.com in Google Chrome.",
+          "status": "complete",
+          "created_at": "2024-01-01T00:00:00Z",
+          "actions": [
+            {
+              "name": "open_url",
+              "source": "system",
+              "input_args": {
+                "url": "https://mail.google.com",
+                "browser": "Google Chrome"
+              },
+              "state": "complete",
+              "status": "success",
+              "attempts": 1,
+              "completed_at": "2025-07-14T08:18:18.217549+00:00"
+            }
+          ],
+          "completed_at": "2025-07-14T08:18:18.220538+00:00"
+        }
+      ],
+      "last_task_id": "navigate-mail-task",
+      "completed_at": "2025-07-14T08:18:18.224450+00:00"
+    }
+  ],
+  "last_objective_id": "navigate-mail",
+  "completed_at": "2025-07-14T08:18:18.229616+00:00"
+}
