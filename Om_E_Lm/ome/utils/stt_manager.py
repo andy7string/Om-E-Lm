@@ -92,19 +92,20 @@ if __name__ == "__main__":
     import argparse
     import sounddevice as sd
     from Om_E_Lm.ome.utils.vad_manager import detect_speech
+    from Om_E_Lm.ome.handlers.audio_handler import AUDIO_DEVICE
     import time
     parser = argparse.ArgumentParser(description="Test streaming Vosk STT with VAD gating.")
     parser.add_argument('--test', action='store_true', help='Run a test: stream audio, print transcripts, detect hotword')
     parser.add_argument('--hotword', type=str, default='om-e', help='Hotword to detect (default: om-e)')
     args = parser.parse_args()
     if args.test:
-        print("Speak into the mic. Ctrl+C to stop.")
+        print(f"Speak into the mic (device {AUDIO_DEVICE}). Ctrl+C to stop.")
         stt = STTManager()
         SAMPLE_RATE = 16000
         FRAME_DURATION_MS = 30
         FRAME_SIZE = int(SAMPLE_RATE * FRAME_DURATION_MS / 1000)
         def audio_frame_generator():
-            with sd.InputStream(samplerate=SAMPLE_RATE, channels=1, dtype='float32') as stream:
+            with sd.InputStream(samplerate=SAMPLE_RATE, channels=1, dtype='float32', device=AUDIO_DEVICE) as stream:
                 while True:
                     audio_chunk, _ = stream.read(FRAME_SIZE)
                     audio_chunk = audio_chunk.flatten()
