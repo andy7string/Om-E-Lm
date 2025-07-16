@@ -23,7 +23,9 @@ When to Use:
 from Om_E_Lm.ome.utils.stt_manager import STTManager
 from Om_E_Lm.ome.handlers.audio_handler import AUDIO_DEVICE
 import argparse
-from env import OME_SMART_PAUSE_THRESHOLD
+from env import OME_SMART_PAUSE_THRESHOLD, OME_VAULT_VOICE_PATH
+import json
+import os
 import time
 
 class TranscriptCollector:
@@ -49,8 +51,15 @@ class TranscriptCollector:
                 "text": full_text,
                 "timestamp": time.strftime('%Y-%m-%dT%H:%M:%S')
             }
+            log_voice_entry(entry)
             print(f"[DEBUG] Committed transcript: {entry}")
             self.buffer = []
+
+def log_voice_entry(entry):
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(OME_VAULT_VOICE_PATH), exist_ok=True)
+    with open(OME_VAULT_VOICE_PATH, 'a', encoding='utf-8') as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + '\n')
 
 class PipelineOrchestrator:
     """

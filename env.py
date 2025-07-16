@@ -41,7 +41,7 @@ OME_WINDOW_MAPS_DIR = os.getenv("OME_WINDOW_MAPS_DIR", PROJECT_ROOT / "OM_E_LM/o
 OME_MAX_CHILDREN = int(os.getenv("OME_MAX_CHILDREN", 20))
 OME_WINDOW_DEPTH = int(os.getenv("OME_WINDOW_DEPTH", 4))
 OME_TOOLBAR_DEPTH = int(os.getenv("OME_TOOLBAR_DEPTH", 6))
-OME_SMART_PAUSE_THRESHOLD = float(os.getenv("OME_SMART_PAUSE_THRESHOLD", 5.0))
+OME_SMART_PAUSE_THRESHOLD = float(os.getenv("OME_SMART_PAUSE_THRESHOLD", 3.0))
 
 # === UI Automation (OM_E_Py) ===
 UI_USE_FRONT_NAV = os.getenv("UI_USE_FRONT_NAV", "true").lower() in ("1", "true", "yes")
@@ -112,6 +112,10 @@ TREE_WINDOW_MAPS_DIR = os.getenv("TREE_WINDOW_MAPS_DIR", PROJECT_ROOT / "OM_E_Tr
 TREE_MAX_CHILDREN = int(os.getenv("TREE_MAX_CHILDREN", 20))
 TREE_WINDOW_DEPTH = int(os.getenv("TREE_WINDOW_DEPTH", 4))
 TREE_TOOLBAR_DEPTH = int(os.getenv("TREE_TOOLBAR_DEPTH", 6))
+
+# === RAG Vault Paths ===
+OME_VAULT_VOICE_PATH = os.getenv("OME_VAULT_VOICE_PATH", PROJECT_ROOT / "Om_E_Lm/ome/data/vault/voice.jsonl")
+# Future: OME_VAULT_APPS_PATH, OME_VAULT_MENUS_PATH, OME_VAULT_WINDOWS_PATH, OME_VAULT_WORKFLOWS_PATH
 
 # === Helper function ===
 def get_env(key, default=None, cast_type=str):
