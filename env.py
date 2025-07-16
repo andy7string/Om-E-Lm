@@ -120,4 +120,6 @@ def get_env(key, default=None, cast_type=str):
             return cast_type(val)
         except Exception:
             return default
-    return val 
+    return val
+
+AUDIO_DEVICE=3
