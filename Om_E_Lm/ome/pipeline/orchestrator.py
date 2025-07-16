@@ -1,109 +1,101 @@
 """
 Om_E_Lm/ome/pipeline/orchestrator.py
 
-Pipeline orchestrator for the OM‑E voice assistant.
+Pipeline orchestrator for the OM‑E voice assistant (refactored: STTManager-centric).
 
 Main Purpose:
-- Connects audio capture, filtering, VAD, and STT into a single, maintainable pipeline.
-- Provides a foundation for adding RAG, LLM, and TTS modules.
+- Starts STTManager, which handles mic input, VAD, and streaming STT internally.
+- Receives partial/final transcripts via callbacks.
+- (Stub) Passes final transcript to next pipeline stage (RAG/LLM/TTS).
 
 Key Features:
-- Continuously captures and filters audio frames from the microphone.
-- Uses VAD to detect speech and smart pauses.
-- Streams speech frames to Vosk STT for real-time transcription.
-- Commits and prints the transcript after a smart pause.
+- Minimal, maintainable pipeline code.
 - CLI entry point for live testing and demonstration.
 
 How to Use (Command Line):
     python -m Om_E_Lm.ome.pipeline.orchestrator --run
-    # Runs the full audio → VAD → STT pipeline, prints transcripts on smart pause.
+    # Runs the full speech pipeline, prints transcripts on-the-fly.
 
 When to Use:
 - As the main entry point for the OM‑E speech-to-speech pipeline.
 - For validating and extending the end-to-end flow.
 """
-import time
-import numpy as np
-from Om_E_Lm.ome.handlers.audio_handler import apply_filters, AUDIO_SAMPLE_RATE, AUDIO_DEVICE
-from Om_E_Lm.ome.utils.vad_manager import detect_speech, smart_pause_detector
 from Om_E_Lm.ome.utils.stt_manager import STTManager
-import sounddevice as sd
+from Om_E_Lm.ome.handlers.audio_handler import AUDIO_DEVICE
+import argparse
+from env import OME_SMART_PAUSE_THRESHOLD
+import time
 
-SAMPLE_RATE = AUDIO_SAMPLE_RATE
-FRAME_DURATION_MS = 30
-FRAME_SIZE = int(SAMPLE_RATE * FRAME_DURATION_MS / 1000)
-SMART_PAUSE_THRESHOLD = 5.0
+class TranscriptCollector:
+    def __init__(self):
+        self.buffer = []
+        self.last_speech_time = time.time()
+
+    def on_partial(self, text):
+        if text:
+            self.last_speech_time = time.time()
+
+    def on_final(self, text):
+        if text:
+            self.buffer.append(text)
+            self.last_speech_time = time.time()
+
+    def check_silence(self):
+        if (time.time() - self.last_speech_time) > OME_SMART_PAUSE_THRESHOLD and self.buffer:
+            full_text = " ".join(self.buffer)
+            entry = {
+                "id": f"user_query_{time.strftime('%Y%m%d_%H%M%S')}",
+                "type": "user_query",
+                "text": full_text,
+                "timestamp": time.strftime('%Y-%m-%dT%H:%M:%S')
+            }
+            print(f"[DEBUG] Committed transcript: {entry}")
+            self.buffer = []
 
 class PipelineOrchestrator:
     """
-    Orchestrates audio capture, filtering, VAD, and STT in a streaming loop.
+    Orchestrates the OM‑E pipeline by starting STTManager and handling transcript events.
     """
-    def __init__(self, sample_rate=SAMPLE_RATE, device=AUDIO_DEVICE, pause_threshold=SMART_PAUSE_THRESHOLD):
-        self.sample_rate = sample_rate
+    def __init__(self, device=AUDIO_DEVICE):
         self.device = device
-        self.pause_threshold = pause_threshold
         self.stt = STTManager()
-        self.last_speech_time = time.time()
-        self.transcript = ""
+        self.last_transcript = ""
+        self.collector = TranscriptCollector()
+
+    def on_partial(self, res):
+        import json
+        partial = json.loads(res).get('partial', '')
+        if partial:
+            print(f"Partial: {partial}", end='\r')
+        self.collector.on_partial(partial)
+        self.collector.check_silence()
+
+    def on_final(self, res):
+        import json
+        text = json.loads(res).get('text', '')
+        if text:
+            print(f"\n[Transcript] {text}")
+            self.last_transcript = text
+        self.collector.on_final(text)
+        self.collector.check_silence()
 
     def run(self):
-        """
-        Runs the main pipeline loop: audio → filter → VAD → STT → commit on smart pause.
-        """
-        print("[Orchestrator] Starting pipeline. Speak into the mic. Ctrl+C to stop.")
-        with sd.InputStream(samplerate=self.sample_rate, channels=1, dtype='float32', device=self.device) as stream:
-            buffer = []
-            def on_partial(res):
-                import json
-                partial = json.loads(res).get('partial', '')
-                if partial:
-                    print(f"Partial: {partial}", end='\r')
-            def on_final(res):
-                import json
-                text = json.loads(res).get('text', '')
-                if text:
-                    print(f"\n[Transcript] {text}")
-                    self.transcript = text
-            while True:
-                audio_chunk, _ = stream.read(FRAME_SIZE)
-                audio_chunk = audio_chunk.flatten()
-                filtered = apply_filters(audio_chunk, self.sample_rate)
-                if detect_speech(filtered, self.sample_rate):
-                    buffer.append(filtered)
-                    self.last_speech_time = time.time()
-                else:
-                    buffer.append(np.zeros_like(filtered))
-                if smart_pause_detector(self.last_speech_time, threshold=self.pause_threshold):
-                    if buffer:
-                        print(f"\n[Orchestrator] Smart pause detected. Committing transcript...")
-                        def frame_gen():
-                            for frame in buffer:
-                                yield frame
-                        self.stt.start_vosk_stream(frame_gen(), on_partial, on_final)
-                        buffer = []
-                    print("[Orchestrator] Waiting for speech...")
-                    # Wait for speech to resume
-                    while smart_pause_detector(self.last_speech_time, threshold=self.pause_threshold):
-                        audio_chunk, _ = stream.read(FRAME_SIZE)
-                        audio_chunk = audio_chunk.flatten()
-                        filtered = apply_filters(audio_chunk, self.sample_rate)
-                        if detect_speech(filtered, self.sample_rate):
-                            self.last_speech_time = time.time()
-                            buffer.append(filtered)
-                            break
-                        else:
-                            buffer.append(np.zeros_like(filtered))
+        print("[Orchestrator] Starting OM‑E pipeline. Speak into the mic. Ctrl+C to stop.")
+        try:
+            # STTManager handles mic, VAD, and streaming STT internally
+            self.stt.run_with_mic(
+                callback_on_partial=self.on_partial,
+                callback_on_final=self.on_final
+            )
+        except KeyboardInterrupt:
+            print("\n[Orchestrator] Stopped.")
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser(description="Run the OM‑E audio → VAD → STT pipeline.")
+    parser = argparse.ArgumentParser(description="Run the OM‑E speech pipeline (STTManager-centric).")
     parser.add_argument('--run', action='store_true', help='Run the pipeline orchestrator')
     args = parser.parse_args()
     if args.run:
         orchestrator = PipelineOrchestrator()
-        try:
-            orchestrator.run()
-        except KeyboardInterrupt:
-            print("\n[Orchestrator] Stopped.")
+        orchestrator.run()
     else:
         parser.print_help() 

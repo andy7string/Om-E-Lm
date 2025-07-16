@@ -88,6 +88,31 @@ class STTManager:
         # Simple stub: check if hotword in text (case-insensitive)
         return hotword.lower() in text.lower() 
 
+    def run_with_mic(self, callback_on_partial, callback_on_final, hotword=None):
+        """
+        Starts the full mic → VAD → STT pipeline using internal logic.
+        Args:
+            callback_on_partial (function): Called with partial transcript (JSON string)
+            callback_on_final (function): Called with final transcript (JSON string)
+            hotword (str, optional): Hotword to detect (for future use)
+        """
+        import sounddevice as sd
+        from Om_E_Lm.ome.utils.vad_manager import detect_speech
+        from Om_E_Lm.ome.handlers.audio_handler import AUDIO_DEVICE
+        SAMPLE_RATE = self.sample_rate
+        FRAME_DURATION_MS = 30
+        FRAME_SIZE = int(SAMPLE_RATE * FRAME_DURATION_MS / 1000)
+        def audio_frame_generator():
+            with sd.InputStream(samplerate=SAMPLE_RATE, channels=1, dtype='float32', device=AUDIO_DEVICE) as stream:
+                while True:
+                    audio_chunk, _ = stream.read(FRAME_SIZE)
+                    audio_chunk = audio_chunk.flatten()
+                    if detect_speech(audio_chunk, SAMPLE_RATE):
+                        yield audio_chunk
+                    else:
+                        yield np.zeros_like(audio_chunk)
+        self.start_vosk_stream(audio_frame_generator(), callback_on_partial, callback_on_final)
+
 if __name__ == "__main__":
     import argparse
     import sounddevice as sd

@@ -23,6 +23,7 @@ When to Use:
 import webrtcvad
 import numpy as np
 import time
+from env import OME_SMART_PAUSE_THRESHOLD
 
 VAD_AGGRESSIVENESS = 2  # 0 (least), 3 (most)
 FRAME_DURATION_MS = 30  # 30ms frames
@@ -48,7 +49,7 @@ def detect_speech(audio_chunk, sample_rate=SAMPLE_RATE):
     return vad.is_speech(pcm_bytes, sample_rate)
 
 
-def smart_pause_detector(last_speech_time, threshold=5.0):
+def smart_pause_detector(last_speech_time, threshold=OME_SMART_PAUSE_THRESHOLD):
     """
     Returns True if the time since last speech exceeds the threshold (smart pause).
     Args:
@@ -64,7 +65,7 @@ if __name__ == "__main__":
     import sounddevice as sd
     parser = argparse.ArgumentParser(description="Test real-time VAD and smart pause detection.")
     parser.add_argument('--test', action='store_true', help='Run a test: stream audio, print Speech/Silence, detect smart pause')
-    parser.add_argument('--pause', type=float, default=5.0, help='Smart pause threshold in seconds (default: 5.0)')
+    parser.add_argument('--pause', type=float, default=OME_SMART_PAUSE_THRESHOLD, help=f'Smart pause threshold in seconds (default: {OME_SMART_PAUSE_THRESHOLD})')
     args = parser.parse_args()
     if args.test:
         print("Speak into the mic. Ctrl+C to stop.")
